@@ -2,8 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-This is a new lesson built with [The Carpentries Workbench][workbench]. 
+In this section we will focus ways of setting up system to get started with basic Python. 
 
 
-[workbench]: https://carpentries.github.io/sandpaper-docs
 
