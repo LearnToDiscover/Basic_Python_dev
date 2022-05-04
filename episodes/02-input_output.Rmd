@@ -768,6 +768,1142 @@ Although scope and hierarchy appear at first glance as theoretical concepts in p
 ![](fig/commandprompt_2.png)
 ![](fig/commandprompt_3.png)
 
+## Operations
+
+Through our experimentations with REF[variable types](sec:variablesAndTypes:VariableTypes), we already know that variables may be subject to different operations. 
+
+When assessing REF[type conversions](subsub:variables:types:conversion), we also established that the operations we can apply to each variable depend on the *type* of that variable. To that end, we learned that although it is sometimes possible to mix variables from different types to perform an operation --- e.g. multiplying a floating point number with an integer, there are some logical restrictions in place.
+
+Throughout this section, we will take a closer look into different types of operations in Python. This will allow us to gain a deeper insight into the concept and familiarise ourselves with the underlying logic.
+
+To recapitulate on what we have done so far, we start off by reviewing *additions* --- the most basic of all operations.
+
+
+Give the variable ```total_items:
+```{python}
+total_items = 2
+
+print(total_items) 
+```
+
+
+We can increment the value of an *existing* variable by ```1``` as follows:
+
+```{python}
+total_items = total_items + 1
+
+print(total_items)
+```
+
+Given 2 different variables, each containing a different value; we can perform an operation on these values and store the result in *another* variable without altering the original variables in any way:
+ 
+```{python}
+old_items = 4
+new_items = 3
+
+total_items = old_items + new_items
+
+print(total_items)
+```
+
+	
+We can change the value of an *existing* variable using the value stored in *another* variable:
+
+```{python}
+new_items = 5
+total_items = total_items + new_items
+
+print(total_items)
+```
+	
+There is also a shorthand method for applying the operation on an *existing* variable: 	
+	
+```{python}
+total_items = 2
+
+print(total_items)
+```
+	
+```{python}  
+total_items += 1
+	
+print(total_items)
+``` 
+
+
+```{python}
+new_items = 5
+total_items += new_items
+
+print(total_items)
+```
+	
+As highlighted in the REF[introduction](sec:variables:operations), different operations may be applied to any variable or value. Throughout the rest of this section, we will explore the most fundamental operations in programming, and learn about their implementation in Python.
+
+::::::::::::::::::: callout
+## Remember
+There are 2 very general categories of operations in programming: *mathematical*, and *logical*. Naturally, we use mathematical operations to perform calculations, and logical operations to perform tests. 
+
+::::::::::::::::::: 	
+	
+## Mathematical Operations {#math_ops}
+
+Suppose ```a``` and ```b``` are 2 variables representing integer numbers as follows:
+
+```{python}
+a = 17
+b = 5
+```
+
+Using ```a``` and ```b``` we can itemise built-in mathematical operations in Python as follows:	
+
+![Routine mathematical operations in Python](fig/routine_operations.png)
+::::::::::::::::::: callout
+
+## Remember
+As far as mathematical operations are concerned, variables ```a``` and ```b``` may be an instance of any *numeric* type. See table REF(tb:types:nativeTypes) to find out more about numeric types in Python.
+
+Values of type ```int``` have been chosen in our examples to facilitate the understanding of the results. 
+
+::::::::::::::::::: 
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself 
+
+1. Calculate the following and store the results in appropriately named variables:
+
+  a. $5.8 x 3.3$
+  
+	b. $\frac{180}{6}$
+	
+	c. $35 - 3.0$
+	
+	d. $35 - 3$
+	
+	e. $2^{1000}$
+
+Display the result of each calculation -- including the type, in the following format:
+
+> ```Result: X is an instance of <class 'Y'>```
+
+	
+2. Now using the results you obtained:
+
+  I. Can you explain why is the result of $35 - 3.0$ is an instance of type ```float```, whilst that of $35 - 3$ is of type ```int```?
+  II. Unlike the numeric types, string values have a length. To obtain the length of a string value, we use ```len()```. Convert the result for $2^{1000}$ from ```int``` to ```str```, then use the aforementioned function to work out the length of the number --- i.e. how many digits is it made of?
+		
+If you feel adventurous, you can try this for $2^{10000}$ or higher; but beware that you might overwhelm your computer and need a restart it if you go too far (i.e. above $2^{1000000}$). Just make sure you save everything beforehand, so you don't accidentally step on your own foot.}
+
+	
+**Hint:** We discuss ```len()``` in subsection REF(arrays:list:mutability:length). However, at this point, you should be able to use the official documentations and StackOverflow to work out how it works.
+
+
+:::::::::::::::::::::::: solution 
+
+## Q1 
+```{python}
+q1_a = 5.8 * 3.3
+print('Result:', q1_a, 'is an instance of', type(q1_a))
+	
+q1_b = 180 / 6
+print('Result:', q1_b, 'is an instance of', type(q1_b))
+	
+q1_c = 35 - 3.0
+print('Result:', q1_c, 'is an instance of', type(q1_c))
+	
+q1_d = 35 - 3
+print('Result:', q1_d, 'is an instance of', type(q1_d))
+	
+q1_e = 2 ** 1000
+print('Result:', q1_e, 'is an instance of', type(q1_e))
+```
+::::::::::::::::::::::::
+
+## Q2-I 
+
+:::::::::::::::::::::::: solution
+In the case of $35 - 3.0$ vs $35 - 3$, the former includes a floating point number. Operations involving multiple numeric types always produce the results as an instance of the type that covers all of the operands -- i.e. ```float``` covers ```int```, but not vice-versa.
+::::::::::::::::::::::::
+
+## Q2-II
+:::::::::::::::::::::::: solution
+```{python}
+big_num = 2 ** 1000
+big_num_str = str(big_num)
+big_num_len = len(big_num_str)
+	
+print('Length of 2**1000:', big_num_len)
+```     
+::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::: callout 
+## Interesting Fact
+As of Python 3.6, you can use an underscores (```_```) *within* large numbers as a separator to make them easier to read in your code. For instance, instead of ```x = 1000000```, you can write ```x = 1_000_000```.
+::::::::::::::::::::::::
+
+
+### Shorthands
+When it comes to mathematical operations in Python, there is a frequently used shorthand method that every Python programmer should be familiar with.
+
+Suppose we have a variable defined as ```total_residues = 52``` and want to perform a mathematical operation on it. However, we would like to store the result of that operation in ```total_residues``` instead of a new variable. In such cases, we can do as follows:
+
+```{python}
+total_residues = 52
+
+# Addition:
+total_residues += 8
+
+print(total_residues)
+```
+
+
+```{python}
+# Subtraction:
+total_residues -= 10
+
+print(total_residues)
+```
+
+
+```{python}
+# Multiplication:
+total_residues *= 2
+
+print(total_residues)
+```
+
+```{python}
+# Division:
+total_residues /= 4
+
+print(total_residues)
+```
+
+```{python}
+# Floor quotient:
+total_residues //= 2
+
+print(total_residues)
+```
+
+```{python}
+# Remainder:
+total_residues %= 5
+
+print(total_residues)
+```
+
+```{python}
+# Power:
+total_residues **= 3
+
+print(total_residues)
+```
+
+We can also perform such operations using multiple variables:
+
+```{python}
+total_residues = 52
+new_residues = 8
+number_of_proteins = 3
+
+total_residues += new_residues
+
+print(total_residues)
+```
+  
+```{python}
+total_residues += (number_of_proteins * new_residues)
+
+print(total_residues)
+```
+
+
+
+
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself 
+
+1. Given:
+	* Circumference: $C = 18.84956$
+	* Radius: $R = 3$
+	
+and considering that the properties of a circle are defined as follows:
+
+![](fig/circle.png)	
+calculate $\pi$ using the following equation and store it in a variable named ```pi```:
+	
+	$$\pi = \frac{C}{D}$$
+	
+Then round the results to 5 decimal places and display the result in the following format:
+
+>```The value of pi calculated to 5 decimal places: X.XXXXX```
+
+	
+**Note: **To round floating point numbers in Python, we use ```round()```. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about ```round()``` in the [official documentations](https://docs.python.org/3.6/library/functions.html\#round).
+	
+2. Now without creating a new variable, perform the following operation:
+	
+	$$pi = \frac{pi}{(3 \bmod 2) - 1}$$
+	
+	
+where the expression ``$3 \bmod 2$'' represents the remainder for the division of 3 by 2.
+
+Explain the output.
+
+::::::::::::::::::::: solution
+## Q1
+
+```{python}
+c = 18.84956
+r = 3
+d = r * 2
+	
+pi = c / d
+	
+print('The value of pi calculated to 5 decimal places:', round(pi, 5))
+```    
+
+:::::::::::::::::::::
+
+::::::::::::::::::::: solution
+## Q2
+```
+	pi /= (3 % 2) - 1
+
+```
+
+The calculation raises a ```ZeroDivisionError```. This is because division by zero is mathematically impossible.
+:::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+### Precedence
+
+In mathematics and computer programming, there is a collection of conventional rules on the precedence of procedures to evaluate a mathematical expression. This collection of rules is referred to as the *order of operation* or *operator precedence*.
+
+Suppose we have a mathematical expression as follows:
+
+x = 2 + 3 x 9
+
+Such an expression can *only* be evaluated correctly if we do the multiplication first and then perform the addition. This means that the evaluation is done as follows:
+
+
+	given:3 x 9  = 27 
+	x = 2 + 27    
+	  = 29
+
+For instance, in an expression such as:
+
+
+x = 2 x (3 + (5 - 1)^2)
+
+
+the evaluation workflow may be described as follows:
+
+
+	x = 2 x (3 + 4^2) 
+	& = 2 x (3 + 16)  
+	& = 2 x 19        
+	& = 38
+
+The same principle applies in Python. This means that if we use Python to evaluate the above expression, the result would be identical:
+```{python}
+result = 2 * (3 + (5 - 1) ** 2)
+
+print(result)
+```
+
+
+::::::::::::::::::::: callout
+## Remember
+Operator precedence in mathematical operations may be described as follows:
+
+1. Exponents and roots
+2. Multiplication and division
+3. Addition and subtraction
+
+If there are any parenthesis ```()``` in the expression, the expression is evaluated from the innermost parenthesis outwards.
+
+:::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself
+Display the result of each item in the following format:
+
+```
+EXPRESSION = RESULT
+```
+
+For example:
+
+```
+	2 + 3 = 5
+```
+
+
+1. Calculate each expression *without* using parentheses:
+
+  a. $3 \times \frac{2}{4}$
+  b. $5 + 3 \times \frac{2}{4}$
+  c. $3 \times \frac{2}{4} + 5$
+  d. $\frac{2}{4} \times 3$
+
+	
+2. Calculate these expressions *using* parentheses:
+
+  a. $5 + \frac{2}{4} \times 3$
+  b.  $5 + \frac{2 \times 3}{4}$
+  c. $5 + \frac{2}{4 \times 3}$
+
+3.  Given
+
+```
+a = 2
+b = 5
+```
+
+use ```a``` and ```b``` to calculate the following expressions:
+  
+  a. $(a + b)^2$
+  b. $a^2 + 2ab + b^2$
+
+::::::::::::::::::::: solution
+
+## Q1
+```{python}
+q1_a = 3 * 2 / 4
+print('3 * 2 / 4 =', q1_a)
+	
+q1_b = 5 + 3 * 2 / 4
+print('5 + 3 * 2 / 4 =', q1_b)
+	
+q1_c = 3 * 2 / 4 + 5
+print('3 * 2 / 4 + 5 =', q1_c)
+	
+q1_d = 2 / 4 * 3
+print('2 / 4 * 3 =', q1_d)
+
+```     
+
+::::::::::::::::::::: 
+
+::::::::::::::::::::: solution
+## Q2
+
+```{python}   
+q2_a = 5 + (2 / 4) * 3
+print('5 + (2 / 4) * 3 =', q2_a)
+	
+q2_b = 5 + (2 * 3) / 4
+print('5 + (2 * 3) / 4 =', q2_b)
+	
+q2_c = 5 + 2 / (4 * 3)
+print('5 + 2 / (4 * 3) =', q2_c)
+
+```   
+
+::::::::::::::::::::: 
+
+::::::::::::::::::::: solution
+
+## Q3
+
+```{python}    
+a = 2
+b = 5
+	
+q3_a = (a + b) ** 2
+print('(a + b)^2 =', q3_a)
+	
+q3_b = a ** 2 + 2 * a * b + b ** 2
+print('a^2 + 2ab + b^2 =', q3_b)
+
+```    
+
+:::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+### Non-numeric values
+It sometimes makes sense to apply *some* mathematical operations to non-numeric variables too.
+
+We can multiply strings to repeat them. There is no specific advantage to the use of multiplication instead of manually repeating characters or words, but it makes our code look cleaner, and that's always a good thing!
+
+We can also add string values to each other. This is called *string concatenation*. It is a useful method for concatenating a few strings and / or string variables.
+
+```{python}
+SEPARATOR = '-' * 20
+NEW_LINE = '\n'
+SPACE = ' '
+
+forename = 'Jane'
+surname = 'Doe'
+birthday = '01/01/1990'
+
+full_name = forename + SPACE + surname
+
+data = full_name + NEW_LINE + SEPARATOR + NEW_LINE + 'DoB: ' + birthday
+
+print(data)
+   
+```
+  
+:::::::::::::::: callout
+
+## Remember
+New line character or ```\n``` is a universal directive to induce a line-break in Unix based operating systems (MACOS) and Linux). In WINDOWS, we usually us ```\r``` or ```\r\n``` instead. These are known as escape sequences, which we explore in additional details under REF[string operations](subsec:stringOperations) in chapter REF (ch:StringsAndFiles)
+
+::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself
+The risk of Huntington's disease appears to increase proportional to the continuous repetition of ```CAG``` nucleotides (glutamine codon) once they exceed 35 near the beginning of the Huntingtin (```IT15```) gene. The ```CAG``` repeats are also referred to as a polyglutamine or polyQ tract.
+
+```    
+glutamine_codon = 'CAG'
+```     
+
+1. Create a polynucleotide chain representing 36 glutamine codons. Store the result in a variable called ```polyq_codons```.
+	
+Display the result as:
+
+> ```Polyglutamine codons with 36 repeats: XXXXXXXXX...```
+
+	
+2. Use ```len()``` to work out the length of ```polyq_codons```, and store the result in a variable called ```polyq_codons_length```.
+	
+Display the result in the following format:
+
+> ```Number of nucleotides in a polyglutamine with 36 repeats: XXX```
+
+
+3. Use ```len()``` to work out the length of ```glutamin_codon```, and store the result in variable ```amino_acids_per_codon```.
+
+4. Divide ```polyq_codons_length``` by ```amino_acids_per_codon``` to prove that the chain contains the codon for exactly 36 amino acids. Store the result in variable ```polyq_peptide_length```.
+	
+Display the result in the following format:
+
+> ```Number of amino acids in a polyglutamine with 36 repeats: XXX```
+
+	
+5. Determine the types for the following variable:
+
+* amino_acids_per_codon
+* polyq_codons_length
+* polyq_peptide_length
+
+	and display the result for each item in the following format:
+
+> ```Value: XXX - Type: <class 'XXXX'>```
+
+	
+6. Are all the variables in task #5 of the same type? Why?
+	
+7. Repeat from task #4, but this time use an alternative method of division as outlined in table REF(tab:math:routineOperations).
+
+:::::::::::::::::::: solution 
+
+## Q1
+
+```{python}     
+glutamine_codon = 'CAG'
+	
+polyq_codons = glutamine_codon * 36
+	
+print('Polyglutamine codons with 36 repeats:', polyq_codons)
+```    
+
+:::::::::::::::::::: 
+
+:::::::::::::::::::: solution
+
+## Q2
+
+``` {python}     
+polyq_codons_length = len(polyq_codons)
+	
+print('Number of nucleotides in a polyglutamine with 36 repeats:', polyq_codons_length)
+```     
+
+:::::::::::::::::::: 
+
+:::::::::::::::::::: solution
+
+## Q3
+
+```   
+amino_acids_per_codon = len(glutamine_codon)
+```
+:::::::::::::::::::: 
+
+:::::::::::::::::::: solution
+
+## Q4
+
+```{python}  
+polyq_peptide_length = polyq_codons_length / amino_acids_per_codon
+	
+print('Number of amino acids in a polyglutamine with 36 repeats:', polyq_peptide_length)
+ 
+```  
+
+:::::::::::::::::::: 
+
+:::::::::::::::::::: solution
+
+## Q5
+
+```{python}
+print('Value:', amino_acids_per_codon, '- Type:', type(amino_acids_per_codon))
+	
+print('Value:', polyq_codons_length, '- Type:', type(polyq_codons_length))
+	
+print('Value:', polyq_peptide_length, '- Type:', type(polyq_peptide_length))
+```    
+
+::::::::::::::::::::
+
+:::::::::::::::::::: solution
+## Q6
+
+No, ```polyq_peptide_length``` is an instance of type ```float```. This is because we used the normal division (```/```) and not floor division (```//```}) to calculate its value. The result of normal division is always presented as a floating point number.
+
+:::::::::::::::::::: 
+
+:::::::::::::::::::: solution
+
+## Q7
+
+```{python}    
+polyq_peptide_length = polyq_codons_length // amino_acids_per_codon
+	
+print('Number of amino acids in a polyglutamine with 36 repeats:', polyq_peptide_length)
+	
+print('Value:', amino_acids_per_codon, '- Type:', type(amino_acids_per_codon))
+	
+print('Value:', polyq_codons_length, '- Type:', type(polyq_codons_length))
+	
+print('Value:', polyq_peptide_length, '- Type:', type(polyq_peptide_length))
+```     
+
+::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::: callout
+
+## Interesting Fact
+The Boolean data type is named after the English mathematician and logician George Boole (1815--1864).
+
+::::::::::::::::::::
+
+## Logical Operations
+
+An operation may involve a comparison. The result of such operations is either ```True``` or ```False```. This is known as the *Boolean* or ```bool``` data type. In reality, however, computers record ```True``` and ```False``` as ```1``` and ```0``` respectively.
+
+Operations with Boolean results are referred to as *logical operations*. Testing the results of such operations is known as *truth value testing*.
+
+Given the two variables ```a``` and ```b``` as follows: 
+
+```
+a = 17
+b = 5
+```
+
+Boolean operations may be defined as outlined in table REF(tab:logical:routineOperations).
+
+![Routine logical operations in Python.](fig/routine_logical_operations.png)
+
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself
+
+We know that in algebra, the first identity (square of a binomial) is:
+	
+$$(a + b)^2 = a^2 + 2ab + b^2$$
+now given:
+	
+```    
+a = 15
+b = 4
+```
+	
+
+1. Calculate
+
+$$y_1 = (a + b)^{2}$$
+$$y_2 = a^2 + 2ab + b^2$$
+
+Display the results in the following format:
+
+```
+y1 = XX
+y2 = XX
+```
+		
+2. Determine whether or not ```y_1``` is indeed equal to ```y_2```. Store the result of your test in another variable called ```equivalence```. Display the results in the following format:
+
+```
+Where a = XX and b = XX: 
+y1 is equal to y2: [True/False]
+```
+
+::::::::::::::::::::: solution
+
+## Q1
+   
+```{python}
+a = 15
+b = 4
+		
+y_1 = (a + b) ** 2
+y_2 = a ** 2 + 2 * a * b + b ** 2 
+		
+print('y1 =', y_1)
+print('y2 =', y_2)
+
+```
+
+::::::::::::::::::::: 
+
+::::::::::::::::::::: solution
+
+## Q2
+
+```{python}
+    
+equivalence = y_1 == y_2
+		
+print('Where a =', a, ' and b=', b)
+print('y1 is equal to y2:', equivalence)
+```
+:::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+### Negation
+
+We can also use negation in logical operations. Negation in Python is implemented using ```not```:
+
+![Negations in Python.](fig/Negation.png)
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself
+
+Using the information from DIY REF(diy:logicalOpts:equivalence):
+	
+
+1. Without using ```not```, determine whether or not ```y_1``` is *not equal* to ```y_2```. Display the result of your test and store it in another variable called ```inequivalent```.
+
+2. Negate ```inequivalent``` and display the result.
+
+:::::::::::::::: solution
+
+## Q1
+
+```{python}
+inequivalent = y_1 != y_2
+		
+print(inequivalent)
+
+```
+
+::::::::::::::::
+
+:::::::::::::::: solution
+
+## Q2
+
+```{python}
+inequivalent_negated = not inequivalent
+		
+print(inequivalent_negated)    
+	
+```
+
+::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::	 
+
+### Disjunctions and Conjunctions
+
+Logical operations may be combined using conjunction with ```and``` and disjunction with ```or``` to create more complex logics:
+
+![Disjunctions and Conjunctions in Python.](fig/Disjunction.png)
+
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself
+
+Given 
+	 
+```
+a = True
+b = False
+c = True
+```
+	
+Evaluate the following statements:
+	
+1. a == b
+2. a == c
+3. a ```or``` b
+4. a ```and``` b
+5. a ```or``` b ```and``` c
+6. (a ```or``` b) ```and``` c
+7. ```not``` a ```or``` (b ```and``` c)
+8. ```not``` a ```or``` ```not```(b ```and``` c)
+9. ```not``` a ```and``` ```not```(b ```and``` c)
+10. ```not``` a ```and``` ```not```(b ```or``` c)
+
+
+Display the results in the following format:
+
+```
+		1. [True/False]
+		2. [True/False]
+		...
+```
+
+Given that: 
+```   
+		a = True
+		b = False
+		c = True
+```
+
+:::::::::::::::::: solution
+## Q1
+
+```{python}
+print('1.', a == b)
+```
+::::::::::::::::::	
+
+:::::::::::::::::: solution
+## Q2
+
+```{python}
+print('2.', a == c)
+```
+::::::::::::::::::	
+
+
+:::::::::::::::::: solution
+## Q3
+
+```{python}
+print('3.', a or b)
+```
+::::::::::::::::::
+	
+
+:::::::::::::::::: solution
+## Q4
+
+```{python}
+print('4.', a and b)
+```
+::::::::::::::::::	
+
+:::::::::::::::::: solution
+## Q5
+
+```{python}
+print('5.', a or b and c)
+```
+::::::::::::::::::
+
+:::::::::::::::::: solution
+## Q6
+
+```{python}
+print('6.', (a or b) and c)
+```
+::::::::::::::::::
+
+:::::::::::::::::: solution
+## Q7
+
+```{python}
+print('7.', not a or (b and c))
+```
+::::::::::::::::::
+
+:::::::::::::::::: solution
+## Q8
+
+```{python}
+print('8.', not a or not(b and c))
+```
+::::::::::::::::::
+
+
+:::::::::::::::::: solution
+## Q9
+
+```{python}
+print('9.', not a and not(b and c))
+```
+::::::::::::::::::
+
+:::::::::::::::::: solution
+## Q10
+
+```{python}
+print('10.', not a and not(b or c))
+```
+::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: 
+
+### Complex logical operations
+
+It may help to break down more complex operations, or use parenthesis to make them easier to both read and write:
+
+![Complex Logical Operations in Python.](fig/Complex_Logical_Operations.png)
+
+Notice that in the last example, all notations are essentially the same and only vary in terms of their collective results as defined using parenthesis. Always remember that in a logical statement:
+
+
+* The statement in parenthesis does **not** have precedence over the rest of the state (unlike mathematical statements). It merely defines an independent part of the operation whose response is evaluated separately. 
+
+* The precedence is established on a first come, first serve basis (from left to right).
+
+* Always use parenthesis in longer statements for clarification.
+
+* In disjunctive statements ---i.e. a > 5 ```or``` b > 5, if the first part is ```True```, the second part is *not* checked. In other words, if a is greater than 5, the computer does not proceed to check whether or not b is greater than 5. 
+
+* In conjunctive statements ---i.e. a > 5 ```and``` b > 5, the statement proceeds to the seconds part if and only if the first part is ```True```. In other words, the result of a conjunctive statement is only ```True``` if and only if both a and b are greater than 5. If a is ```False```, the entire statement will inevitably be ```False```.
+
+* The longer the statement, the more difficult it would be to understand it properly, and by extension, the more likely it would be to cause problems. 
+
+```{python}
+a, b, c = 17, 5, 2  # Alternative method to define variables.
+```
+
+```{python}
+# Disjunction: false OR true.
+a < b or b > c  
+```
+
+
+```{python}
+# Disjunction: true OR true.
+a > b or b > c  
+```
+
+
+```{python}
+# Conjunction: true AND true.
+a > b and b > c  
+```
+
+
+```{python}
+# Conjunction: false and true.
+a < b and b > c  
+```
+
+```{python}
+# Disjunction and conjunction: true OR false AND true
+a > b or b < c and b < a
+```
+
+```{python}
+# Disjunction and conjunction: false OR true AND false
+a < b or b > c and b > a
+```
+
+
+```{python}
+# Disjunctions and conjunction: false OR true AND true
+a < b or b > c and b < a
+```
+
+```{python}
+# Disjunction and negated conjunction and conjunction: 
+# true AND NOT false AND false
+a < b or not b < c and b > a
+```
+
+
+```{python}
+# Disjunction and negated conjunction - similar to the 
+# previous example: true AND NOT (false AND false)
+a < b or not (b < c and b > a)
+```
+
+
+These are only a few examples. There are endless possibilities, try them yourself and see how they work.
+
+::::::::::::: callout
+
+## Remember
+
+Some logical operations may be written in different ways. However, we should always use the notation that is most coherent in the context of our code. If in doubt, use the simplest / shortest notation.
+:::::::::::::
+
+
+To that end, you may want to use variables to split complex statements down to smaller portions:
+
+```{python}
+age_a, age_b = 15, 35
+	
+are_positive = age_a > 0 and age_b > 0
+	
+a_is_older = are_positive and (age_a > age_b)
+b_is_older = are_positive and (age_a < age_b)
+	
+a_is_teenager = are_positive and 12 < age_a < 20
+b_is_teenager = are_positive and 12 < age_b < 20
+	
+a_is_teenager and b_is_older
+```
+
+```{python}
+a_is_teenager and a_is_older
+```
+
+```{python}
+a_is_teenager and (b_is_teenager or b_is_older)
+```
+	
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Do it Yourself
+
+Given
+```
+a = 3
+b = 13
+```
+
+Test the following statements and display the results:
+	
+* $a^2 < b$
+* $3 - a^3 < b$
+* $|25 - a^2| > b$
+* $25 \bmod a^2 > b$
+* $25 \bmod a^2 > b$ or $25 \bmod b < a$
+* $25 \bmod a^2 < b$ and $25 \bmod b > a$
+* $\frac{12}{a}$ and $a\times4 < b$
+
+	
+where "|...|" represents the absolute value, and "$n \bmod m$" represents the remainder for the division of~$n$ by $m$.} 
+	
+Display the results in the following format:
+```
+1. [True/False]
+2. [True/False]
+...
+```
+
+Given that: 
+```   
+a = 3
+b = 13
+```
+
+:::::::::::::::: solution 
+
+## Q1
+
+```{python}
+print('1.', a**2 < b)
+```
+:::::::::::::::: 
+
+	
+:::::::::::::::: solution 
+
+## Q2
+
+```{python}
+print('2.', (3 - a**3) < b)
+```
+:::::::::::::::: 	
+
+	
+:::::::::::::::: solution 
+
+## Q3
+
+```{python}
+print('3.', abs(25 - a**2) > b)
+```
+:::::::::::::::: 	
+	
+:::::::::::::::: solution 
+
+## Q4
+
+```{python}
+print('4.', (25 % a**2) > b)
+```
+:::::::::::::::: 		
+	
+
+:::::::::::::::: solution 
+
+## Q5
+
+```{python}
+print('5.', (25 % a**2) > b or (25 % b) < a)
+```
+:::::::::::::::: 
+
+:::::::::::::::: solution 
+
+## Q6
+
+```{python}
+print('6.', (25 % a**2) < b and (25 % b) > a)
+```
+:::::::::::::::: 
+	
+	
+:::::::::::::::: solution 
+
+## Q7
+
+```{python}
+print('7.', (12 / a) and (a * 4) < b)
+```
+:::::::::::::::: 	
+
+
+:::::::::::::::::::::::::::::::::::::
+
+## Exercises
+
+:::::::: checklist
+
+## End of chapter **Exercises**
+
+- [x] Write and execute a Python script to display your own name as an output in the terminal.
+- [x] Write and execute a Python script that:
+  * Displays the text ```Please press enter to continue...```, and waits for the user to press enter.
+  * Once the user pressed enter, the program should display ```Welcome to my programme!``` before it terminates.
+- [x] We have an enzyme whose reaction velocity is $v=50~mol \cdot L^{-1} \cdot s^{-1}$ at the substrate concentration of $[S] = K_{m} = 2.5~mol \cdot L^{-1}$. Work out the maximum reaction velocity or $V_{\max}$ for this enzyme using the Michaelis-Menten equation:
+		
+
+
+		$$v = \frac{V_{\max} [\textrm{S}]}{K_{m} + [\textrm{S}]}$$   
+:::::::
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 -
