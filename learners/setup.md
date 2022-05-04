@@ -13,7 +13,7 @@ For the purpose of this course, we recommend the Anaconda distribution of Python
 </p>
 
 <p style='text-align: justify;'>	
-Anaconda automatically installs many package needed for scientific purposes (over 720 open source packages). It is easy to install, and it takes care of al dependencies between packages. This is particularly important because some of Python's scientific libraries have Fortran-- and C--based dependencies, which may be challenging to install for beginners.
+Anaconda automatically installs many package needed for scientific purposes (over 720 open source packages). It is easy to install, and it takes care of all dependencies between packages. This is particularly important because some of Python's scientific libraries have Fortran-- and C--based dependencies, which may be challenging to install for beginners.
 </p>
 
 ## Installation
