@@ -60,12 +60,12 @@ jobs:
       - name: "Setup Lesson Engine"
         uses: carpentries/actions/setup-sandpaper@main
         with:
-          cache-version: 2
+          cache-version: ${{ secrets.CACHE_VERSION }}
 
       - name: "Setup Package Cache"
         uses: carpentries/actions/setup-lesson-deps@main
         with:
-          cache-version: 2
+          cache-version: ${{ secrets.CACHE_VERSION }}
 
       - name: "Deploy Site"
         run: |
