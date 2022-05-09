@@ -64,7 +64,6 @@ contact: team@carpentries.org
 episodes:
   - 01-getting_started.Rmd
   - 02-input_output.Rmd
-  - 03-operations.Rmd
   - 04-conditional_statements.Rmd
   - 05-arrays.Rmd
   - 06-iterations.Rmd

@@ -151,7 +151,7 @@ print('Hello', 'John')
 ```
 
 
-Notice that there is a space between *Hello* and *John* even though we did not include a space in our text. This is the default behaviour of the **```print()```** function when it receives more than a single value (argument).
+Notice that there is a space between <span style="color: rgb(32, 121, 77);">'Hello'</span> and <span style="color: rgb(32, 121, 77);">'John'</span> even though we did not include a space in our text. This is the default behaviour of the **```print()```** function when it receives more than a single value (argument).
 
 This default behaviour may be inhibited:
 
@@ -193,34 +193,38 @@ print('Protein Kinase C (Alpha subunit)')
 
 ::::::::::::::::::::::::::::::: 
 
-![(#fig:terLinux) Terminal window on a Linux computer](fig/prompt.png) 
+![Terminal window on a Linux computer](fig/prompt.png){#fig:terLinux}
 
-![Terminal window on a Mac](fig/MacPrompt.png) {#fig:terMac}
+![Terminal window on a Mac](fig/MacPrompt.png){#fig:terMac}
 
 :::::::::::::::::::::::::::::::::::::::::::::::: discussion	
 ### Receiving an input
 [**Input**](https://docs.python.org/3/library/functions.html\#input)
 
-Inputs are I/O operations that involve receiving some data from the outside world. This might include reading the contents of a file, downloading something the Internet, or asking the user to enter a value.
+Inputs are I/O operations that involve receiving some data from the outside world. This might include reading the contents of a file, downloading something from the Internet, or asking the user to enter a value.
 
 The simplest way to acquire an input is to ask the user to enter a value in the terminal. To do so, we use a dedicated built-in function called **```input()```**. 
 
 ::::::::::::::::::::::: callout
 ## Note 
-In a Unix system (Mac OS or Linux), a tilde is an alias for a user's home directory.
+In a Unix system (Mac OS or Linux), a tilde (~) is an alias for a user's home directory.
 ::::::::::::::::::::::: 
 
 
-The function takes a single *argument* called ```prompt```. Prompt is the text displayed in the terminal to ask the user for an input. Figure [\@ref(fig:terLinux)] REF(fig:prompt), illustrates a screen shot of my personal computer's prompt, where it displays my user name (i.e. ```pouria```) followed by a tilde (~). A terminal prompt may be different in each computer and operating system.
+The function takes a single *argument* called ```prompt```. Prompt is the text displayed in the terminal to ask the user for an input. Figure [Terminal window on a Linux computer](#fig:terLinux) and [Terminal window on a Mac](#fig:terMac), illustrates a screen shot of my personal computer's prompt, where it displays my user name (i.e. ```pouria```) followed by a tilde (~). A terminal prompt may be different in each computer and operating system.
 
 
-Here is how we implement the **input()** function:
+Here is how we implement the **```input()```** function:
 
-> ```input('Please enter your name: ')```
+```
+input('Please enter your name: ')
+```
 
 which is exactly the same as:
 
-> ```input(prompt='Please enter your name: ')```
+```
+input(prompt='Please enter your name: ')
+```
 
 If we save one of the above in a file and call it ```script_b.py```; and execute the file using the Python 3 interpreter as described previously, we shall see the following:
 
@@ -230,10 +234,10 @@ python3 script_b.py
 Please enter your name: _
 ```
 
-The terminal cursor, displayed as an underscore in our example, will be in front of the prompt (i.e. ```Please enter your name: ```) waiting for a response. Once it receives a response, it will proceed to run the rest of the code (if any), or terminate the execution.
+The terminal cursor, displayed as an underscore in our example, will be in front of the prompt (i.e. ```'Please enter your name: '```) waiting for a response. Once it receives a response, it will proceed to run the rest of the code (if any), or terminate the execution.
 
 
-We may store the user's response in a variable. Variables are the topic of the next section, where we shall also review more examples on **input()** and how we can use it to produce results based on the responses we receive from the user.
+We may store the user's response in a variable. Variables are the topic of the next section, where we shall also review more examples on **```input()```** and how we can use it to produce results based on the responses we receive from the user.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -241,7 +245,7 @@ We may store the user's response in a variable. Variables are the topic of the n
 ::::::::::::::::::::::::::::::: callout
 
 ## Remember
-Python is an interpreted language; that is, the code we write is executed by the Python interpreter one line at a time. The **input()** function performs a *blocking* process. This means that the execution of the code by the Python interpreter is halted upon encountering an **input()** function until the user enters a value. Once a value is entered, the interpreter then proceeds to execute the next line.
+Python is an interpreted language; that is, the code we write is executed by the Python interpreter one line at a time. The **```input()```** function performs a *blocking* process. This means that the execution of the code by the Python interpreter is halted upon encountering an **```input()```** function until the user enters a value. Once a value is entered, the interpreter then proceeds to execute the next line.
 
 :::::::::::::::::::::::::::::::
 
@@ -253,7 +257,9 @@ Write a script that asks the user to enter the name of a protein in the terminal
 ::::::::::::::::::: solution 
 ## DIY ANSWER
 
-> ```input('Please enter the name of a protein: ')```
+```
+input('Please enter the name of a protein: ')
+```
 
 :::::::::::::::::::
 :::::::::::::::::::::::::::::::
