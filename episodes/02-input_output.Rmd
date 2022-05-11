@@ -9,17 +9,19 @@ output:
 
 ::::::::::::::::::::::::::::::::::::: questions 
 
-- 
--
--
+- What are I/O operations?
+- What variables do?
+- Why types and scope of variables are important?
+- What type of operations are used?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
--
--
--
+- Understanding the output and input operations
+- Build concepts of different types of variables
+- Learning about type conversions and scope
+- Understanding mathematical and logical operations
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'> 
@@ -1962,8 +1964,10 @@ print('7.', (12 / a) and (a * 4) < b)
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
--
--
--
+- Two key functions for I/O operations are <kbd>print()</kbd> and <kbd>input()</kbd>
+- Three most commonly used variables such as ```int```, ```float```, and ```str```.
+- Variable scope can be local or global depending where they are being used.
+- Mathematical operations follow conventional rules of precedence
+- Logical operations provide results in Boolean (True or False)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
