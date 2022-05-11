@@ -64,10 +64,11 @@ contact: team@carpentries.org
 episodes:
   - 01-getting_started.Rmd
   - 02-input_output.Rmd
-  - 04-conditional_statements.Rmd
-  - 05-arrays.Rmd
-  - 06-iterations.Rmd
-  - 07-functions.Rmd
+  - 03-conditional_statements.Rmd
+  - 04-arrays.Rmd
+  - 05-iterations.Rmd
+  - 06-functions.Rmd
+  - 07-strings.Rmd
 
 # Information for Learners
 learners:
