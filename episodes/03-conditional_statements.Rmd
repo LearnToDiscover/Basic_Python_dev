@@ -30,6 +30,12 @@ This chapter assumes that you are familiar with the following concepts in Python
 
 ::::::::::::::::::::::::::::::::
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+
+use_virtualenv("r-env")
+```
 When we construct logical expressions, we almost always do so because we need to test something. The definition of a process through which we test our logical expressions and provide directives on how to proceed is known in computer science as a *conditional statement*. Conditional statements are a feature of programming languages. This means that although their definitions and grammar may vary slightly from one programming language to another, their principles are almost universally identical.
 
 
@@ -134,7 +140,7 @@ students_present = 15
 # Conditional statement:
 if students_present > 10:  # Initiation
 		# Directive (must be indented).
-		print('More than 10 students are present.')
+    print('More than 10 students are present.')
 ```
 	
 
@@ -154,7 +160,9 @@ elif 0 < students_present < 10:
     print('Less than 10 students are present.')
 ```
 	
+	
 * To introduce a default --- i.e. where none of the above are ```True```, we use the syntax <kbd>else</kbd>.
+
 
 ```{python}
 students_present = 0
@@ -162,15 +170,15 @@ students_present = 0
 # Conditional statement:
 if students_present > 10:  # Initiation
 	# Directive (must be indented).
-	print('More than 10 students are present.')
+    print('More than 10 students are present.')
 
 elif 0 < students_present < 10:  # Alternative condition
 	# Alternative directive (must be indented).
-	print('Less than 10 students are present.')
+    print('Less than 10 students are present.')
 
 else:  # Default (none of the conditions are met).
 	# Directive (must be indented).
-	print('There is no one!')
+    print('There is no one!')
 ```
 	
 ::::::::::::::::::::: callout
@@ -188,37 +196,40 @@ Always use 4 spaces for indentation. Indentations are how the Python interpreter
 
 The indented part of the code is known as a *block*. A block represents a part of the code that always ``belongs'' to (is the child process of) the first *un*indented (dedented) line that precedes it. In other words, the action(s) within a conditional statement (actions that are subject to a specific condition) must always be *indented*:
 
-```
+```{python}
 
 value = 10
 	
 # Statement A:
-if value > 0:  # First dedented line before the block.
+if value > 0: 
+  
+# First dedented line before the block.  
 # This is a block, and it belongs to the 
 # preceding "if" (Statement A):
-	print('The value is positive.')
+    print('The value is positive.')
 
 	# We can have nested blocks too.
 	# Statement B:
-	if value > 9:  # First dedented line before the block.
+    if value > 9:  
+      # First dedented line before the block.
 		# This is another block (nested).
 		# This block belongs to the preceding "if" (Statement B).
-		print('The value is not a single digit.')
+        print('The value is not a single digit.')
 
 	# Introducing a default behaviour for Statement B:
-	else:
+    else:
 	# This block belongs to the preceding "else".
-		print('The value is a single digit.')
+      print('The value is a single digit.')
 
 # Introducing an alternative condition for Statement A:
 elif value < 0: 
 # This block belongs to the preceding "elif".
-	print('The value is negative.')
+    print('The value is negative.')
 
 # Introducing a default behaviour for Statement A:
 else:  
 # This block belongs to the preceding "else".
-	print('The value is zero.')
+    print('The value is zero.')
 ```
 
 
@@ -230,15 +241,15 @@ On that note, where possible, it is better to use conjunctions and disjunctions,
 value = 10
 	
 if value > 9:
-	print('The value is positive.')
-	print('The value is not a single digit.')
+  print('The value is positive.')
+  print('The value is not a single digit.')
 elif value > 0: 
-	print('The value is positive.')
-	print('The value is a single digit.')
+  print('The value is positive.')
+  print('The value is a single digit.')
 elif value < 0:
-	print('The value is negative.')
+  print('The value is negative.')
 else:
-	print('The value is zero.')
+  print('The value is zero.')
 ```
 
 
@@ -252,7 +263,12 @@ if value > 0:
    print('POSITIVE.')  # Indented with 3 spaces.
 
 ```
-
+```
+File <STDIN>, line 5
+    print('POSITIVE.')  # Indented with 3 spaces.
+                                                 ^
+IndentationError: unindent does not match any outer indentation level
+```
 :::::::::::::::::::::: callout
 
 ```Tab``` indentations represent different number of spaces on different computers and operating systems. It is therefore more than likely that they will lead to ```IndentationError```. Additionally, Python 3 disallows the mixing of **tab** and **space** indentations. Some Python IDEs such as *PyCharm* automatically convert ```Tab``` indentations to 4 spaces. Some other IDEs (e.g. Jupyter) typically highlight ```Tab``` indentations to explicitly distinguish them and thereby notify the programmer of their existence. However, more often than not, IDEs and text editors tend to *ignore* this, which amounts to inconsistencies and subsequently ```IndentationError```. This is a very common difficulty that new Python programmers face, and can be very confusing if not handled correctly.} 
@@ -357,16 +373,16 @@ There are a few very popular shorthands in Python that you should be familiar wi
 
 In an <kbd>if</kbd> statement, Python expects the result of the condition to be ```True```. As result of that, we can simplify the above example as follows:
 
-```
+```{python}
 light_status = False
 	
 if light_status:
 	
-	action = 'The light is on; you may want to turn off the desk light.'
+  action = 'The light is on; you may want to turn off the desk light.'
 	
-	else:
+else:
 	
-		action = 'The light is off... turn it on.'
+  action = 'The light is off... turn it on.'
 	
 print(action)
 ```
