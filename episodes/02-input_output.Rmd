@@ -7,6 +7,11 @@ output:
     keep_md: true
 ---
 
+[**Download Chapter pdf**](02-input_output.md.pdf)
+
+[**Download Chapter notebook (ipynb)**](02-input_output.ipynb)
+
+
 ::::::::::::::::::::::::::::::::::::: questions 
 
 - What are I/O operations?
@@ -30,6 +35,9 @@ library(reticulate)
 
 use_virtualenv("r-env")
 ```
+
+
+
 <p style='text-align: justify;'> 
 In programming, we process data and produce outputs. When the data is being processed, it is stored in the memory, so that it is readily available, and can therefore be subject to the processes we want to apply.
 </p>

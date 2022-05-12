@@ -4,6 +4,10 @@ teaching: 10
 exercises: 2
 ---
 
+[**Download Chapter pdf**](01-getting_started.md.pdf)
+
+[**Download Chapter notebook (ipynb)**](01-getting_started.ipynb)
+
 ::::::::::::::::::::::::::::::::::::: questions 
 
 - Programming - why bother?
