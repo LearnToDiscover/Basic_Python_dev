@@ -36,7 +36,9 @@ library(reticulate)
 use_virtualenv("r-env")
 ```
 
-
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qr-UBp_AeDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 <p style='text-align: justify;'> 
 In programming, we process data and produce outputs. When the data is being processed, it is stored in the memory, so that it is readily available, and can therefore be subject to the processes we want to apply.
@@ -90,6 +92,7 @@ If you are interested in learning more about I/O systems and how they are handle
 <p style='text-align: justify;'>
 In this section, we learn about two very basic but most fundamental methods of I/O operations in Python. We will be using these methods throughout the course, so it is essential that you feel comfortable with them and the way they work before moving on. We shall return to I/O operations later in the course, especially in chapter [Strings](REF-chapter:StringsAndFiles).
 </p>
+
 
 :::::::::::::::::::::::::::::::::::::::::::::::: discussion	
 ### Producing an output

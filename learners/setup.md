@@ -21,5 +21,9 @@ Anaconda automatically installs many package needed for scientific purposes (ove
 To install the Anaconda distribution of Python, please visit the [installation instructions](https://docs.anaconda.com/anaconda/install/) as outlined in the Anaconda documentations, and follow the instructions for your operating system. Ensure that you use the Python 3.x graphical installer for Windows and MacOSX (there is no graphical installer for Linux). Once downloaded, you can proceed to install the distribution as you would any other application on your computer.
 </p>
 
+### Starting with JupyterLab
+Here is the video to learn using JupyterLab
 
-
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sem75rYIrvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
