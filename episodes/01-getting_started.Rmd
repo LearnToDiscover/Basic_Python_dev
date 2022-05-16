@@ -11,8 +11,8 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::: questions 
 
 - Programming - why bother?
-- Why python?
-- How to learn?
+- Why Python?
+- How to learn it?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -31,7 +31,7 @@ Data handling and analysis in bio-research and medicine is best done using codin
 
 ## This Course
 <p style='text-align: justify;'>
-Focusing on the Python programming language throughout this course, we will discuss some universal principles shared amongst many programming languages. Through a diverse range of examples, we will be training these principles by solving problems that we face in biological and medical research.
+We focus on the Python programming language throughout this course, but we discuss universal principles shared amongst many programming languages. Through a diverse range of examples, we will be training these principles by solving problems that we face in biological and medical research.
 </p>
 
 ::::::::::::::::::::::::::::::::::::::::::::::
@@ -50,7 +50,7 @@ In addition, the 2021 developer survey conducted by StackOverflow found that Pyt
 
 ## How to learn?	
 <p style='text-align: justify;'>
-Learning how to code as a beginner is akin to learning how to walk as a baby. You cannot learn programming by memorising directives; no matter how well you memorise them. To learn how to code, one must learn how think algorithmically; that is, how to break different tasks down into logical procedures. The only way to learn how to think that way is to practice, make mistakes, and how to overcome those mistakes. It is common to make the same mistake more than once, especially in different contexts, and that can become frustrating at times. However, once you get it, you will have it for life.
+Learning how to code as a beginner is akin to learning how to walk as a baby. You cannot learn programming by memorising directives; no matter how well you memorise them. To learn how to code, one must learn how think algorithmically; that is, how to break different tasks down into logical procedures. The only way to learn how to "think code" is to practice, make mistakes, and how to overcome those mistakes. It is common to make the same mistake more than once, especially in different contexts, and that can become frustrating at times. However, once you get it, you have it for life.
 </p>
 
 <p style='text-align: justify;'>	
@@ -62,7 +62,7 @@ There are lots materials on the web, both free and paid, to assist with your lea
 ::::::::::::::::::::::::::::::::::::: callout
 ## Known Quirk
 <p style='text-align: justify;'>
-Unlike popular belief, the name **Python** has nothing to do with the snake. It is in fact derived from the popular British sketch comedy series [Monty Python's Flying Circus](https://en.wikipedia.org/wiki/Monty_Python\%27s_Flying_Circus), of which van Rossum was a self-confessed fan.
+Unlike popular belief, the name **Python** has nothing to do with the snake. It is in fact derived from the popular British sketch comedy series [Monty Python's Flying Circus](https://en.wikipedia.org/wiki/Monty_Python\%27s_Flying_Circus), of which inventor Guido van Rossum was a self-confessed fan.
 </p>
 
 ::::::::::::::::::::::::::::::::::::::::::::::: 
@@ -72,20 +72,20 @@ Unlike popular belief, the name **Python** has nothing to do with the snake. It 
 Python is a general-purpose, high-level programming language. It was invented by the Dutch computer programmer [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) and was released for the first time in 1990. 
 </p>
 <p style='text-align: justify;'>	
-A **high-level** programming language is a language that enjoys strong abstraction from computer details. This means that it is closer to the language that is spoken and understood by humans; which put simply, makes the language more enjoyable to work with.
+A **high-level** programming language is a language that enjoys strong abstraction from computer details. This means that it is closer to the language that is spoken and understood by humans; put simply: it makes the language more enjoyable to work with.
 </p>	
 
 :::::::::::::::::::::::::::::::::::::::::::::::: discussion	
 ## Categories
 <p style='text-align: justify;'>
-In terms of compilation, programming languages may be divided into two different categories:
+In terms of compilation (the conversion of code into the binary symbols understood by a computer), programming languages may be divided into two different categories:
 </p>
 
 <p style='text-align: justify;'>
 1 - **Compiled ** These are languages whose code is translated (compiled) into machine language en-masse, and in advance, using a designated compiler programme --- e.g.\  C, Rust, Haskell.
 </p>
 <p style='text-align: justify;'>
-2- **Interpreted** Rely on and must *always* be accompanied with an interpreter, whose job is to translate the source code into machine language one line at a time --- e.g.\  Python, R, MATLAB^&#174;^.
+2- **Interpreted** These languages rely on and must *always* be accompanied by an interpreter, whose job is to translate the source code into machine language one line at a time --- e.g.\  Python, R, MATLAB^&#174;^.
 </p>
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
@@ -97,7 +97,7 @@ In terms of compilation, programming languages may be divided into two different
 
 - Programming is an important skill which is highly applicable to bio-research and medicine.
 - Python is one of the most popular programming language for being general-purpose and high level language.
-- Python requires interpreter for line by line code translation. 
+- Python uses an interpreter for line by line code translation. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

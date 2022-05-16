@@ -13,12 +13,12 @@ For the purpose of this course, we recommend the Anaconda distribution of Python
 </p>
 
 <p style='text-align: justify;'>	
-Anaconda automatically installs many package needed for scientific purposes (over 720 open source packages). It is easy to install, and it takes care of all dependencies between packages. This is particularly important because some of Python's scientific libraries have Fortran-- and C--based dependencies, which may be challenging to install for beginners.
+Anaconda automatically installs many packages needed for scientific purposes (over 250 automatically installed). It is easy to install, and it takes care of dependencies between packages. This is particularly important because some of Python's scientific libraries require Fortran-- and C--based libraries, which may be challenging to install for beginners.
 </p>
 
 ## Installation
 <p style='text-align: justify;'>
-To install the Anaconda distribution of Python, please visit the [installation instructions](https://docs.anaconda.com/anaconda/install/) as outlined in the Anaconda documentations, and follow the instructions for your operating system. Ensure that you use the Python 3.x graphical installer for Windows and MacOSX (there is no graphical installer for Linux). Once downloaded, you can proceed to install the distribution as you would any other application on your computer.
+To install the Anaconda distribution of Python, please visit the [installation instructions](https://docs.anaconda.com/anaconda/install/) as outlined in the Anaconda [documentations](https://docs.anaconda.com/anaconda/install/), and follow the instructions for your operating system. Ensure that you use the Python 3.x graphical installer for Windows and MacOSX (there is no graphical installer for Linux). Once downloaded, you can proceed to install the distribution as you would any other application on your computer.
 </p>
 
 ### Starting with JupyterLab

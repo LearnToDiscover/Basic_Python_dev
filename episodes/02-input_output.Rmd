@@ -15,9 +15,9 @@ output:
 ::::::::::::::::::::::::::::::::::::: questions 
 
 - What are I/O operations?
-- What variables do?
-- Why types and scope of variables are important?
-- What type of operations are used?
+- What do variables do?
+- Why types and scopes of variables are important?
+- What types of operations are used?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -40,34 +40,38 @@ use_virtualenv("r-env")
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qr-UBp_AeDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-<p style='text-align: justify;'> 
-In programming, we process data and produce outputs. When the data is being processed, it is stored in the memory, so that it is readily available, and can therefore be subject to the processes we want to apply.
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rCwBVf4_XjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 <p style='text-align: justify;'> 
-Throughout this section, we will discuss how to handle data in Python. We start by learning how to display data on the screen, and receive an input from a user. We then use these techniques to perform different mathematical, and logical operations. This chapter introduces the fundamental principles that we will employ every time we code in Python. On that account, it is very important that you understand this chapter well before moving on. 
+In programming, we process data and produce outputs. When data is being processed, it is stored in a memory, so that it is readily available, and can therefore be subject to the processes we want to apply.
+</p>
+
+<p style='text-align: justify;'> 
+Throughout this section, we will discuss how to handle data in Python. We start by displaying data on the screen, and see how to receive input from a user. We then use these techniques to perform different mathematical and logical operations. This chapter introduces the fundamental principles that we employ every time we code in Python. On that account, make sure you understand everything before moving on. 
 </p>
 
 
 ## I/O Operations {#operations}
 <p style='text-align: justify;'> 
-In computer science, input or output operations refer to the communication between an information processing system such as a computer, and the outside world, which may be a user or another computer. Such communications are more commonly known as *I/O operations*. In general, the outside world --- especially in the context of this course, may be loosely defined as anything that falls outside of the environment that is directly controlled by an application. 
+In computer science, input or output operations refer to the communication between an information processing system such as a computer, and the outside world, which may be a user or another computer. Such communications are more commonly known as *I/O operations*. In general, the outside world --- especially in the context of this course, may be loosely defined as anything that falls outside of the coding environment. 
 </p>
 
 ::::::::::::::::::::::::::::::::::::: callout
 ## REMEMBER
 <p style='text-align: justify;'>
-Only what we define within the environment of our application and store in the memory is directly controlled by our application. We may access or take control over other environments through certain mediums; however, such interactions are classified as I/O operations. An example of this is interacting with a file on our computer, which we discuss in the topic of [Strings](07-strings.Rmd). Whilst we have complete control over the file while we are working on it (e.g. reading from it or writing to it), our access to the file and the transmission of data is in fact controlled and managed by the operating system.
+Only what we define within the environment and what we store in the memory is directly controlled by our application. We may access or take control over other environments through certain mediums; however, such interactions are classified as I/O operations. An example of this is interacting with a file on our computer, which we discuss in the topic of [Strings](07-strings.Rmd). Whilst we have complete control over a file while working on it (e.g. reading from it or writing to it), the access to the file and the transmission of data is in fact controlled and managed not by the programming environment but by the operating system of the computer.
 </p>
 
 ::::::::::::::::::::::::::::::::::::: 
 
 
-In programming, I/O operations include, but are certainly not limited to:
+In programming, I/O operations include, but are not limited to:
 
-* displaying the results of a calculation to the user
+* displaying the results of a calculation
 
-* asking the user enter a value
+* require the user to enter a value
 
 * writing or reading data to and from a file or a database
 
@@ -75,7 +79,6 @@ In programming, I/O operations include, but are certainly not limited to:
 
 * operating a hardware (e.g. a robot)
 
-* any operation that allows our programme to communicate the data stored in the memory.
 
 :::::: prereq
 
@@ -90,7 +93,7 @@ If you are interested in learning more about I/O systems and how they are handle
 [**Input and Output**](https://docs.python.org/3/tutorial/inputoutput.html)
 
 <p style='text-align: justify;'>
-In this section, we learn about two very basic but most fundamental methods of I/O operations in Python. We will be using these methods throughout the course, so it is essential that you feel comfortable with them and the way they work before moving on. We shall return to I/O operations later in the course, especially in chapter [Strings](07-strings.Rmd).
+In this section, we learn about two fundamental methods of I/O operations in Python. We will be using these methods throughout the course, so it is essential that you feel comfortable with them and the way they work before moving on.
 </p>
 
 
@@ -99,7 +102,7 @@ In this section, we learn about two very basic but most fundamental methods of I
 [**Print**](https://docs.python.org/3/library/functions.html\#print)
 
 <p style='text-align: justify;'>
-The term ```output``` in reference to an application typically refers to the data that has either been generated, or manipulated by that application.
+The term ```output``` in reference to an application typically refers to data that has either been generated or manipulated by that application.
 </p>
 
 <p style='text-align: justify;'>
@@ -107,7 +110,7 @@ For example; we have two number and we would like to calculate their sum. The ac
 </p>
 
 <p style='text-align: justify;'>
-The simplest and most frequently used method for generating an output in almost every modern programming language is to display something on the screen. We normally run our Python scripts and programmes from the terminal; so the typical (and the easiest) method for producing an output is to display it in the terminal.  The way we do this is by calling a dedicated built-in function called <kbd>print()</kbd>.
+The simplest and most frequently used method for generating an output in almost every modern programming language is to display something on the screen. We recommend using JupyterLab notebooks to run our scripts and the typical method to produce an output is to display it in cell below the code.To do this, we will call a dedicated built-in function named <kbd>print()</kbd>.
 </p>
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -115,13 +118,13 @@ The simplest and most frequently used method for generating an output in almost 
 ## REMEMBER
 
 <p style='text-align: justify;'>
-In programming, a ```function``` is essentially an isolated piece of code. It usually to takes some inputs, *does *something to or with them, and produces an ```output```. The pair of parenthesis that follow a function are there so that we can provide the function with the *input arguments* it needs when we *call* it, so that it can do what it is supposed to do using our data. We will explore functions in more details in chapter [Functions](06-functions.Rmd).
+In programming, a ```function``` is essentially an isolated piece of code. It usually to takes some inputs, *does *something to or with them, and produces an ```output```. The pair of (typically round) parenthesis that follow a function are there to provide the function with the *input arguments* it needs when we *call* it, so that it can do what it is supposed to do using our data. We will explore functions in more details in Lesson 4 [Functions](06-functions.Rmd).
 </p>
 
 ::::::::::::::::::::::::::::::::::::: 
 
 <p style='text-align: justify;'>
-The <kbd>print()</kbd> function can take several inputs and performs different tasks. Its primary objective, however, is to take some values as input and display them in the terminal. Here is how it works:
+The <kbd>print()</kbd> function can take several inputs and performs different tasks. Its primary objective, however, is to take some values as input and display them on the screen. Here is how it works:
 </p>
 
 Suppose we want to display some text in the terminal. To do so, we write:
@@ -130,15 +133,15 @@ Suppose we want to display some text in the terminal. To do so, we write:
 print('Hello world!')
 ```
 <p style='text-align: justify;'>
-in our favourite editor or IDE and save it as ```script_a.py``` in a file. This is not a fully functioning python programme that we can run using the Python interpreter.
+in a cell of our notebook (or, if not using a notebook, an editor or IDE) and save the notebook in a file. This is now a fully functioning Python programme that we can run using the Python interpreter.
 </p>
 
 <p style='text-align: justify;'>
-If you are using an Integrated Development Environment (IDE) --- e.g.\ Visual Studio Code, you may execute your code using the internal tools provided by that IDE. The specifics of how you do so depends on the IDE that you are using.
+If you are using an Integrated Development Environment (IDE) --- e.g.\ Visual Studio Code, you have to save the code in a file with extension ```.py``` and may then execute your code using the internal tools provided by that IDE. The specifics of how you do so depend on the IDE that you are using.
 </p>
 
 <p style='text-align: justify;'>
-Alternatively, we could always execute Python scripts manually. To do so, we open the terminal or the command prompt (CMD) in Windows and navigate to the directory where we saved ```script_a.py```. 
+```.py``` Python scripts can also be executed manually. To do so, we open the terminal in MacOS or Linux or the command prompt (CMD) in Windows and navigate to the directory where we saved the script. 
 </p>
 
 :::::: prereq
@@ -150,14 +153,18 @@ If you don't know how to navigate in the terminal, see the example in section [H
 
 :::::: 
 
-Once in the correct directory, we run the script by typing ```python3 script_a.py``` in our terminal as follows:
+Once in the correct directory, we run a script called ```script_a.py``` by typing ```python3 script_a.py``` in our terminal as follows:
 
 ```{bash}
 python3 script_a.py
 ```
 
 <p style='text-align: justify;'>
-This will call the Python 3 interpreter to execute the code we wrote in ```script_a.py```. Once executed, which in this case should be instantaneously, we should see the output:
+This will call the Python 3 interpreter to execute the code we wrote in ```script_a.py```. Once executed, which in this case should be instantaneously, we should see the output.
+</p>
+
+<p style='text-align: justify;'>
+In a JupyterLab notebook we can press the keyboard shortcut 'shift-enter' to execute the code in a cell. The output will be displayed below the code cell.
 </p>
 
 <p style='text-align: justify;'>
@@ -170,7 +177,7 @@ This will call the Python 3 interpreter to execute the code we wrote in ```scrip
 ## REMEMBER
 
 <p style='text-align: justify;'>
-We know <kbd>print()</kbd> is a *function* because it ends with a pair of parenthesis, and it is written entirely in lowercase characters [PEP-8: Function Names](https://www.python.org/dev/peps/pep-0008/#function-names). Some IDEs change color when they encounter built-in functions in the code so that we won't accidentally overwrite them. We shall discuss *functions* in more details in chapter [Functions](06-functions.Rmd).
+We know <kbd>print()</kbd> is a *function* because it ends with a pair of parenthesis, and it is written entirely in lowercase characters [PEP-8: Function Names](https://www.python.org/dev/peps/pep-0008/#function-names). Some IDEs change color when they encounter built-in functions in the code so that we won't accidentally overwrite them. We shall discuss *functions* in more details in Lesson 4 [Functions](06-functions.Rmd).
 </p>
 
 ::::::::::::::::::::::::::::::::::::: 
@@ -188,7 +195,7 @@ print('Hello', 'John')
 Notice that there is a space between <span style="color: rgb(32, 121, 77);">'Hello'</span> and <span style="color: rgb(32, 121, 77);">'John'</span> even though we did not include a space in our text. This is the default behaviour of the <kbd>print()</kbd> function when it receives more than a single value (argument).
 </p>
 
-This default behaviour may be inhibited:
+This default behaviour may be changed:
 
 ```{python}
 print('Hello', 'John', sep='')
@@ -211,7 +218,7 @@ print('Jane', 21, 'London', sep='.')
 
 ## Do it Yourself
 
-Write a script that displays the following output:
+Write code that displays the following output:
 
 >**Protein Kinase C (Alpha subunit)**
 	
@@ -265,7 +272,8 @@ which is exactly the same as:
 input(prompt='Please enter your name: ')
 ```
 
-If we save one of the above in a file and call it ```script_b.py```; and execute the file using the Python 3 interpreter as described previously, we shall see the following:
+If we save one of the above in a notebook and execute it, we will see:
+
 
 ```
 python3 script_b.py
@@ -329,7 +337,7 @@ There are some relatively simple rules to follow when defining variable names, w
 
 ## Remember
 <p style='text-align: justify;'>
-We should never overwrite an existing, built-in definitions or identifier (e.g. ```int``` or  ```j```). We will be learning many such definitions and identifiers as we progress through this course. Nonetheless, a good IDE highlights syntaxes and built-in identifiers in different colours. The exact colouring scheme depends on the IDE and the theme. That is why the internal identifiers display in different colour in the previous example.
+We should never overwrite an existing, built-in definition or identifier (e.g. ```int``` or  ```print```). We will be learning many such definitions and identifiers as we progress through this course. Nonetheless, the Jupyterlab notebook as well as any good IDE highlights syntaxes and built-in identifiers in different colours. In JupyterLab the default for built-in definitions is green. The exact colouring scheme depends on the IDE and the theme.
 </p>
 
 :::::::::::::::::::::::
@@ -375,12 +383,12 @@ print('Hi,', forename, surname)
 
 ## Do it Yourself {#diy:enzyme}
 <p style='text-align: justify;'>
-Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, internalisation and degradation of oxidatively modified low density lipoprotein by vascular endothelial cells. Using the [Universal Protein Resource](https://uniprot.org}{Universal Protein Resource) (UniProt) website, find this protein for humans, and identify:
+Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, internalisation and degradation of oxidatively modified low density lipoprotein by vascular endothelial cells. Using the [Universal Protein Resource](https://beta.uniprot.org) (UniProt) website, find this protein for humans, and identify:
 </p>
 
 * UniProt entry number.
-* Length of the protein for isoform 1 (under \emph{Sequences}).
-* Gene name (under \emph{Names \& Taxonomy}). 
+* Length of the protein (right at the top).
+* Gene name (right at the top). 
 
 Store the information you retrieved, including the protein name, in 4 separate variables. 
 	
@@ -407,36 +415,6 @@ print(name, uniprot_entry, gene_name, length, sep='   ')
 ::::::::::::::: 
 
 ::::::::::::::::::::::::::::::: 
-
-
-
-#### **Using variables with input**
-
-<p style='text-align: justify;'>
-Now that we know how to create variables to store values, we can also use them to retain the value entered by the user when using the <kbd>input()</kbd> function:
-</p>
-
-```
-name = input('Please enter your name: ')
-	
-print('Hi,', name)
-
-```
-<p style='text-align: justify;'>
-If we save this in a file called ```script_c.py``` and run it, the output will appear in the terminal as displayed in Figure [Run from terminal](#fig:inputExample).
-</p>
-
-![Run from terminal](fig/input_example.png){#fig:inputExample}
-
-
-::::::::::::::::::::::::::: callout 
-
-## Remember
-<p style='text-align: justify;'>
-The <kbd>input()</kbd> function displays a prompt and waits for the user to enter a value. The value entered by the user is then *returned* by the function as a ```str``` type. The value returned by a function may also be referred to as the *output* of that function. The output of a function may be stored in a variable. 
-</p>
-
-:::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::: challenge 
 
@@ -531,7 +509,7 @@ Now that we know how to define variables in Python, you may have noticed that de
 Python enjoys a powerful type system out of the box. Table [Built-in types in Python](#tb:types:nativeTypes) provides a comprehensive reference for the built-in types in Python. Built-in types are the types that exist in the language and do not require any third party libraries to implement or use. 
 </p>
 
-![A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. <br> <br>**Mutability** is an important [concept in programming](https://en.wikipedia.org/wiki/Immutable_object). For the purpose of this tutorial, a mutable object is an object whose value(s) may be altered. This will become clearer once we study ```list``` and ```tuple```. Find out more about mutability in Python from the [documentations}](https://docs.python.org/3.6/reference/datamodel.html). <br> <br>**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have a real part, and an imaginary part; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). ](fig/python_built-in_types.png){#tb:types:nativeTypes}
+![A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. <br> <br>**Mutability** is an important [concept in programming](https://en.wikipedia.org/wiki/Immutable_object). A mutable object is an object whose value(s) may be altered. This will become clearer once we study ```list``` and ```tuple```. Find out more about mutability in Python from the [documentations}](https://docs.python.org/3.6/reference/datamodel.html). <br> <br>**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have a real part, and an imaginary part; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). ](fig/python_built-in_types.png){#tb:types:nativeTypes}
 
  
 Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:
@@ -593,6 +571,8 @@ The result for each value should be represented in the following format:
 ```Value X is an instance of <class 'Y'>```
 
 ::::::::::::::: solution 
+
+## DIY ANSWER 
 
 ```{python}
 value = 32
@@ -678,7 +658,7 @@ It is sometimes necessary to have the values returned by the <kbd>input()</kbd> 
 
 <p style='text-align: justify;'>
 <span style="color: rgb(32, 121, 77);">	
-"We ask our user to enter the total volume of their purified protein, so that we can work out the amount of assay they need to conduct a specific experiment. To calculate this assay volume using the volume of the purified protein, we need to perform mathematical calculations based on the response we receive from our user. It is not possible to perform mathematical operations on non-numeric values. Therefore, we ought to somehow convert the type from \texttt{str} to a numeric type." 
+"We ask our user to enter the total volume of their purified protein, so that we can work out the amount of assay they need to conduct a specific experiment. To calculate this assay volume using the volume of the purified protein, we need to perform mathematical calculations based on the response we receive from our user. It is not possible to perform mathematical operations on non-numeric values. Therefore, we ought to somehow convert the type from ```str``` to a numeric type." 
 </span>
 </p>
 
@@ -760,6 +740,9 @@ Debug the snippet so that the correct result is displayed:
 
 
 :::::::::::::::::: solution
+
+## DIY ANSWER 
+
 ```{python}
 value_a = 3
 
@@ -777,20 +760,9 @@ print(value_a, '+', value_b, '=', result)
 ### **Handling input variables**
 ::::::::::::::::::::::::::::::: discussion
 <p style='text-align: justify;'>
-When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type ```str```. So for the code we explored in relation to Figure [Run from terminal](#fig:inputExample), we could assess the input type as follows:
-</p>
-
-```
-name = input('Please enter your name: ')
-		
-print(name, type(name))
-```
-<p style='text-align: justify;'>	
-If we save this script in a file called ```script_d.py``` and run it, the output will be as displayed in Figure [Run script](#fig:inputTypeExample). 
-</p>
+When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type ```str```. An <kbd>input()</kbd> function always stores the response as a ```str``` value, no matter what the user enters. However, it is possible to convert the type afterwards.
 
 
-![Type evaluation against four different responses to the ***input()*** function. An **input()** function *always* stores the response as a ```str``` value, no matter what the user enters.](fig/input_type_example.png){#fig:inputTypeExample}	
 ::::::::::::::::::::::::::::::: 
 	
 :::::::::::::: callout
@@ -816,10 +788,9 @@ print('response_numeric type:', type(response_numeric))
 ```
 	
 <p style='text-align: justify;'>
-If we save this as ```script_e.py``` as run it, we will be directed to enter numeric values. The first two attempts displayed in Figure [Input conversion](#fig:inputConversionExample) demonstrate the results when we enter numeric values as directed. If, however, we supply a non-numeric response as demonstrated in the third attempt, a ```ValueError``` will be raised. 
+The output shows the results when we enter numeric values as directed. 
 </p>	
 
-![Input conversion](fig/input_conversion_example.png){#fig:inputConversionExample}		
 	
 ::::::::::::::::::::::::::::::::::: challenge
 ## Do it Yourself 
@@ -840,6 +811,8 @@ where ```NUCLEOTIDES``` is the total number of mRNA nucleotides that you calcula
 **Note:** Multiplication is represented using the asterisk (```*```) sign.
 
 ::::::::::::: solution
+
+## DIY ANSWER 
 
 ```
 enzyme = input('Please enter the name of an enzyme: ')
@@ -890,10 +863,10 @@ Python is an interpreted language. This means that the Python interpreter goes t
 </p>
 
 <p style='text-align: justify;'>
-Although scope and hierarchy appear at first glance as theoretical concepts in programming, their implications are entirely practical. The definition of these principles tend to vary from one programming language to another. As such, it is essential to understand these principles and their implications in relation to any programming language we are trying to learn.
+Although scope and hierarchy appear at first glance as theoretical concepts in programming, their implications are entirely practical. The definition of these principles vary from one programming language to another. As such, it is essential to understand these principles and their implications in relation to any programming language we are trying to learn.
 </p>
 
-### **How to use terminal environment?** {#terminal}
+### **Optional: How to use terminal environment?** {#terminal}
 ![](fig/commandprompt_1.png)
 ![](fig/commandprompt_2.png)
 ![](fig/commandprompt_3.png)

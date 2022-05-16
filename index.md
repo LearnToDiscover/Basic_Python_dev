@@ -2,7 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-In this section we will focus ways of setting up system to get started with basic Python. 
+In this section we will focus on setting up the computer to get started with Python. 
 
 
 
