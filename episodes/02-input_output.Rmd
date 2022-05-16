@@ -39,14 +39,22 @@ use_virtualenv("r-env")
 <p align = "center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qr-UBp_AeDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+<br>
 
 <p align = "center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rCwBVf4_XjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+<br>
+
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2JROJYyCEuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
 
 <p style='text-align: justify;'> 
 In programming, we process data and produce outputs. When data is being processed, it is stored in a memory, so that it is readily available, and can therefore be subject to the processes we want to apply.
 </p>
+
 
 <p style='text-align: justify;'> 
 Throughout this section, we will discuss how to handle data in Python. We start by displaying data on the screen, and see how to receive input from a user. We then use these techniques to perform different mathematical and logical operations. This chapter introduces the fundamental principles that we employ every time we code in Python. On that account, make sure you understand everything before moving on. 
