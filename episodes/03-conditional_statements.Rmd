@@ -26,6 +26,11 @@ exercises: 2
 - Learning structuring code using correct indentation. 
 - Understanding the hierarchy of conditional statements.
 ::::::::::::::::::::::::::::::::::::::::::::::::
+<br>
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oxB_XFfC4VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
 
 This chapter assumes that you are familiar with the following concepts in Python 3:
 
