@@ -10,6 +10,7 @@ exercises: 2
 
 [**Download Chapter notebook (ipynb)**](03-conditional_statements.ipynb)
 
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What are conditional statements?
