@@ -1,0 +1,47 @@
+\documentclass[float=false, crop=false]{standalone}
+\usepackage[subpreambles=true,]{standalone}
+% \usepackage{styles/python}
+\usepackage{import}
+
+\begin{document}
+\section{Associative Arrays and Sets}
+
+\begin{itemize}
+	% \require \nameref{sec:ioOperatons}
+	% \require \nameref{sec:variablesAndTypes}
+	% \require \nameref{subsec:mathematicalOperations}
+	\item Indentation Rule
+	% \require \nameref{subsec:logicalOperatons} +
+	\item Conditional Statements}
+	\item Arrays (List and Tuple)
+	\item For Loops and Iterations
+\end{itemize}
+
+
+\input{Python/associative_arrays/dictionary}
+
+\input{Python/associative_arrays/for_and_dict}
+
+\subsection{Summary}
+In this section we talked about dictionaries, which are one the most powerful built-in types in Python. We learned:
+\begin{itemize}[itemsep=1pt]
+	\item how to create dictionaries in Python,
+	\item methods to alter or manipulate normal and nested dictionaries,
+	\item two different techniques for changing an existing \emph{key},
+	\item examples on how dictionaries help us organise our data and retrieve them when needed,
+\end{itemize}
+
+Finally, we also learned that we can create an \emph{iterable} (discussed in section~\ref{subsec:forLoops}) from dictionary \emph{keys} or \emph{values} using the \pymeth{.key()}, the \pymeth{.values()}, or the \pymeth{.items()} methods.
+
+
+\input{Python/associative_arrays/frequencyAnalysis}
+
+
+\include{Python/associative_arrays/set}
+
+
+\include{Python/associative_arrays/cheatsheet}
+
+
+\include{Python/associative_arrays/exercises}
+\end{document}
