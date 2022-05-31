@@ -1,11 +1,14 @@
 ---
-title: "Iterations (Lesson Under Preparation)"
+title: "Iterations"
 teaching: 58
 exercises: 2
 ---
 [**Download Chapter pdf**](05-iterations.md.pdf)
 
 [**Download Chapter notebook (ipynb)**](05-iterations.ipynb)
+
+[<span style="color: rgb(255, 0, 0);">**Mandatory Lesson Feedback Survey**</span>](https://docs.google.com/forms/d/e/1FAIpQLSdr0capF7jloJhPH3Pki1B3LZoKOG16poOpuVJ7SL2LkwLHQA/viewform?pli=1)
+
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
@@ -116,7 +119,7 @@ There are some universal tools for iterations that exist in all programming lang
 Throughout this section, we will discuss iterations via <kbd>for</kbd> and <kbd>while</kbd> loops, and review some real-world examples that may be only be addressed using iterative processes. 
 </p>
 
-## for-loops
+## for-loops {#for-loop}
 
 <p style='text-align: justify;'>
 Some of the data show that up to 80\% of all conventional iterations are implemented as <kbd>for</kbd> loops. Whether or not it is the best choice in of all these cases is a matter of opinion. What is important, however, is to learn the difference between the 2 methods and feel comfortable with how they work. 
@@ -433,7 +436,7 @@ print(numbers)
 
 ::::::::::::::::::::::::::::::: challenge 
 
-## Do it Yourself
+## Do it Yourself {#diy:loops:for:enumerate}
 
 Given:
 ```{python}

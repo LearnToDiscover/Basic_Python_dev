@@ -11,6 +11,7 @@ output:
 
 [**Download Chapter notebook (ipynb)**](02-input_output.ipynb)
 
+[<span style="color: rgb(255, 0, 0);">**Mandatory Lesson Feedback Survey**</span>](https://docs.google.com/forms/d/e/1FAIpQLSdr0capF7jloJhPH3Pki1B3LZoKOG16poOpuVJ7SL2LkwLHQA/viewform?pli=1)
 
 ::::::::::::::::::::::::::::::::::::: questions 
 
