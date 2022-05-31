@@ -262,12 +262,9 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>
-</li>
-<li>
-</li>
-<li>
-</li>
+<ul><li>How a dictionary is defined in Python?</li>
+<li>What are the ways to interact with a dictionary?</li>
+<li>Can a dictionary be nested?</li>
 </ul></div>
 </div>
 </div>
@@ -275,12 +272,9 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>
-</li>
-<li>
-</li>
-<li>
-</li>
+<ul><li>Understanding the structure of a dictionary.</li>
+<li>Learning ways of accessing data from a dictionary.</li>
+<li>Practising the nested dictionaries to deal with complex data.</li>
 </ul></div>
 </div>
 </div>
@@ -302,7 +296,10 @@
 </div>
 </div>
 <section id="sec:dict"><h2 class="section-heading">Dictionary</h2>
-<hr class="half-width"><p><a href="https://docs.python.org/3.6/library/stdtypes.html#mapping-types-dict" class="external-link"><strong>Mapping Types – <code>dict</code></strong></a> <a href="https://www.google.co.uk/search?q=Dictionaries%20in%20Python%203" class="external-link"><strong>Google search</strong></a> <a href="https://stackoverflow.com/search?q=python-3.x%20dictionaries&amp;s=78ef2a31-bb79-485b-914d-02db1ab8e9ca" class="external-link"><strong>StackOverflow python-3.x dictionaries</strong></a> <a href="https://www.youtube.com/results?search_query=Python+3+Programming+Tutorial+-+Dictionaries" class="external-link"><strong>YouTube Tutorial Dictionaries</strong></a></p>
+<hr class="half-width"><p><a href="https://docs.python.org/3.6/library/stdtypes.html#mapping-types-dict" class="external-link"><strong>Mapping Types – <code>dict</code></strong></a></p>
+<p><a href="https://www.google.co.uk/search?q=Dictionaries%20in%20Python%203" class="external-link"><strong>Google search</strong></a></p>
+<p><a href="https://stackoverflow.com/search?q=python-3.x%20dictionaries&amp;s=78ef2a31-bb79-485b-914d-02db1ab8e9ca" class="external-link"><strong>StackOverflow python-3.x dictionaries</strong></a></p>
+<p><a href="https://www.youtube.com/results?search_query=Python+3+Programming+Tutorial+-+Dictionaries" class="external-link"><strong>YouTube Tutorial Dictionaries</strong></a></p>
 <p>One of the most useful built-in tools in Python, dictionaries associate a set of <em>values</em> with a number of <em>keys</em>.</p>
 <p>Think of an old fashion, paperback dictionary where we have a range of words with their definitions. The words are the <em>keys</em>, and the definitions are the <em>values</em> that are associated with the keys. A Python dictionary works in the same way.</p>
 <p>Consider the following scenario:</p>
@@ -310,7 +307,7 @@
 <p>Suppose we have a number of protein kinases, and we would like to associate them with their descriptions for future reference.</p>
 </blockquote>
 <p>This is an example of association in arrays. We may visualise this problem as displayed in <a href="#assArr">Figure</a>.</p>
-<figure><img src="fig/associative_arrays.png" id="assArr" class="figure mx-auto d-block"> One way to associate the proteins with their definitions would be to use nested arrays. However, it would make it difficult to retrieve the values at a later time. This is because to retrieve the values, we would need to know the index at which a given protein is stored.</figure><p>Instead of using normal arrays, in such circumstances, we use <em>associative arrays</em>. The most popular method to create construct an associative array in Python is to create dictionaries or <code>dict</code>.</p>
+<figure><img src="fig/associative_arrays.png" id="assArr" alt="Illustrative diagram of associative arrays, showing the sets of keys and their association with some of the values." class="figure mx-auto d-block"> One way to associate the proteins with their definitions would be to use nested arrays. However, it would make it difficult to retrieve the values at a later time. This is because to retrieve the values, we would need to know the index at which a given protein is stored.</figure><p>Instead of using normal arrays, in such circumstances, we use <em>associative arrays</em>. The most popular method to create construct an associative array in Python is to create dictionaries or <code>dict</code>.</p>
 <div id="callout1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -503,9 +500,10 @@ Detailed traceback:
 <h3 class="callout-title">Do it Yourself</h3>
 <div class="callout-content">
 <p>Implement a <code>dict</code> to represent the following set of information:</p>
-<table class="table"><thead><tr class="header"><th align="center">Full Name</th>
-<th align="center">Gene</th>
-<th align="center">Type</th>
+<p><strong>Cystic Fibrosis:</strong></p>
+<table class="table"><thead><tr class="header"><th align="center"><strong>Full Name</strong></th>
+<th align="center"><strong>Gene</strong></th>
+<th align="center"><strong>Type</strong></th>
 </tr></thead><tbody><tr class="odd"><td align="center">Cystic fibrosis transmembrane conductance regulator</td>
 <td align="center">CFTR</td>
 <td align="center">Membrane Protein</td>
@@ -1723,11 +1721,12 @@ Detailed traceback:
 <div class="callout-inner">
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
-<ul><li>
-</li>
+<ul><li>Dictionaries associate a set of <em>values</em> with a number of <em>keys</em>.</li>
 <li>
-</li>
-<li>
+<em>keys</em> are used to access the values of a dictionary.</li>
+<li>Dictionaries are mutable.</li>
+<li>Nested dictionaries are constructed to organise data in a hierarchical fashion.</li>
+<li>Some of the useful methods to work with dictionaries are: <kbd>.items()</kbd>, <kbd>.get()</kbd>
 </li>
 </ul></div>
 </div>

@@ -3833,7 +3833,7 @@ On a distant planet, the dominant carnivore, the zab, is nearing extinction. The
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <pre><code>To obtain the answer, we may write an algorithm in a pseudo-code format as follows:
 		
@@ -4157,7 +4157,7 @@ Classification: XXX</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4516,7 +4516,7 @@ If there is a match, our programme should display the name of the corresponding 
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9265,12 +9265,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>
-</li>
-<li>
-</li>
-<li>
-</li>
+<li>How a dictionary is defined in Python?</li>
+<li>What are the ways to interact with a dictionary?</li>
+<li>Can a dictionary be nested?</li>
 </ul>
 </div>
 </div>
@@ -9280,12 +9277,9 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>
-</li>
-<li>
-</li>
-<li>
-</li>
+<li>Understanding the structure of a dictionary.</li>
+<li>Learning ways of accessing data from a dictionary.</li>
+<li>Practising the nested dictionaries to deal with complex data.</li>
 </ul>
 </div>
 </div>
@@ -9311,7 +9305,10 @@ any links that you are not going to use.
 </div>
 <section id="sec:dict"><h2 class="section-heading">Dictionary</h2>
 <hr class="half-width">
-<p><a href="https://docs.python.org/3.6/library/stdtypes.html#mapping-types-dict" class="external-link"><strong>Mapping Types – <code>dict</code></strong></a> <a href="https://www.google.co.uk/search?q=Dictionaries%20in%20Python%203" class="external-link"><strong>Google search</strong></a> <a href="https://stackoverflow.com/search?q=python-3.x%20dictionaries&amp;s=78ef2a31-bb79-485b-914d-02db1ab8e9ca" class="external-link"><strong>StackOverflow python-3.x dictionaries</strong></a> <a href="https://www.youtube.com/results?search_query=Python+3+Programming+Tutorial+-+Dictionaries" class="external-link"><strong>YouTube Tutorial Dictionaries</strong></a></p>
+<p><a href="https://docs.python.org/3.6/library/stdtypes.html#mapping-types-dict" class="external-link"><strong>Mapping Types – <code>dict</code></strong></a></p>
+<p><a href="https://www.google.co.uk/search?q=Dictionaries%20in%20Python%203" class="external-link"><strong>Google search</strong></a></p>
+<p><a href="https://stackoverflow.com/search?q=python-3.x%20dictionaries&amp;s=78ef2a31-bb79-485b-914d-02db1ab8e9ca" class="external-link"><strong>StackOverflow python-3.x dictionaries</strong></a></p>
+<p><a href="https://www.youtube.com/results?search_query=Python+3+Programming+Tutorial+-+Dictionaries" class="external-link"><strong>YouTube Tutorial Dictionaries</strong></a></p>
 <p>One of the most useful built-in tools in Python, dictionaries associate a set of <em>values</em> with a number of <em>keys</em>.</p>
 <p>Think of an old fashion, paperback dictionary where we have a range of words with their definitions. The words are the <em>keys</em>, and the definitions are the <em>values</em> that are associated with the keys. A Python dictionary works in the same way.</p>
 <p>Consider the following scenario:</p>
@@ -9319,7 +9316,7 @@ any links that you are not going to use.
 <p>Suppose we have a number of protein kinases, and we would like to associate them with their descriptions for future reference.</p>
 </blockquote>
 <p>This is an example of association in arrays. We may visualise this problem as displayed in <a href="#assArr">Figure</a>.</p>
-<figure><img src="fig/associative_arrays.png" id="assArr" class="figure mx-auto d-block"> One way to associate the proteins with their definitions would be to use nested arrays. However, it would make it difficult to retrieve the values at a later time. This is because to retrieve the values, we would need to know the index at which a given protein is stored.</figure><p>Instead of using normal arrays, in such circumstances, we use <em>associative arrays</em>. The most popular method to create construct an associative array in Python is to create dictionaries or <code>dict</code>.</p>
+<figure><img src="fig/associative_arrays.png" id="assArr" alt="Illustrative diagram of associative arrays, showing the sets of keys and their association with some of the values." class="figure mx-auto d-block"> One way to associate the proteins with their definitions would be to use nested arrays. However, it would make it difficult to retrieve the values at a later time. This is because to retrieve the values, we would need to know the index at which a given protein is stored.</figure><p>Instead of using normal arrays, in such circumstances, we use <em>associative arrays</em>. The most popular method to create construct an associative array in Python is to create dictionaries or <code>dict</code>.</p>
 <div id="callout1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -9513,11 +9510,12 @@ Detailed traceback:
 <h3 class="callout-title">Do it Yourself</h3>
 <div class="callout-content">
 <p>Implement a <code>dict</code> to represent the following set of information:</p>
+<p><strong>Cystic Fibrosis:</strong></p>
 <table class="table">
 <thead><tr class="header">
-<th align="center">Full Name</th>
-<th align="center">Gene</th>
-<th align="center">Type</th>
+<th align="center"><strong>Full Name</strong></th>
+<th align="center"><strong>Gene</strong></th>
+<th align="center"><strong>Type</strong></th>
 </tr></thead>
 <tbody><tr class="odd">
 <td align="center">Cystic fibrosis transmembrane conductance regulator</td>
@@ -10794,11 +10792,12 @@ Detailed traceback:
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
 <ul>
+<li>Dictionaries associate a set of <em>values</em> with a number of <em>keys</em>.</li>
 <li>
-</li>
-<li>
-</li>
-<li>
+<em>keys</em> are used to access the values of a dictionary.</li>
+<li>Dictionaries are mutable.</li>
+<li>Nested dictionaries are constructed to organise data in a hierarchical fashion.</li>
+<li>Some of the useful methods to work with dictionaries are: <kbd>.items()</kbd>, <kbd>.get()</kbd>
 </li>
 </ul>
 </div>
