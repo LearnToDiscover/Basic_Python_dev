@@ -11,9 +11,9 @@ date: '2022-05-11'
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- 
--
--
+- How a dictionary is defined in Python?
+- What are the ways to interact with a dictionary?
+- Can a dictionary be nested?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -21,9 +21,9 @@ date: '2022-05-11'
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
--
--
--
+- Understanding the structure of a dictionary.
+- Learning ways of accessing data from a dictionary.
+- Practising the nested dictionaries to deal with complex data.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -40,8 +40,11 @@ This chapter assumes that you are familiar with the following concepts in Python
 ## Dictionary {#sec:dict}
 
 [**Mapping Types -- ```dict```**](https://docs.python.org/3.6/library/stdtypes.html\#mapping-types-dict)
+
 [**Google search**](https://www.google.co.uk/search?q=Dictionaries%20in%20Python%203)
+
 [**StackOverflow python-3.x dictionaries**](https://stackoverflow.com/search?q=python-3.x%20dictionaries&s=78ef2a31-bb79-485b-914d-02db1ab8e9ca)
+
 [**YouTube Tutorial Dictionaries**](https://www.youtube.com/results?search_query=Python+3+Programming+Tutorial+-+Dictionaries)
 
 
@@ -58,7 +61,7 @@ Consider the following scenario:
 
 This is an example of association in arrays. We may visualise this problem as displayed in [Figure](#assArr).
 
-![](fig/associative_arrays.png){#assArr}
+![Illustrative diagram of associative arrays, showing the sets of *keys* and their association with some of the values.](fig/associative_arrays.png){#assArr}
 One way to associate the proteins with their definitions would be to use nested arrays. However, it would make it difficult to retrieve the values at a later time. This is because to retrieve the values, we would need to know the index at which a given protein is stored. 
 
 Instead of using normal arrays, in such circumstances, we use *associative arrays*. The most popular method to create construct an associative array in Python is to create dictionaries or ```dict```.
@@ -176,8 +179,9 @@ print(protein_kinases['GSK3'])
 
 Implement a ```dict``` to represent the following set of information:
 
+**Cystic Fibrosis:**
 
-| Full Name | Gene | Type  |  
+| **Full Name** | **Gene** | **Type**  |  
 |:---------------------------:|:---:|:---:|
 | Cystic fibrosis transmembrane conductance regulator | CFTR | Membrane Protein |
 	
@@ -1035,9 +1039,11 @@ print('Protein:', protein)
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
--
--
--
+- Dictionaries associate a set of *values* with a number of *keys*.
+- *keys* are used to access the values of a dictionary.
+- Dictionaries are mutable.
+- Nested dictionaries are constructed to organise data in a hierarchical fashion.
+- Some of the useful methods to work with dictionaries are: <kbd>.items()</kbd>, <kbd>.get()</kbd>
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
