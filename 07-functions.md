@@ -27,7 +27,19 @@ exercises: 2
 - Understanding the inter-connectivity of functions.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-
+<br>
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kBlxg1lV5NQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Y6ucZYbVL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/on_v5Ge80iE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
 
 This chapter assumes that you are familiar with the following concepts in Python 3:
 
@@ -122,7 +134,7 @@ def add(value_a, value_b):
 ```
 
 <p style='text-align: justify;'>
-Once implemented, we can go ahead use the function. We can so in the same way as we do with the *built-in* functions such as <kbd>max()</kbd> or <kbd>print()</kbd>:
+Once implemented, we can go ahead use the function. We can do so in the same way as we do with the *built-in* functions such as <kbd>max()</kbd> or <kbd>print()</kbd>:
 </p>
 
 
@@ -192,7 +204,7 @@ Choose the order of your *input argument* wisely. This is important when your fu
 </p>
 
 <p style='text-align: justify;'>
-Suppose we want to define a "division" function. It makes sense to assume that the first number passed to the function will be divide by the second number:
+Suppose we want to define a "division" function. It makes sense to assume that the first number passed to the function will be divided by the second number:
 </p>
 
 
@@ -281,9 +293,9 @@ def find_tata(seq):
 It is *essential* to write short, but proper documentation for our functions. There is no *correct* way document a code. However, a general rule, a good documentation should tell us:
 </p>
 
-- what does a function do;
+- what a function does;
 
-- input arguments, and what types should each argument be;
+- the names of the input arguments, and what type each argument should be;
 
 - the output, and its type.
 
@@ -312,7 +324,7 @@ def add(value_a, value_b):
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember	
 <p style='text-align: justify;'>
-You might feel as though you would remember what do your own functions do. That, however, is scarcely the case. Functions that we implement tend to perform specialist, and at times, very complex and interconnected processes. Whilst you might remember what does a specific function do for the next few days, you would almost certainly have trouble remembering the details in a matter of months. That is not to even mention the details regarding the type of the input argument(s) and that of the output. In addition, programmers often share their works with other fellow programmer; be it with their team, or in the context of a publication, or in public repositories as a contribution to the community. Whatever the reason, there is one golden rule: a functionality does not exist unless it is documented.
+You might feel as though you would remember what your own functions do. That, however, is scarcely the case. Functions that we implement tend to perform specialist, and at times, very complex and interconnected processes. Whilst you might remember what a specific function does for a few days after writing it, you would almost certainly have trouble remembering the details in a matter of months. And that is not even considering details regarding the type of the input argument(s) and those of the output. In addition, programmers often share their works with other fellow programmers; be it with their team, or in the context of a publication, or in public repositories as a contribution to the community. Whatever the reason, there is one golden rule: a functionality does not exist unless it is documented.
 </p>
 
 :::::::::::::::::::::::::::::::::::: 
@@ -369,7 +381,7 @@ add(value_a, value_b)
 
 ## Do it Yourself {#diy:func:tataBoxFinderWithDocs}
 
-Re-implement the function you defined in previous [Do it Yourself](#diy:func:tataBoxFinder) with appropriate documentations.
+Re-implement the function you defined in the previous [Do it Yourself](#diy:func:tataBoxFinder) with appropriate documentations.
 	
 	
 ::::::::::::::::: solution
@@ -402,17 +414,17 @@ def find_tata(seq):
 ### Optional arguments
 
 <p style='text-align: justify;'>
-We already know that most function take in one or more input arguments. Sometime a function does not need all of the argument to perform a specific task.
+We already know that most functions take in one or more input arguments. Sometime a function does not need all of the arguments to perform a specific task.
 </p>
 
 <p style='text-align: justify;'>
-An example of this is that we have already worked with is <kbd>print()</kbd>. We already know that this function may be utilised to display text on the screen. However, we also know that if we use the a ```file``` argument when using this function, it will behave differently in that it will write the text inside a file instead of displaying it on the screen. Additionally, <kbd>print()</kbd> has other arguments such as ```sep``` or ```end```, which have specific default values of <span style="color: rgb(32, 121, 77);">' '</span> (a single space) and <span style="color: rgb(32, 121, 77);">\\n</span> (a linebreak) respectively.
+An example we have already worked with is <kbd>print()</kbd>. We already know that this function may be utilised to display text on the screen. However, we also know that if we use the ```file``` argument, it will behave differently in that it will write the text inside a file instead of displaying it on the screen. Additionally, <kbd>print()</kbd> has other arguments such as ```sep``` or ```end```, which have specific default values of <span style="color: rgb(32, 121, 77);">' '</span> (a single space) and <span style="color: rgb(32, 121, 77);">\\n</span> (a linebreak) respectively.
 </p>
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember	
 <p style='text-align: justify;'>
-Input arguments that are necessary to call a specific function are referred to as *non-default arguments*, and those whose definition is not mandatory for a function to be called are known as *default* or *optional arguments*.	
+Input arguments that are necessary to call a specific function are referred to as *non-default arguments*. Those whose definition is not mandatory for a function to be called are known as *default* or *optional arguments*.	
 </p>
 
 <p style='text-align: justify;'>
@@ -430,7 +442,7 @@ The default value defined for *optional arguments* can in theory be an instance 
 :::::::::::::::::::::::::::::::::::: 
 
 <p style='text-align: justify;'>
-To define such functions, we need to give our input arguments a default value. Remember that input argument are variables with a specific scope. As a result, we can treat our input argument as variables and assign them a value:
+To define functions with optional arguments, we need to assign to them a default value. Remember that input arguments are variables with a specific scope. As a result, we can treat our input argument as variables and assign them a value:
 </p>
 
 
