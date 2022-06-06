@@ -623,7 +623,7 @@ print(prepped)
 The sequence of DNA is: TAGCTGC
 ```
 
-## Interconnectivity of functions
+### **Interconnectivity of functions**
 Functions can call other functions. This is what makes them extremely powerful tools that may be utilised to address an unlimited number of problems.
 
 This allows us to devise a network of functions that call each other to perform different tasks at different times, and collectively contribute to the production of one final answer.
