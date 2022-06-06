@@ -59,7 +59,7 @@ Additionally, make sure that you are comfortable with the principles of [indexin
 :::::::::::::::::::::::::::::::::::: callout
 ## Note	
 <p style='text-align: justify;'>
-You can practice everything in this section and the subsequent ones as you have been doing so far. However, if you find it hard to grasp some of the concepts, don't worry, you are not alone. It takes practice. To help you with that, [Philip Guo](http://www.pgbovine.net) from UC San Diego (Calif., USA) has developed [PythonTutor.com](http://www.pythontutor.com/visualize.html\#mode=edit), an excellent online tool for learning Python. On the website, Write (or copy and paste) your code in the editor, then click *Visualize Execution*. In the new page, use the *forward* and *back* buttons to see a step-by-step graphical visualisation of the processes that occur during the execution of your code. Try it on the examples in this section --- it will almost certainly help.
+You can practice everything in this section and the subsequent ones as you have been doing so far. However, if you find it hard to grasp some of the concepts, don't worry, you are not alone. It takes practice. To help you with that, [Philip Guo](http://www.pgbovine.net) from UC San Diego (Calif., USA) has developed [PythonTutor.com](http://www.pythontutor.com/visualize.html\#mode=edit), an excellent online tool for learning Python. On that website, write (or 'copy and paste') your code in the editor, then click *Visualize Execution*. In the new page, use the *forward* and *back* buttons to see a step-by-step graphical visualisation of the processes that occur during the execution of your code. Try it on the examples in this section.
 </p>
 
 :::::::::::::::::::::::::::::::::::: 
@@ -121,7 +121,7 @@ There are some universal tools for iterations that exist in all programming lang
 </p>
 
 <p style='text-align: justify;'>
-Throughout this section, we will discuss iterations via <kbd>for</kbd> and <kbd>while</kbd> loops, and review some real-world examples that may be only be addressed using iterative processes. 
+Throughout this section, we will discuss iterations via <kbd>for</kbd> and <kbd>while</kbd> loops, and review some real-world examples that may only be addressed using iterative processes. 
 </p>
 
 ## for-loops {#for-loop}
@@ -131,7 +131,7 @@ Some of the data show that up to 80\% of all conventional iterations are impleme
 </p>
 
 <p style='text-align: justify;'>
-Implementation of <kbd>for</kbd> loops in Python is much simpler compared to other programming languages. It essentially iterates through an existing iterable variable --- e.g.  an array, and retrieves the values from it one by one, from the beginning right down to the end.
+Implementation of <kbd>for</kbd> loops in Python is simple compared to other programming languages. It essentially iterates through an existing *iterable* variable --- e.g.  an array, and retrieves the values from it one by one, from the beginning right down to the end.
 </p>
 
 :::::::::::::::::::::::::::::::::::: callout
@@ -199,7 +199,7 @@ for item in numbers:
 ```
 
 <p style='text-align: justify;'>
-where we can see that the result for each iteration is display on a new line. [Example](#ExtExmp) outlines other such applications and expands on repetitive operations that may be simplified using <kbd>for</kbd> loops.
+where we can see that the result for each iteration is displayed in a new line. [Example](#ExtExmp) outlines other such applications and expands on repetitive operations that may be simplified using <kbd>for</kbd> loops.
 </p>
 
 :::::::::::::::::::::::::::::::::::: callout
@@ -221,7 +221,7 @@ where ```an_array``` is an *iterable* variable, and ```variable_name``` is the n
 You can think of each iteration cycle as pulling out a row from table that is our array (as exemplified in section [arrays](04-arrays.Rmd)) and temporarily assigning its corresponding value to a variable until the next iteration cycle. 
 </p>	
 
-See subsection [List Members](04-arrays.Rmd#listMem) to see how we can find out the length of an array.
+See subsection [List Members](04-arrays.Rmd#listMem) to find the length of an array.
 
 :::::::::::::::::::::::::::::::::::: 
 
@@ -240,7 +240,7 @@ peptides = [
 		]
 ```
 
-Write a <kbd>for</kbd> loop to display each item in <span style="color: rgb(32, 121, 77);">peptides</span> alongisde its index and length. Display the results in the following format:	
+Write a <kbd>for</kbd> loop to display each item in <span style="color: rgb(32, 121, 77);">peptides</span> alongside its index and length. Display the results in the following format:	
 
 ```Peptide XXXX at index X contains X amino acids.```
 	
@@ -365,16 +365,16 @@ Protein Kinase 5: CK1
 
 ### **Retaining the new values**
 <p style='text-align: justify;'>
-It is very nice to be able to manipulate and display the values of an array, but in the majority of cases, we need to retain the new values and use them later.
+It is nice to be able to manipulate and display the values of an array but in the majority of cases, we need to retain the new values and use them later.
 </p>
 
 In such cases, we have two options:
 
   - Create a new array to store our values.
-  - Replace the existing values with the new ones by overwrriting them in the same array.
+  - Replace the existing values with the new ones by overwriting them in the same array.
 
 <p style='text-align: justify;'>
-Creating a new array to store our values is very easy. All we need to do is to create a new ```list``` and add values to it in every iteration. In other words, We start off by creating an empty ```list```; to which we then add members using the <kbd>.append()</kbd> method inside our <kbd>for</kbd> loop. The process of creating a new ```list``` and using the <kbd>.append()</kbd> method to values to an existing ```list``` are discussed in subsections [Useful Methods](04-arrays.Rmd#subsubsec:list:usefulMethodsForList) and [mutability](04-arrays.Rmd#subsubsec:list:mutability) respectively.
+Creating a new array to store our values is very easy. All we need to do is to create a new ```list``` and add values to it in every iteration. In other words, We start off by creating an empty ```list```; to which we then add members using the <kbd>.append()</kbd> method inside our <kbd>for</kbd> loop. The process of creating a new ```list``` and using the <kbd>.append()</kbd> method to values to an existing ```list``` are discussed in subsections [Useful Methods](04-arrays.Rmd#subsubsec:list:usefulMethodsForList) and [mutability](04-arrays.Rmd#subsubsec:list:mutability), respectively.
 </p>
 
 
@@ -441,11 +441,11 @@ for sequence in peptides:
 
 ::::::::::::::::::::::::::::::: 
 
-The replacement methods uses a slightly different approach. Essentially what we are trying to achieve is boils down to:
+The replacement method uses a slightly different approach. Essentially what we try to achieve is:
 
 
-  - read the value of a row in an array;
-  - manipulate the value in a operations;
+  - read the value of an item in an array;
+  - manipulate the value via operations;
   - put the value back to the original array through *item assignment* and thereby replace the existing value. 
 
 <p style='text-align: justify;'>
@@ -491,7 +491,7 @@ The ```enumerate()``` function actually returns a *generator* of ```tuple``` ite
 :::::::::::::::::::::::::::::::::::: 
 
 <p style='text-align: justify;'>
-This is a perfectly valid approach, and is used in many programming languages. However, Python makes this process even easier using the function <kbd>enumerate()</kbd> loop. We often use this function at the initiation of a <kbd>for</kbd> loop. The function takes an array as an input and as the name suggests, enumerates them; thereby simplifying the indexing process. The previous example may therefore be written more concisely in Python as follows:
+This is a perfectly valid approach and it is used in many programming languages. However, Python makes this process even easier by introducing the function <kbd>enumerate()</kbd>. We often use this function at the initiation of a <kbd>for</kbd> loop. The function takes an array as an input and as the name suggests, enumerates them; thereby simplifying the indexing process. The previous example may therefore be written more concisely in Python as follows:
 </p>
 
 
@@ -697,17 +697,17 @@ It may, however, be deemed necessary to apply iterative processes based on condi
 
 Consider the following scenario:
 
->We want to ask the user to enter a sequence of exactly 5 amino acids. If the sequence the user provides in more or less than 5 letters long, we would like to display a message and ask them to try again; otherwise, we will display the process and terminate the programme.
+>We want to ask the user to enter a sequence of exactly 5 amino acids in single letter code. If the provided sequence is more or less than 5 letters long, we would like to display a message and ask them to try again; otherwise, we will display the process and terminate the programme.
 
 
 <p style='text-align: justify;'>
-It is impossible to write such a process using a ```for```-loop. This is because when we initialise the iteration process, the number of loops we need is unknown. In other words, we simply do not know how many times the user would need enter the said sequence before they get it right.
+It is impossible to write such a process using a ```for```-loop. This is because when we initialise the iteration process, the number of loops we need is unknown. In other words, we simply do not know how many times the user would need enter said sequence before they get it right.
 </p>
 
 ![](fig/flowchart3.png){#flowchart3}
 
 <p style='text-align: justify;'>
-On that note, to simplify the understanding of the concept, we can visualise the process in flowchart, as displayed in [figure](#flowchart3). In the flowchart, you can clearly see that the only way to exit the loop is to enter a sequence of exactly 5 characters, so doing anything else --- i.e. entering a different value; is tantamount to going back to be beginning of the loop. The visualised process may be described verbally as follows:
+To simplify the understanding of the concept, we can visualise the process in flowchart, as displayed in [figure](#flowchart3). In the flowchart, you can see that the only way to exit the loop is to enter a sequence of exactly 5 characters. Doing anything else --- i.e. entering a different number of letters -- is tantamount to going back to be beginning of the loop. The process may be described verbally as follows:
 </p>
 
 1.  Initialise the variable <span style="color: rgb(32, 121, 77);">sequence</span> and assign an empty string to it.
@@ -723,7 +723,7 @@ On that note, to simplify the understanding of the concept, we can visualise the
 ### **Implementation**
 We start ```while```-loop using the <kbd>while</kbd> syntax, immediately followed by the loop condition. 
 
-We can now implement the process display in [figure](#flowchart3) as follows:
+We can now implement the process displayed in [figure](#flowchart3) as follows:
 
 ```
 sequence = str()
@@ -745,7 +745,7 @@ Enter a sequence of exactly 5 amino acids: GCGLL
 GCGLL
 ```
 
-As expect, the user is repetitively asked to enter a 5 character sequence until they supply the correct value.
+As expected, the user is repetitively asked to enter a 5 character sequence until they supply the correct number of letters.
 
 
 ::::::::::::::::::::::::::::::: challenge 
@@ -843,17 +843,17 @@ print(sequence)
 
 ### **Breaking a while-loop**
 
-Unlike ```for```-loops, it is common *break* out of a ```while```-loop mid-process. This is also known as *premature termination*. 
+Unlike ```for```-loops, it is common to *break* out of a ```while```-loop mid-process. This is also known as *premature termination*. 
 
 To consider a situation that may necessitate such an approach, we shall modify our scenario as follows:
 
 <p style='text-align: justify;'>
->We want to ask the user to enter a sequence of exactly 5 amino acids. If the sequence the user provides in more or less than 5 letters long, we would like to display a message and ask them to try again; otherwise, we will display the process and terminate the programme. Additionally, the loop should be terminated:
+>We want to ask the user to enter a sequence of exactly 5 amino acids. If the sequence the user provides is more or less than 5 letters long, we would like to display a message and ask them to try again; otherwise, we will display the sequence and terminate the programme. Additionally, the loop should be terminated:
    - upon 3 failed attempts; or,
    - if the user entered the word <span style="color: rgb(32, 121, 77);">exit</span> instead of a 5 character sequence. 
 
 </p>
-In the former case, however, we would also like to display message and inform the user that we are terminating the programme because of 3 failed attempts.
+In the former case, however, we would also like to display a message and inform the user that we are terminating the programme because of 3 failed attempts.
 
 To implement the first addition to our code, we will have to make the following alterations in our code:
 
