@@ -154,7 +154,7 @@ print('ERK' in proteins)
 
 ::::::::::::::::::::::::::::::: 
 
-## Interacting a with a dictionary {#subsec:dict:InteractingWithDicts}
+### **Interacting with a dictionary** {#subsec:dict:InteractingWithDicts}
 We have already learnt that in programming, the more explicit our code, the better it is. Interacting with dictionaries in Python is very easy, coherent, and explicit. This makes them a powerful tool that we can exploit for different purposes.
 
 In arrays, specifically in ```list``` and ```tuple```, we routinely use [indexing](#sec:list:indexing) techniques to retrieve *values*. In dictionaries, however, we use *keys* to do that. Because we can define the *keys* of a dictionary ourselves, we no longer have to rely exclusively on numeric indices.  
@@ -851,7 +851,7 @@ print(cdna)
 
 ::::::::::::::::::::::::::::::: 
 
-### **Summary**
+## Summary
 In this section we talked about dictionaries, which are one the most powerful built-in types in Python. We learned:
 
 - how to create dictionaries in Python,
