@@ -88,7 +88,7 @@ In programming, I/O operations include, but are not limited to:
 
 ## Advanced Topic
 <p style='text-align: justify;'>
-If you are interested in learning more about I/O systems and how they are handled at operating system level, you might benefit from chapter 13 of [*Operating Systems Concepts, 8^th^ ed.*](http://web.cse.ohio-state.edu/~soundarajan.1/courses/3430/silberschatz8thedition.pdf) by Abraham Silberschatz, Greg Gagne, and Peter Galvin.
+If you are interested in learning more about I/O systems and how they are handled at operating system level, you might benefit from chapter 13 of [*Operating Systems Concepts, 10^th^ ed.*](https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf) by Abraham Silberschatz, Greg Gagne, and Peter Galvin.
 </p>
 
 :::::: 
@@ -565,7 +565,6 @@ The values determine the type of a variable in dynamically typed languages. This
 
 #### **Why learn about *types* in a dynamically typed programming language?**
 <p style='text-align: justify;'>
-Now that we know how to define variables in Python, you may have noticed that depending on the value, there are different forms of variables such as ```int```, ```float```, and ```str```. These are built-in definitions known as variable *types*. In essence, types tell the computer how much space in the memory should be reserved for the value of a specific variable, and clarify the operations that may be applied to it. 
 </p>
 
 <p style='text-align: justify;'>
