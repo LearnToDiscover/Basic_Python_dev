@@ -454,12 +454,12 @@ An iterable is a Python variable that contains the built–in method <code>.__it
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span class="fl">6</span>
-<span class="fl">10</span>
-<span class="fl">12.6</span>
-<span class="fl">18</span>
-<span class="fl">30</span>
-<span class="fl">6.8</span></code></pre>
+<pre class="output" tabindex="0"><code><span><span class="fl">6</span></span>
+<span><span class="fl">10</span></span>
+<span><span class="fl">12.6</span></span>
+<span><span class="fl">18</span></span>
+<span><span class="fl">30</span></span>
+<span><span class="fl">6.8</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
 where we can see that the result for each iteration is displayed in a new line. <a href="#ExtExmp">Example</a> outlines other such applications and expands on repetitive operations that may be simplified using <kbd>for</kbd> loops.
@@ -816,9 +816,9 @@ This is a perfectly valid approach and it is used in many programming languages.
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>characters <span class="op">=</span> [<span class="st">'1'</span>, <span class="st">'2'</span>, <span class="st">'3'</span>, <span class="st">'4'</span>]</span></code></pre>
 </div>
 <p>Display each item in <span style="color: rgb(32, 121, 77);">characters</span> as many times in one line as the index of that item in <span style="color: rgb(32, 121, 77);">characters</span>. The results should appear as follows:</p>
-<pre><code><span class="fl">2</span>
-<span class="fl">33</span>
-<span class="fl">444</span></code></pre>
+<pre><code><span><span class="fl">2</span></span>
+<span><span class="fl">33</span></span>
+<span><span class="fl">444</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -840,9 +840,10 @@ This is a perfectly valid approach and it is used in many programming languages.
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span class="fl">2</span>
-<span class="fl">33</span>
-<span class="fl">444</span></code></pre>
+<pre class="output" tabindex="0"><code><span></span>
+<span><span class="fl">2</span></span>
+<span><span class="fl">33</span></span>
+<span><span class="fl">444</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -960,7 +961,7 @@ To produce a sequence of <code>int</code> numbers to use in a <kbd>for</kbd> loo
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span class="fu">range</span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">2</span><span class="op">)</span></code></pre>
+<pre class="output" tabindex="0"><code><span><span class="fu">range</span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre>
 </div>
 <p>It is, however, possible to evaluate the values outside of a <kbd>for</kbd> loop. To do so, we need to convert the output of the function to <code>list</code> or a <code>tuple</code>:</p>
 <div class="codewrapper sourceCode" id="cb41">
@@ -1058,9 +1059,9 @@ GCGLL</code></pre>
 </p>
 <ol start="2" style="list-style-type: decimal"><li>We learned in subsection <a href="#subsec:iter:for:range">Sequence of Numbers</a> that the built-in function <kbd>range()</kbd> may be utilised to produce a sequence of <em>integer</em> numbers. The function takes 3 input arguments in the following order: <span style="color: rgb(32, 121, 77);">stop, start, step</span>.</li>
 </ol><p>We now need a sequence of floating point numbers with the following criteria:</p>
-<pre><code><span class="va">stop</span> <span class="op">=</span> <span class="fl">10</span>
-<span class="va">start</span> <span class="op">=</span> <span class="fl">0</span>
-<span class="va">step</span> <span class="op">=</span> <span class="fl">0.5</span></code></pre>
+<pre><code><span><span class="va">stop</span> <span class="op">=</span> <span class="fl">10</span></span>
+<span><span class="va">start</span> <span class="op">=</span> <span class="fl">0</span></span>
+<span><span class="va">step</span> <span class="op">=</span> <span class="fl">0.5</span></span></code></pre>
 <p style="text-align: justify;">
 The use of a floating point number as <span style="color: rgb(32, 121, 77);">step</span> means that we cannot use <kbd>range()</kbd> to create the desired sequence. Write a script in which you use a <code>while</code>-loop to produce a sequence of floating point numbers with the above criteria and display the result.
 </p>
@@ -1215,8 +1216,8 @@ print(sequence)</code></pre>
 <li><p>Calculate the sum of: each number (<span class="math inline">\(x_i\)</span>) subtracted by the Mean (<span class="math inline">\(\mu\)</span>) and square the result.</p></li>
 <li><p>Divide the resulting number by the length of <span style="color: rgb(32, 121, 77);">number</span>.</p></li>
 </ol><p>Display the results in the following format:</p>
-<pre><code><span class="va">Mean</span><span class="op">:</span> <span class="va">XXXX</span>
-<span class="va">Variance</span><span class="op">:</span> <span class="va">XXXX</span></code></pre>
+<pre><code><span><span class="va">Mean</span><span class="op">:</span> <span class="va">XXXX</span></span>
+<span><span class="va">Variance</span><span class="op">:</span> <span class="va">XXXX</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1280,12 +1281,12 @@ print(sequence)</code></pre>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span class="fl">2</span>
-<span class="fl">2</span>
-<span class="fl">1</span>
-<span class="fl">3</span>
-<span class="fl">3</span>
-<span class="fl">3</span></code></pre>
+<pre class="output" tabindex="0"><code><span><span class="fl">2</span></span>
+<span><span class="fl">2</span></span>
+<span><span class="fl">1</span></span>
+<span><span class="fl">3</span></span>
+<span><span class="fl">3</span></span>
+<span><span class="fl">3</span></span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1332,7 +1333,7 @@ print(sequence)</code></pre>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span class="va">Mean</span><span class="op">:</span> <span class="fl">6.366666666666666</span></code></pre>
+<pre class="output" tabindex="0"><code><span><span class="va">Mean</span><span class="op">:</span> <span class="fl">6.366666666666666</span></span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb65">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1342,7 +1343,7 @@ print(sequence)</code></pre>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span class="va">Variance</span><span class="op">:</span> <span class="fl">48.919999999999995</span></code></pre>
+<pre class="output" tabindex="0"><code><span><span class="va">Variance</span><span class="op">:</span> <span class="fl">48.919999999999995</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1416,7 +1417,7 @@ any links that you are not going to use.
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/05-iterations.html",
   "dateCreated": "2022-06-06",
   "dateModified": "2022-06-06",
-  "datePublished": "2022-06-23"
+  "datePublished": "2022-06-28"
 }
 
   </script><script>
