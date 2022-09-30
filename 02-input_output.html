@@ -247,7 +247,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Variables, Types, and Operations</h1>
-        <p> Last updated on 2022-07-12 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/02-input_output.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-09-30 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/02-input_output.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -851,7 +851,7 @@ The values determine the type of a variable in dynamically typed languages. This
 <p style="text-align: justify;">
 Python enjoys a powerful type system out of the box. Table <a href="#tb:types:nativeTypes">Built-in types in Python</a> provides a comprehensive reference for the built-in types in Python. Built-in types are the types that exist in the language and do not require any third party libraries to implement or use.
 </p>
-<figure><img src="fig/python_built-in_types.png" id="tb:types:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br><sup>*</sup> Not discussed in this course — included for reference only. <br><sup>$</sup><code>dict</code> is not an iterable by default, however, it is possible to iterate through its keys. <br><br><strong>Mutability</strong> is an important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in programming</a>. A mutable object is an object whose value(s) may be altered. This will become clearer once we study <code>list</code> and <code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.6/reference/datamodel.html" class="external-link">documentations}</a>. <br><br><strong>Complex numbers</strong> refer to a <a href="http://thinkzone.wlonk.com/Numbers/NumberSets.htm" class="external-link">set of numbers</a> that have a real part, and an imaginary part; where the imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this <a href="https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro" class="external-link">Khan Academy video tutorial</a>.</figcaption></figure><p>Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
+<figure><img src="fig/python_built-in_types.png" id="tb:types:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br><sup>*</sup> Not discussed in this course — included for reference only. <br><sup>$</sup><code>dict</code> is not an iterable by default, however, it is possible to iterate through its keys. <br><br><strong>Mutability</strong> is an important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in programming</a>. A mutable object is an object whose value(s) may be altered. This will become clearer once we study <code>list</code> and <code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.9/reference/datamodel.html" class="external-link">documentations}</a>. <br><br><strong>Complex numbers</strong> refer to a <a href="http://thinkzone.wlonk.com/Numbers/NumberSets.htm" class="external-link">set of numbers</a> that have a real part, and an imaginary part; where the imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this <a href="https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro" class="external-link">Khan Academy video tutorial</a>.</figcaption></figure><p>Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1224,11 +1224,19 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
 </div>
 <div class="section level3">
 <h3 id="handling-input-variables"><strong>Handling input variables</strong><a class="anchor" aria-label="anchor" href="#handling-input-variables"></a></h3>
-::::::::::::::::::::::::::::::: discussion
+<div id="discussion4" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
 <p style="text-align: justify;">
+When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type <code>str</code>. An <kbd>input()</kbd> function always stores the response as a <code>str</code> value, no matter what the user enters. However, it is possible to convert the type afterwards.
 </p>
-<p>When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type <code>str</code>. An <kbd>input()</kbd> function always stores the response as a <code>str</code> value, no matter what the user enters. However, it is possible to convert the type afterwards.</p>
-<p>:::::::::::::::::::::::::::::::</p>
+</div>
+</div>
+</div>
 <div id="callout11" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1493,7 +1501,8 @@ As far as mathematical operations are concerned, variables <code>a</code> and <c
 </blockquote>
 <ol start="2" style="list-style-type: decimal"><li>Now using the results you obtained:
 <p style="text-align: justify;">
-<strong>I.</strong> Can you explain why is the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type <code>float</code>, whilst that of <span class="math inline">\(35 - 3\)</span> is of type <code>int</code>?</p>
+<strong>I.</strong> Can you explain why is the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type <code>float</code>, whilst that of <span class="math inline">\(35 - 3\)</span> is of type <code>int</code>?
+</p>
 </li>
 </ol><p style="text-align: justify;">
 <strong>II.</strong> Unlike the numeric types, string values have a length. To obtain the length of a string value, we use <kbd>len()</kbd>. Convert the result for <span class="math inline">\(2^{1000}\)</span> from <code>int</code> to <code>str</code>, then use the aforementioned function to work out the length of the number — i.e. how many digits is it made of?
@@ -1785,7 +1794,7 @@ Suppose we have a variable defined as <code>total_residues = 52</code> and want 
 <p><code>The value of pi calculated to 5 decimal places: X.XXXXX</code></p>
 </blockquote>
 <p style="text-align: justify;">
-<strong>Note: </strong>To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the <a href="https://docs.python.org/3.6/library/functions.html#round" class="external-link">official documentations</a>.
+<strong>Note: </strong>To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the <a href="https://docs.python.org/3/library/functions.html#round" class="external-link">official documentations</a>.
 </p>
 <ol start="2" style="list-style-type: decimal"><li>
 <p>Now without creating a new variable, perform the following operation:</p>
@@ -3256,13 +3265,11 @@ Some logical operations may be written in different ways. However, we should alw
 <li>Once the user pressed enter, the program should display <code>Welcome to my programme!</code> before it terminates.
 <p style="text-align: justify;"></p>
 </li>
-</ul><ol start="3" style="list-style-type: decimal"><li>We have an enzyme whose reaction velocity is <span class="math inline">\(v=50~mol \cdot L^{-1} \cdot s^{-1}\)</span> at the substrate concentration of <span class="math inline">\([S] = K_{m} = 2.5~mol \cdot L^{-1}\)</span>. Work out the maximum reaction velocity or <span class="math inline">\(V_{\max}\)</span> for this enzyme using the Michaelis-Menten equation:</li>
-</ol><div class="codewrapper sourceCode" id="cb250">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb250-1"><a href="#cb250-1" aria-hidden="true" tabindex="-1"></a>	<span class="va">$$</span><span class="ex">v</span> = <span class="dt">\f</span>rac{V_{<span class="dt">\m</span>ax} [<span class="dt">\t</span>extrm{S}]}{K_{m} + [<span class="dt">\t</span>extrm{S}]}<span class="va">$$</span>   </span></code></pre>
-</div>
-</div>
+</ul><ol start="3" style="list-style-type: decimal"><li>We have an enzyme whose reaction velocity is <span class="math inline">\(v=50~mol \cdot L^{-1} \cdot s^{-1}\)</span> at the substrate concentration of <span class="math inline">\([S] = K_{m} = 2.5~mol \cdot L^{-1}\)</span>. Work out the maximum reaction velocity or <span class="math inline">\(V_{\max}\)</span> for this enzyme using the Michaelis-Menten equation:
+
+<span class="math display">\[v = \frac{V_{\max} [\textrm{S}]}{K_{m} + [\textrm{S}]}\]</span>
+</li>
+</ol></div>
 </div>
 </div>
 <div id="accordionSolution44" class="accordion challenge-accordion accordion-flush">
@@ -3276,14 +3283,14 @@ Some logical operations may be written in different ways. However, we should alw
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="q1-8">Q1<a class="anchor" aria-label="anchor" href="#q1-8"></a></h3>
-<div class="codewrapper sourceCode" id="cb251">
+<div class="codewrapper sourceCode" id="cb250">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb251-1"><a href="#cb251-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">'Gerold Baier'</span></span>
-<span id="cb251-2"><a href="#cb251-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb251-3"><a href="#cb251-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Displaying the author's name:</span></span>
-<span id="cb251-4"><a href="#cb251-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb251-5"><a href="#cb251-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb250-1"><a href="#cb250-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">'Gerold Baier'</span></span>
+<span id="cb250-2"><a href="#cb250-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb250-3"><a href="#cb250-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Displaying the author's name:</span></span>
+<span id="cb250-4"><a href="#cb250-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb250-5"><a href="#cb250-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3302,19 +3309,19 @@ Some logical operations may be written in different ways. However, we should alw
 </div>
 <div class="section level3">
 <h3 id="q3-4">Q3<a class="anchor" aria-label="anchor" href="#q3-4"></a></h3>
-<div class="codewrapper sourceCode" id="cb254">
+<div class="codewrapper sourceCode" id="cb253">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb254-1"><a href="#cb254-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb254-2"><a href="#cb254-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s </span></span>
-<span id="cb254-3"><a href="#cb254-3" aria-hidden="true" tabindex="-1"></a>k_m <span class="op">=</span> S <span class="op">=</span> <span class="fl">2.5</span> <span class="co">#mol/L</span></span>
-<span id="cb254-4"><a href="#cb254-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb254-5"><a href="#cb254-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Rearranged the equation to</span></span>
-<span id="cb254-6"><a href="#cb254-6" aria-hidden="true" tabindex="-1"></a><span class="co"># solve for v_max:</span></span>
-<span id="cb254-7"><a href="#cb254-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb254-8"><a href="#cb254-8" aria-hidden="true" tabindex="-1"></a>v_max <span class="op">=</span> (v <span class="op">*</span> (k_m <span class="op">+</span> S)) <span class="op">/</span> S</span>
-<span id="cb254-9"><a href="#cb254-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit: mol/L/s</span></span>
-<span id="cb254-10"><a href="#cb254-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vmax ='</span>, v_max, <span class="st">'[ mol / (l * sec) ]'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb253-1"><a href="#cb253-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-2"><a href="#cb253-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s </span></span>
+<span id="cb253-3"><a href="#cb253-3" aria-hidden="true" tabindex="-1"></a>k_m <span class="op">=</span> S <span class="op">=</span> <span class="fl">2.5</span> <span class="co">#mol/L</span></span>
+<span id="cb253-4"><a href="#cb253-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-5"><a href="#cb253-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Rearranged the equation to</span></span>
+<span id="cb253-6"><a href="#cb253-6" aria-hidden="true" tabindex="-1"></a><span class="co"># solve for v_max:</span></span>
+<span id="cb253-7"><a href="#cb253-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-8"><a href="#cb253-8" aria-hidden="true" tabindex="-1"></a>v_max <span class="op">=</span> (v <span class="op">*</span> (k_m <span class="op">+</span> S)) <span class="op">/</span> S</span>
+<span id="cb253-9"><a href="#cb253-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit: mol/L/s</span></span>
+<span id="cb253-10"><a href="#cb253-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vmax ='</span>, v_max, <span class="st">'[ mol / (l * sec) ]'</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3392,9 +3399,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/02-input_output.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/02-input_output.html",
-  "dateCreated": "2022-06-06",
-  "dateModified": "2022-07-12",
-  "datePublished": "2022-09-27"
+  "dateCreated": "2022-09-30",
+  "dateModified": "2022-09-30",
+  "datePublished": "2022-09-30"
 }
 
   </script><script>

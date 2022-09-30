@@ -571,7 +571,8 @@ The values determine the type of a variable in dynamically typed languages. This
 Python enjoys a powerful type system out of the box. Table [Built-in types in Python](#tb:types:nativeTypes) provides a comprehensive reference for the built-in types in Python. Built-in types are the types that exist in the language and do not require any third party libraries to implement or use. 
 </p>
 
-![A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. <br> <br>**Mutability** is an important [concept in programming](https://en.wikipedia.org/wiki/Immutable_object). A mutable object is an object whose value(s) may be altered. This will become clearer once we study ```list``` and ```tuple```. Find out more about mutability in Python from the [documentations}](https://docs.python.org/3.6/reference/datamodel.html). <br> <br>**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have a real part, and an imaginary part; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). ](fig/python_built-in_types.png){#tb:types:nativeTypes}
+![A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. <br> <br>**Mutability** is an important [concept in programming](https://en.wikipedia.org/wiki/Immutable_object). A mutable object is an object whose value(s) may be altered. This will become clearer once we study ```list``` and ```tuple```. Find out more about mutability in Python from the [documentations}](https://docs.python.org/3.9/reference/datamodel.html). <br> <br>
+**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have a real part, and an imaginary part; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). ](fig/python_built-in_types.png){#tb:types:nativeTypes}
 
  
 Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:
@@ -910,10 +911,11 @@ print(value_a, '+', value_b, '=', result)
 ::::::::::::::::::::::::::::::: 
 
 ### **Handling input variables**
+
 ::::::::::::::::::::::::::::::: discussion
 <p style='text-align: justify;'>
 When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type ```str```. An <kbd>input()</kbd> function always stores the response as a ```str``` value, no matter what the user enters. However, it is possible to convert the type afterwards.
-
+</p>
 
 ::::::::::::::::::::::::::::::: 
 	
@@ -1452,7 +1454,7 @@ Then round the results to 5 decimal places and display the result in the followi
 >```The value of pi calculated to 5 decimal places: X.XXXXX```
 
 <p style='text-align: justify;'>	
-**Note: **To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the [official documentations](https://docs.python.org/3.6/library/functions.html\#round).
+**Note: **To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the [official documentations](https://docs.python.org/3/library/functions.html#round).
 </p>
 
 2. Now without creating a new variable, perform the following operation:

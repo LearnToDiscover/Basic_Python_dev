@@ -424,7 +424,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-input_output"><p>Content from <a href="02-input_output.html">Variables, Types, and Operations</a></p>
 <hr>
-<p> Last updated on 2022-07-12 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/02-input_output.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-09-30 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/02-input_output.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -1050,7 +1050,7 @@ The values determine the type of a variable in dynamically typed languages. This
 <p style="text-align: justify;">
 Python enjoys a powerful type system out of the box. Table <a href="#tb:types:nativeTypes">Built-in types in Python</a> provides a comprehensive reference for the built-in types in Python. Built-in types are the types that exist in the language and do not require any third party libraries to implement or use.
 </p>
-<figure><img src="../fig/python_built-in_types.png" id="tb:types:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br><sup>*</sup> Not discussed in this course — included for reference only. <br><sup>$</sup><code>dict</code> is not an iterable by default, however, it is possible to iterate through its keys. <br><br><strong>Mutability</strong> is an important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in programming</a>. A mutable object is an object whose value(s) may be altered. This will become clearer once we study <code>list</code> and <code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.6/reference/datamodel.html" class="external-link">documentations}</a>. <br><br><strong>Complex numbers</strong> refer to a <a href="http://thinkzone.wlonk.com/Numbers/NumberSets.htm" class="external-link">set of numbers</a> that have a real part, and an imaginary part; where the imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this <a href="https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro" class="external-link">Khan Academy video tutorial</a>.</figcaption></figure><p>Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
+<figure><img src="../fig/python_built-in_types.png" id="tb:types:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br><sup>*</sup> Not discussed in this course — included for reference only. <br><sup>$</sup><code>dict</code> is not an iterable by default, however, it is possible to iterate through its keys. <br><br><strong>Mutability</strong> is an important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in programming</a>. A mutable object is an object whose value(s) may be altered. This will become clearer once we study <code>list</code> and <code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.9/reference/datamodel.html" class="external-link">documentations}</a>. <br><br><strong>Complex numbers</strong> refer to a <a href="http://thinkzone.wlonk.com/Numbers/NumberSets.htm" class="external-link">set of numbers</a> that have a real part, and an imaginary part; where the imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this <a href="https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro" class="external-link">Khan Academy video tutorial</a>.</figcaption></figure><p>Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1431,11 +1431,19 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
 <h3 id="handling-input-variables">
 <strong>Handling input variables</strong><a class="anchor" aria-label="anchor" href="#handling-input-variables"></a>
 </h3>
-::::::::::::::::::::::::::::::: discussion
+<div id="discussion4" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
 <p style="text-align: justify;">
+When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type <code>str</code>. An <kbd>input()</kbd> function always stores the response as a <code>str</code> value, no matter what the user enters. However, it is possible to convert the type afterwards.
 </p>
-<p>When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type <code>str</code>. An <kbd>input()</kbd> function always stores the response as a <code>str</code> value, no matter what the user enters. However, it is possible to convert the type afterwards.</p>
-<p>:::::::::::::::::::::::::::::::</p>
+</div>
+</div>
+</div>
 <div id="callout11" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1715,7 +1723,8 @@ As far as mathematical operations are concerned, variables <code>a</code> and <c
 <ol start="2" style="list-style-type: decimal">
 <li>Now using the results you obtained:
 <p style="text-align: justify;">
-<strong>I.</strong> Can you explain why is the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type <code>float</code>, whilst that of <span class="math inline">\(35 - 3\)</span> is of type <code>int</code>?</p>
+<strong>I.</strong> Can you explain why is the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type <code>float</code>, whilst that of <span class="math inline">\(35 - 3\)</span> is of type <code>int</code>?
+</p>
 </li>
 </ol>
 <p style="text-align: justify;">
@@ -2014,7 +2023,7 @@ Suppose we have a variable defined as <code>total_residues = 52</code> and want 
 <p><code>The value of pi calculated to 5 decimal places: X.XXXXX</code></p>
 </blockquote>
 <p style="text-align: justify;">
-<strong>Note: </strong>To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the <a href="https://docs.python.org/3.6/library/functions.html#round" class="external-link">official documentations</a>.
+<strong>Note: </strong>To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the <a href="https://docs.python.org/3/library/functions.html#round" class="external-link">official documentations</a>.
 </p>
 <ol start="2" style="list-style-type: decimal">
 <li>
@@ -3555,13 +3564,11 @@ Some logical operations may be written in different ways. However, we should alw
 </li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li>We have an enzyme whose reaction velocity is <span class="math inline">\(v=50~mol \cdot L^{-1} \cdot s^{-1}\)</span> at the substrate concentration of <span class="math inline">\([S] = K_{m} = 2.5~mol \cdot L^{-1}\)</span>. Work out the maximum reaction velocity or <span class="math inline">\(V_{\max}\)</span> for this enzyme using the Michaelis-Menten equation:</li>
+<li>We have an enzyme whose reaction velocity is <span class="math inline">\(v=50~mol \cdot L^{-1} \cdot s^{-1}\)</span> at the substrate concentration of <span class="math inline">\([S] = K_{m} = 2.5~mol \cdot L^{-1}\)</span>. Work out the maximum reaction velocity or <span class="math inline">\(V_{\max}\)</span> for this enzyme using the Michaelis-Menten equation:
+
+<span class="math display">\[v = \frac{V_{\max} [\textrm{S}]}{K_{m} + [\textrm{S}]}\]</span>
+</li>
 </ol>
-<div class="codewrapper sourceCode" id="cb250">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb250-1"><a href="#cb250-1" aria-hidden="true" tabindex="-1"></a>	<span class="va">$$</span><span class="ex">v</span> = <span class="dt">\f</span>rac{V_{<span class="dt">\m</span>ax} [<span class="dt">\t</span>extrm{S}]}{K_{m} + [<span class="dt">\t</span>extrm{S}]}<span class="va">$$</span>   </span></code></pre>
-</div>
 </div>
 </div>
 </div>
@@ -3577,14 +3584,14 @@ Some logical operations may be written in different ways. However, we should alw
 <div class="section level3">
 <h3 id="q1-8">Q1<a class="anchor" aria-label="anchor" href="#q1-8"></a>
 </h3>
-<div class="codewrapper sourceCode" id="cb251">
+<div class="codewrapper sourceCode" id="cb250">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb251-1"><a href="#cb251-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">'Gerold Baier'</span></span>
-<span id="cb251-2"><a href="#cb251-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb251-3"><a href="#cb251-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Displaying the author's name:</span></span>
-<span id="cb251-4"><a href="#cb251-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb251-5"><a href="#cb251-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb250-1"><a href="#cb250-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">'Gerold Baier'</span></span>
+<span id="cb250-2"><a href="#cb250-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb250-3"><a href="#cb250-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Displaying the author's name:</span></span>
+<span id="cb250-4"><a href="#cb250-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb250-5"><a href="#cb250-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3605,19 +3612,19 @@ Some logical operations may be written in different ways. However, we should alw
 <div class="section level3">
 <h3 id="q3-4">Q3<a class="anchor" aria-label="anchor" href="#q3-4"></a>
 </h3>
-<div class="codewrapper sourceCode" id="cb254">
+<div class="codewrapper sourceCode" id="cb253">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb254-1"><a href="#cb254-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb254-2"><a href="#cb254-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s </span></span>
-<span id="cb254-3"><a href="#cb254-3" aria-hidden="true" tabindex="-1"></a>k_m <span class="op">=</span> S <span class="op">=</span> <span class="fl">2.5</span> <span class="co">#mol/L</span></span>
-<span id="cb254-4"><a href="#cb254-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb254-5"><a href="#cb254-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Rearranged the equation to</span></span>
-<span id="cb254-6"><a href="#cb254-6" aria-hidden="true" tabindex="-1"></a><span class="co"># solve for v_max:</span></span>
-<span id="cb254-7"><a href="#cb254-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb254-8"><a href="#cb254-8" aria-hidden="true" tabindex="-1"></a>v_max <span class="op">=</span> (v <span class="op">*</span> (k_m <span class="op">+</span> S)) <span class="op">/</span> S</span>
-<span id="cb254-9"><a href="#cb254-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit: mol/L/s</span></span>
-<span id="cb254-10"><a href="#cb254-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vmax ='</span>, v_max, <span class="st">'[ mol / (l * sec) ]'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb253-1"><a href="#cb253-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-2"><a href="#cb253-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s </span></span>
+<span id="cb253-3"><a href="#cb253-3" aria-hidden="true" tabindex="-1"></a>k_m <span class="op">=</span> S <span class="op">=</span> <span class="fl">2.5</span> <span class="co">#mol/L</span></span>
+<span id="cb253-4"><a href="#cb253-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-5"><a href="#cb253-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Rearranged the equation to</span></span>
+<span id="cb253-6"><a href="#cb253-6" aria-hidden="true" tabindex="-1"></a><span class="co"># solve for v_max:</span></span>
+<span id="cb253-7"><a href="#cb253-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-8"><a href="#cb253-8" aria-hidden="true" tabindex="-1"></a>v_max <span class="op">=</span> (v <span class="op">*</span> (k_m <span class="op">+</span> S)) <span class="op">/</span> S</span>
+<span id="cb253-9"><a href="#cb253-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit: mol/L/s</span></span>
+<span id="cb253-10"><a href="#cb253-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vmax ='</span>, v_max, <span class="st">'[ mol / (l * sec) ]'</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3835,7 +3842,7 @@ On a distant planet, the dominant carnivore, the zab, is nearing extinction. The
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <pre><code>To obtain the answer, we may write an algorithm in a pseudo-code format as follows:
 		
@@ -4159,7 +4166,7 @@ Classification: XXX</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4518,7 +4525,7 @@ If there is a match, our programme should display the name of the corresponding 
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4572,7 +4579,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-arrays"><p>Content from <a href="04-arrays.html">Introduction to Arrays</a></p>
 <hr>
-<p> Last updated on 2022-07-12 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/04-arrays.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-09-30 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/04-arrays.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -4736,7 +4743,7 @@ The easiest way to imagine how a <code>list</code> works is to think of it as a 
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4823,7 +4830,7 @@ As demonstrated in the diagram; to retrieve a member of an array through its ind
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4941,7 +4948,7 @@ Detailed traceback:
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5091,7 +5098,7 @@ Retrieve and display a slice of Fibonacci numbers from the <code>list</code> you
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb45">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5202,7 +5209,7 @@ Detailed traceback:
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb56">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5341,7 +5348,7 @@ Sometimes, it may be necessary to insert a value at a specific index in a <code>
   Q1
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb68">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5359,7 +5366,7 @@ Sometimes, it may be necessary to insert a value at a specific index in a <code>
   Q2
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb69">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5494,7 +5501,7 @@ However, values 11 and 7 have been misplaced in the sequence. Correct the order 
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb86">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5603,7 +5610,7 @@ New strand: [X, X, X, ...] </code></pre>
   Q1
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb98">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5624,7 +5631,7 @@ New strand: [X, X, X, ...] </code></pre>
   Q2
   </h4>
 </button>
-<div id="collapseSolution10" class="accordion-collapse collapse" data-bs-parent="#accordionSolution10" aria-labelledby="headingSolution10">
+<div id="collapseSolution10" class="accordion-collapse collapse" aria-labelledby="headingSolution10" data-bs-parent="#accordionSolution10">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb99">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5660,7 +5667,7 @@ New strand: [X, X, X, ...] </code></pre>
   Q3
   </h4>
 </button>
-<div id="collapseSolution11" class="accordion-collapse collapse" data-bs-parent="#accordionSolution11" aria-labelledby="headingSolution11">
+<div id="collapseSolution11" class="accordion-collapse collapse" aria-labelledby="headingSolution11" data-bs-parent="#accordionSolution11">
 <div class="accordion-body">
 <p>One of the two <span style="color: rgb(32, 121, 77);">G</span> nucleotides, the one at index 2 of the original array, is removed. This means that the <kbd>.remove()</kbd> method removes only <em>first</em> instance of a member in an array. The output would therefore be:</p>
 <pre><code>['A', 'C', 'G', 'C', 'M', 'T', 'A']</code></pre>
@@ -6069,7 +6076,7 @@ Likewise, the <code>list</code> plays the role of a container that may incorpora
   Q1
   </h4>
 </button>
-<div id="collapseSolution12" class="accordion-collapse collapse" data-bs-parent="#accordionSolution12" aria-labelledby="headingSolution12">
+<div id="collapseSolution12" class="accordion-collapse collapse" aria-labelledby="headingSolution12" data-bs-parent="#accordionSolution12">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb154">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6091,7 +6098,7 @@ Likewise, the <code>list</code> plays the role of a container that may incorpora
   Q2
   </h4>
 </button>
-<div id="collapseSolution13" class="accordion-collapse collapse" data-bs-parent="#accordionSolution13" aria-labelledby="headingSolution13">
+<div id="collapseSolution13" class="accordion-collapse collapse" aria-labelledby="headingSolution13" data-bs-parent="#accordionSolution13">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb155">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6118,7 +6125,7 @@ Likewise, the <code>list</code> plays the role of a container that may incorpora
   Q3
   </h4>
 </button>
-<div id="collapseSolution14" class="accordion-collapse collapse" data-bs-parent="#accordionSolution14" aria-labelledby="headingSolution14">
+<div id="collapseSolution14" class="accordion-collapse collapse" aria-labelledby="headingSolution14" data-bs-parent="#accordionSolution14">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb157">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6140,7 +6147,7 @@ Likewise, the <code>list</code> plays the role of a container that may incorpora
   Q4
   </h4>
 </button>
-<div id="collapseSolution15" class="accordion-collapse collapse" data-bs-parent="#accordionSolution15" aria-labelledby="headingSolution15">
+<div id="collapseSolution15" class="accordion-collapse collapse" aria-labelledby="headingSolution15" data-bs-parent="#accordionSolution15">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb158">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6161,7 +6168,7 @@ Likewise, the <code>list</code> plays the role of a container that may incorpora
   Q5
   </h4>
 </button>
-<div id="collapseSolution16" class="accordion-collapse collapse" data-bs-parent="#accordionSolution16" aria-labelledby="headingSolution16">
+<div id="collapseSolution16" class="accordion-collapse collapse" aria-labelledby="headingSolution16" data-bs-parent="#accordionSolution16">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb159">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6294,7 +6301,7 @@ Length of overlaps: XX</code></pre>
   Q1
   </h4>
 </button>
-<div id="collapseSolution17" class="accordion-collapse collapse" data-bs-parent="#accordionSolution17" aria-labelledby="headingSolution17">
+<div id="collapseSolution17" class="accordion-collapse collapse" aria-labelledby="headingSolution17" data-bs-parent="#accordionSolution17">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb172">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6339,7 +6346,7 @@ Length of overlaps: XX</code></pre>
   Q2
   </h4>
 </button>
-<div id="collapseSolution18" class="accordion-collapse collapse" data-bs-parent="#accordionSolution18" aria-labelledby="headingSolution18">
+<div id="collapseSolution18" class="accordion-collapse collapse" aria-labelledby="headingSolution18" data-bs-parent="#accordionSolution18">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb174">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6362,7 +6369,7 @@ Length of overlaps: XX</code></pre>
   Q3
   </h4>
 </button>
-<div id="collapseSolution19" class="accordion-collapse collapse" data-bs-parent="#accordionSolution19" aria-labelledby="headingSolution19">
+<div id="collapseSolution19" class="accordion-collapse collapse" aria-labelledby="headingSolution19" data-bs-parent="#accordionSolution19">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb176">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6536,7 +6543,7 @@ When defining a consensus sequence, it is common to include annotations to repre
   Q1
   </h4>
 </button>
-<div id="collapseSolution20" class="accordion-collapse collapse" data-bs-parent="#accordionSolution20" aria-labelledby="headingSolution20">
+<div id="collapseSolution20" class="accordion-collapse collapse" aria-labelledby="headingSolution20" data-bs-parent="#accordionSolution20">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb193">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6554,7 +6561,7 @@ When defining a consensus sequence, it is common to include annotations to repre
   Q2
   </h4>
 </button>
-<div id="collapseSolution21" class="accordion-collapse collapse" data-bs-parent="#accordionSolution21" aria-labelledby="headingSolution21">
+<div id="collapseSolution21" class="accordion-collapse collapse" aria-labelledby="headingSolution21" data-bs-parent="#accordionSolution21">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb194">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6574,7 +6581,7 @@ When defining a consensus sequence, it is common to include annotations to repre
   Q3
   </h4>
 </button>
-<div id="collapseSolution22" class="accordion-collapse collapse" data-bs-parent="#accordionSolution22" aria-labelledby="headingSolution22">
+<div id="collapseSolution22" class="accordion-collapse collapse" aria-labelledby="headingSolution22" data-bs-parent="#accordionSolution22">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb195">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6592,7 +6599,7 @@ When defining a consensus sequence, it is common to include annotations to repre
   Q4
   </h4>
 </button>
-<div id="collapseSolution23" class="accordion-collapse collapse" data-bs-parent="#accordionSolution23" aria-labelledby="headingSolution23">
+<div id="collapseSolution23" class="accordion-collapse collapse" aria-labelledby="headingSolution23" data-bs-parent="#accordionSolution23">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb196">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6693,7 +6700,7 @@ Total number of threonine residues: XX</code></pre>
   Q1
   </h4>
 </button>
-<div id="collapseSolution24" class="accordion-collapse collapse" data-bs-parent="#accordionSolution24" aria-labelledby="headingSolution24">
+<div id="collapseSolution24" class="accordion-collapse collapse" aria-labelledby="headingSolution24" data-bs-parent="#accordionSolution24">
 <div class="accordion-body">
 <pre><code><span><span class="va">sequence_str</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'Please enter a sequence of signle-letter amino acids in lower-case: '</span><span class="op">)</span></span>
 <span>    </span>
@@ -6716,7 +6723,7 @@ Total number of threonine residues: XX</code></pre>
   Q2
   </h4>
 </button>
-<div id="collapseSolution25" class="accordion-collapse collapse" data-bs-parent="#accordionSolution25" aria-labelledby="headingSolution25">
+<div id="collapseSolution25" class="accordion-collapse collapse" aria-labelledby="headingSolution25" data-bs-parent="#accordionSolution25">
 <div class="accordion-body">
 <pre><code>if ser_count &gt; 0 and thr_count &gt; 0:
     response_state = ''
@@ -6851,7 +6858,7 @@ We can also reverse the values in a <code>list</code>. There are two methods for
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>Result: &lt;list_reverseiterator object at 0x7f8410a09540&gt;</code></pre>
+<pre class="output" tabindex="0"><code>Result: &lt;list_reverseiterator object at 0x7f3b6f35e410&gt;</code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb219">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6973,7 +6980,7 @@ Create a <code>list</code>, and experiment with each of the methods provided in 
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution26" class="accordion-collapse collapse" data-bs-parent="#accordionSolution26" aria-labelledby="headingSolution26">
+<div id="collapseSolution26" class="accordion-collapse collapse" aria-labelledby="headingSolution26" data-bs-parent="#accordionSolution26">
 <div class="accordion-body">
 <p>This DIY was intended to encourage you to experiment with the methods outlined.</p>
 </div>
@@ -7150,7 +7157,7 @@ An array with only one member — <em>e.g.</em> <span style="color: rgb(32, 121,
   Q1
   </h4>
 </button>
-<div id="collapseSolution27" class="accordion-collapse collapse" data-bs-parent="#accordionSolution27" aria-labelledby="headingSolution27">
+<div id="collapseSolution27" class="accordion-collapse collapse" aria-labelledby="headingSolution27" data-bs-parent="#accordionSolution27">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb251">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7185,7 +7192,7 @@ An array with only one member — <em>e.g.</em> <span style="color: rgb(32, 121,
   Q2
   </h4>
 </button>
-<div id="collapseSolution28" class="accordion-collapse collapse" data-bs-parent="#accordionSolution28" aria-labelledby="headingSolution28">
+<div id="collapseSolution28" class="accordion-collapse collapse" aria-labelledby="headingSolution28" data-bs-parent="#accordionSolution28">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb253">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7314,7 +7321,7 @@ Computers see images as multidimensional arrays (matrices). In its simplest form
   Q1
   </h4>
 </button>
-<div id="collapseSolution29" class="accordion-collapse collapse" data-bs-parent="#accordionSolution29" aria-labelledby="headingSolution29">
+<div id="collapseSolution29" class="accordion-collapse collapse" aria-labelledby="headingSolution29" data-bs-parent="#accordionSolution29">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb263">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7347,7 +7354,7 @@ Computers see images as multidimensional arrays (matrices). In its simplest form
   Q2
   </h4>
 </button>
-<div id="collapseSolution30" class="accordion-collapse collapse" data-bs-parent="#accordionSolution30" aria-labelledby="headingSolution30">
+<div id="collapseSolution30" class="accordion-collapse collapse" aria-labelledby="headingSolution30" data-bs-parent="#accordionSolution30">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb265">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7808,7 +7815,7 @@ Detailed traceback:
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution31" class="accordion-collapse collapse" data-bs-parent="#accordionSolution31" aria-labelledby="headingSolution31">
+<div id="collapseSolution31" class="accordion-collapse collapse" aria-labelledby="headingSolution31" data-bs-parent="#accordionSolution31">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb322">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7912,7 +7919,7 @@ where each row in the matrix represents a node of origin in the graph, and each 
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution32" class="accordion-collapse collapse" data-bs-parent="#accordionSolution32" aria-labelledby="headingSolution32">
+<div id="collapseSolution32" class="accordion-collapse collapse" aria-labelledby="headingSolution32" data-bs-parent="#accordionSolution32">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="q1-8">Q1<a class="anchor" aria-label="anchor" href="#q1-8"></a>
@@ -8075,7 +8082,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-iterations"><p>Content from <a href="05-iterations.html">Iterations</a></p>
 <hr>
-<p> Last updated on 2022-07-12 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/05-iterations.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-09-30 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/05-iterations.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 60 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -8352,7 +8359,7 @@ You can think of each iteration cycle as pulling out a row from table that is ou
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8461,7 +8468,7 @@ Protein Kinase 2: PKC</code></pre>
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8556,7 +8563,7 @@ Creating a new array to store our values is very easy. All we need to do is to c
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8672,7 +8679,7 @@ This is a perfectly valid approach and it is used in many programming languages.
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8754,7 +8761,7 @@ This is a perfectly valid approach and it is used in many programming languages.
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8941,7 +8948,7 @@ The use of a floating point number as <span style="color: rgb(32, 121, 77);">ste
   Q1
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <pre><code>value = 0
 		
@@ -8961,7 +8968,7 @@ print(value)</code></pre>
   Q2
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8995,7 +9002,7 @@ print(value)</code></pre>
   Q2 - Smart Solution
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9106,7 +9113,7 @@ print(sequence)</code></pre>
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="q1-1">Q1<a class="anchor" aria-label="anchor" href="#q1-1"></a>
@@ -9255,7 +9262,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-06-dictionaries"><p>Content from <a href="06-dictionaries.html">Dictionaries</a></p>
 <hr>
-<p> Last updated on 2022-07-12 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/06-dictionaries.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-09-30 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/06-dictionaries.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -10814,7 +10821,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-07-functions"><p>Content from <a href="07-functions.html">Functions</a></p>
 <hr>
-<p> Last updated on 2022-07-12 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/07-functions.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-09-30 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/07-functions.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -11890,9 +11897,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/aio.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/aio.html",
-  "dateCreated": "2022-06-06",
-  "dateModified": "2022-09-27",
-  "datePublished": "2022-09-27"
+  "dateCreated": "2022-09-30",
+  "dateModified": "2022-09-30",
+  "datePublished": "2022-09-30"
 }
 
   </script><script>
