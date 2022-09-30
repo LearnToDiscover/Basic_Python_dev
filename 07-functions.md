@@ -112,6 +112,8 @@ Functions are designed to perform specific tasks. That is why in the majority of
 Once you start creating functions for different purposes; after a while, you will have a library of ready-to-use functions to address different needs. This is the primary principle of a popular programming paradigm known as [functional programming](https://en.wikipedia.org/wiki/Functional_programming).
 </p>
 
+
+
 So let us implement the example outline in the diagram:
 
 
