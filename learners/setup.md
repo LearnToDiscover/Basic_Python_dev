@@ -21,6 +21,32 @@ Anaconda automatically installs many packages needed for scientific purposes (ov
 To install the Anaconda distribution of Python, please visit the [installation instructions](https://docs.anaconda.com/anaconda/install/) as outlined in the Anaconda [documentations](https://docs.anaconda.com/anaconda/install/), and follow the instructions for your operating system. Ensure that you use the Python 3.x graphical installer for Windows and MacOSX (there is no graphical installer for Linux). Once downloaded, you can proceed to install the distribution as you would any other application on your computer.
 </p>
 
+<p style='text-align: justify;'>
+Anaconda Navigator is a desktop graphical user interface (GUI) included in Anaconda distribution that allows users to launch applications and manage conda packages, environments and channels without using command-line commands. Navigator can search for packages on Anaconda Cloud or in a local Anaconda Repository, install them in an environment, run the packages and update them. It is available for Windows, macOS and Linux.
+</p>
+
+The following applications are available by default in Navigator:
+
+ - JupyterLab
+ 
+ - Jupyter Notebook
+ 
+ - QtConsole
+ 
+ - Spyder
+ 
+ - Glue
+ 
+ - Orange
+ 
+ - RStudio
+ 
+ - Visual Studio Code
+
+
+We recommend using JupyterLab for writing and practicing your codes. 
+
+
 ### Starting with JupyterLab
 Here is the video to learn using JupyterLab
 

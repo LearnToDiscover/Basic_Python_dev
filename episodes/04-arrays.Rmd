@@ -78,6 +78,13 @@ To implement a ```list``` in Python, we place the values separated by commas ins
 	
 :::::::::::::::::::::::::::::::::::: 
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+
+use_virtualenv("r-env")
+```
+
 ```{python}
 table = [5, 21, 5, -1]
 	
