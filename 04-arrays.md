@@ -28,7 +28,15 @@ exercises: 2
 
 <br>
 <p align = "center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PKECJlZOXlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RlhGPZv8fZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KiMQiN4CN8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+<p align = "center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/id72qTBmCEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 
@@ -1935,7 +1943,7 @@ print("Result:", table_rev)
 ```
 
 ```{.output}
-Result: <list_reverseiterator object at 0x7f3b6f35e410>
+Result: <list_reverseiterator object at 0x7f2283602470>
 ```
 
 ```python
