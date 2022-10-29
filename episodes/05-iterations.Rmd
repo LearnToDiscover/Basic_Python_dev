@@ -32,11 +32,11 @@ exercises: 2
 
 <br>
 <p align = "center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SNZFXRrxMjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/40mryCzIBwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 <p align = "center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cNQ692g8NLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-Ex4JtqhWLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 <br>
 This chapter assumes that you are familiar with the following concepts in Python 3:
