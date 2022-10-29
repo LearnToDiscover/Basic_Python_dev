@@ -1943,7 +1943,7 @@ print("Result:", table_rev)
 ```
 
 ```{.output}
-Result: <list_reverseiterator object at 0x7f2283602470>
+Result: <list_reverseiterator object at 0x7fc266fdc9a0>
 ```
 
 ```python
@@ -2030,11 +2030,11 @@ print(table)
 another_table = ['Jane', 'Janette']
 table.extend(another_table)
 	
-print(table)
+print(another_table)
 ```
 
 ```{.output}
-[5, 'Jane', 'Janette']
+['Jane', 'Janette']
 ```
 
 ::::::::::::::::::::::::::::::: challenge 
@@ -2059,7 +2059,7 @@ At this point, you should be comfortable with creating, handling, and manipulati
 </p>
 
 <p style='text-align: justify;'> 
-We have already established that arrays can contain any value regardless of type. This means that they also contain other arrays. An array that includes at least one member that is itself an arrays is referred to as a *nested arrays*. This can be thought of as a table with more than one column:
+We have already established that arrays can contain any value regardless of type. This means that they also contain other arrays. An array that includes at least one member that is itself an array is referred to as a *nested arrays*. This can be thought of as a table with more than one column:
 </p>
 
 ![](fig/nested_arrays.png)

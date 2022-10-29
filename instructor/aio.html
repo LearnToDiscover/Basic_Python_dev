@@ -3842,7 +3842,7 @@ On a distant planet, the dominant carnivore, the zab, is nearing extinction. The
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <pre><code>To obtain the answer, we may write an algorithm in a pseudo-code format as follows:
 		
@@ -4166,7 +4166,7 @@ Classification: XXX</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4525,7 +4525,7 @@ If there is a match, our programme should display the name of the corresponding 
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4579,7 +4579,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-arrays"><p>Content from <a href="04-arrays.html">Introduction to Arrays</a></p>
 <hr>
-<p> Last updated on 2022-10-14 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/04-arrays.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-10-29 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/04-arrays.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -6866,7 +6866,7 @@ We can also reverse the values in a <code>list</code>. There are two methods for
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>Result: &lt;list_reverseiterator object at 0x7f2283602470&gt;</code></pre>
+<pre class="output" tabindex="0"><code>Result: &lt;list_reverseiterator object at 0x7fc266fdc9a0&gt;</code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb219">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6961,12 +6961,12 @@ We can also reverse the values in a <code>list</code>. There are two methods for
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb231-1"><a href="#cb231-1" aria-hidden="true" tabindex="-1"></a>another_table <span class="op">=</span> [<span class="st">'Jane'</span>, <span class="st">'Janette'</span>]</span>
 <span id="cb231-2"><a href="#cb231-2" aria-hidden="true" tabindex="-1"></a>table.extend(another_table)</span>
 <span id="cb231-3"><a href="#cb231-3" aria-hidden="true" tabindex="-1"></a>	</span>
-<span id="cb231-4"><a href="#cb231-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table)</span></code></pre>
+<span id="cb231-4"><a href="#cb231-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(another_table)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[5, 'Jane', 'Janette']</code></pre>
+<pre class="output" tabindex="0"><code>['Jane', 'Janette']</code></pre>
 </div>
 <div id="challenge13" class="callout challenge">
 <div class="callout-square">
@@ -7003,7 +7003,7 @@ Create a <code>list</code>, and experiment with each of the methods provided in 
 At this point, you should be comfortable with creating, handling, and manipulating arrays of type <code>list</code> in Python. It is important to have a relatively good understanding of the principles outlined in this section so far before you start learning about <em>nested arrays</em>.
 </p>
 <p style="text-align: justify;">
-We have already established that arrays can contain any value regardless of type. This means that they also contain other arrays. An array that includes at least one member that is itself an arrays is referred to as a <em>nested arrays</em>. This can be thought of as a table with more than one column:
+We have already established that arrays can contain any value regardless of type. This means that they also contain other arrays. An array that includes at least one member that is itself an array is referred to as a <em>nested arrays</em>. This can be thought of as a table with more than one column:
 </p>
 <figure><img src="../fig/nested_arrays.png" class="figure mx-auto d-block"></figure><div id="callout12" class="callout callout">
 <div class="callout-square">
@@ -8090,7 +8090,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-iterations"><p>Content from <a href="05-iterations.html">Iterations</a></p>
 <hr>
-<p> Last updated on 2022-09-30 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/05-iterations.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-10-29 | <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/05-iterations.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 60 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -8130,11 +8130,11 @@ any links that you are not going to use.
 </div>
 </div>
 <br><p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SNZFXRrxMjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/40mryCzIBwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </p>
 <br><p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cNQ692g8NLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-Ex4JtqhWLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </p>
 <p><br> This chapter assumes that you are familiar with the following concepts in Python 3:</p>
@@ -11129,7 +11129,7 @@ In which case, our function would perform perfectly well if we use <em>keyword a
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -11256,7 +11256,7 @@ add(value_a, value_b)
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -11400,7 +11400,7 @@ To define functions with optional arguments, we need to assign to them a default
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -11674,7 +11674,7 @@ It is possible to have more than one <kbd>return</kbd> in a function. This is us
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb46">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -11749,7 +11749,7 @@ STD of array 2 :  0.14357537702854514</code></pre>
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -11905,9 +11905,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/aio.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/aio.html",
-  "dateCreated": "2022-10-14",
-  "dateModified": "2022-10-25",
-  "datePublished": "2022-10-25"
+  "dateCreated": "2022-10-29",
+  "dateModified": "2022-10-29",
+  "datePublished": "2022-10-29"
 }
 
   </script><script>
