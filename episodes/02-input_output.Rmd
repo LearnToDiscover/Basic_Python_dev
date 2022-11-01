@@ -1754,7 +1754,7 @@ Display the results in the following format:
 ```
 
 Given that: 
-```   
+```{python}   
 a = True
 b = False
 c = True
