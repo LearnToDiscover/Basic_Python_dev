@@ -1943,7 +1943,7 @@ print("Result:", table_rev)
 ```
 
 ```{.output}
-Result: <list_reverseiterator object at 0x7fc266fdc9a0>
+Result: <list_reverseiterator object at 0x7fc0ab8e49d0>
 ```
 
 ```python
@@ -2986,14 +2986,14 @@ adjacency_matrix = [
     [0, 0, 1, 0, 0],  # Hypothalamus
     [0, 0, 0, 1, 0],  # Anterior Pituitary Gland
     [0, 0, 0, 0, 1],  # Adrenal Cortex
-    [0, 0, 1, 1, 0],  # Glucocorticoids
+    [0, 1, 1, 0, 0],  # Glucocorticoids
 ]
 
 print(adjacency_matrix)
 ```
 
 ```{.output}
-[[0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1], [0, 0, 1, 1, 0]]
+[[0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1], [0, 1, 1, 0, 0]]
 ```
 
 ::::::::::::::::::::: 
