@@ -144,25 +144,29 @@ To obtain the answer, we may write an algorithm in a pseudo-code format as follo
   
   let b_total = 9
   
-  let current_total = 0
+  let current_total = absolute(a_total - b_total) + 1
+  
+  let a_total = b_total
+  
+  let b_total = current_total
   
   let current_year = 2002
   
 			
   do {
 				
-    b_total = current_total 
-				
     current_total = absolute(a_total - b_total) + 1
 				
     a_total = b_total
+    
+    b_total = current_total 
 				
     current_year = current_year + 1
 				
 		} while current_total > 1
 			
 			
-    display current_year 
+display current_year 
 
 		
 Given: 
@@ -225,6 +229,33 @@ Is current_total > 1 ? No:
 
 The correct answer is  **c)** 2013.
 
+If this algorithm/pseudo-code is translated to Python language, it will look like this:
+
+
+```python
+
+a_total = 2
+  
+b_total = 9
+  
+current_year = 2002
+
+current_total = abs(a_total - b_total) + 1
+a_total = b_total
+b_total = current_total
+
+while (current_total > 1):
+    current_total = abs(a_total - b_total) + 1
+    a_total = b_total
+    b_total = current_total
+    current_year = current_year + 1
+
+print(current_year)
+```
+
+```{.output}
+2013
+```
 :::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::
@@ -438,7 +469,7 @@ Write a conditional statement that tests the length of a polyQ tract to determin
 
 ![](fig/diy_CAG.png)
 <p style='text-align: justify;'>
-Using the technique you used in [Do it Yourself](02-input_output.Rmd#diy:mathOpts:Huntington), create 5 polyQ tracts containing 26, 15, 39, 32, 26, and 54 codons. Use these polynucleotide chains to test your conditional statement. 
+Using the technique you used in [Do it Yourself](02-input_output.Rmd#diy:mathOpts:Huntington), create 5 polyQ tracts containing 26, 15, 39, 32, 36, and 54 codons. Use these polynucleotide chains to test your conditional statement. 
 </p>
 
 Display the result for each chain in the following format:
@@ -460,7 +491,7 @@ Classification: XXX
 
 glutamine_codon = 'CAG'
 
-polyq_codons = glutamine_codon * 36
+polyq_codons = glutamine_codon * 26
 
 
 #Determining the length of our codon:
@@ -470,6 +501,7 @@ signle_codon = len('CAG')
 len_polyq = len(polyq_codons) 
 
 polyq = len_polyq / signle_codon 
+
 #Constructing the conditional statement:
 
 NORMAL = 26
@@ -479,47 +511,34 @@ REDUCED_PENETRANCE = 40
 classification = str()
 status = str()
 
-if len_polyq < NORMAL:
+if polyq < NORMAL:
 
-  classification, status = 'Normal', 'Unaffected'
+    classification, status = 'Normal', 'Unaffected'
 
-elif len_polyq <= INTERMEDIATE:
+elif polyq <= INTERMEDIATE:
 
-  classification, status = 'Intermediate', 'Unaffected'
+    classification, status = 'Intermediate', 'Unaffected'
 
-elif len_polyq <= REDUCED_PENETRANCE:
-  classification, status = 'Reduced Penetrance', '+/- Affected'
+elif polyq <= REDUCED_PENETRANCE:
+    classification, status = 'Reduced Penetrance', '+/- Affected'
 
 else:
-  classification, status = 'Full Penetrance', 'Affected'
+    classification, status = 'Full Penetrance', 'Affected'
 
 
 #Displaying the results:
 
 print('PolyQ chain with', polyq, 'number of CAG codons:') 
-```
-
-```{.output}
-PolyQ chain with 36.0 number of CAG codons:
-```
-
-```python
-print('Status:', status)
-```
-
-```{.output}
-Status: Affected
-```
-
-```python
 print('Classification:', classification)
+print('Status:', status)
 
-
-#Repeat this with 15, 39, 32, 26, and 54 codons. 
+#Repeat this with 15, 39, 32, 36, and 54 codons. 
 ```
 
 ```{.output}
-Classification: Full Penetrance
+PolyQ chain with 26.0 number of CAG codons:
+Classification: Intermediate
+Status: Unaffected
 ```
 
 ::::::::::::::::::
@@ -712,24 +731,24 @@ The classification protocol is as follows:
 
 ```python
 mark = 63
-		
+
 # Thresholds 
 first = 70
 second_upper = 60
 second_lower = 50 
 passed = 40  # "pass" is a syntax in Python.
-		
+
 if mark >= first:
     classification = 'First Class' 
-elif mark > second_upper:
+elif mark >= second_upper:
     classification = 'Second Class (upper division)'
-elif mark > second_lower:
+elif mark >= second_lower:
     classification = 'Second Class (lower division)'
-elif mark > passed:
+elif mark >= passed:
     classification = 'Pass'
 else:
     classification = 'Fail'
-		
+
 print('The student obtained a', classification, 'in their studies.')
 ```
 
