@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.2.1",
+    "Version": "4.2.2",
     "Repositories": [
       {
         "Name": "carpentries",
@@ -21,7 +21,7 @@
       "Package": "Matrix",
       "Version": "1.4-0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "130c0caba175739d98f2963c6a407cf6",
       "Requirements": [
         "lattice"
@@ -232,7 +232,7 @@
       "Package": "renv",
       "Version": "0.15.4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "c1078316e1d4f70275fc1ea60c0bc431",
       "Requirements": []
     },
@@ -240,7 +240,7 @@
       "Package": "reticulate",
       "Version": "1.24",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "ffdf27627a3c1537478073c43b6e7980",
       "Requirements": [
         "Matrix",
@@ -284,7 +284,7 @@
       "Package": "rprojroot",
       "Version": "2.0.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "249d8cd1e74a8f6a26194a91b47f21d1",
       "Requirements": []
     },
@@ -306,8 +306,11 @@
       "Package": "stringi",
       "Version": "1.7.6",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "bba431031d30789535745a9627ac9271",
+      "RemoteType": "repository",
+      "RemoteUrl": "https://github.com/gagolews/stringi",
+      "RemoteRef": "v1.7.6",
+      "RemoteSha": "1a1b5115884cd68650915bb1a8ad893ee4d3f4c6",
+      "Hash": "3ef6419a915c7472e644afbdca6e44a2",
       "Requirements": []
     },
     "stringr": {
@@ -326,7 +329,7 @@
       "Package": "tinytex",
       "Version": "0.38",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "759d047596ac173433985deddf313450",
       "Requirements": [
         "xfun"
@@ -344,7 +347,7 @@
       "Package": "xfun",
       "Version": "0.30",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "e83f48136b041845e50a6658feffb197",
       "Requirements": []
     },
