@@ -1943,7 +1943,7 @@ print("Result:", table_rev)
 ```
 
 ```{.output}
-Result: <list_reverseiterator object at 0x7f7316f9ac50>
+Result: <list_reverseiterator object at 0x7f653abf6d40>
 ```
 
 ```python
