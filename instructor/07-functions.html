@@ -85,11 +85,11 @@
   Basic Python
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 100%" class="percentage">
-    100%
+<aside class="col-md-12 lesson-progress"><div style="width: 91%" class="percentage">
+    91%
   </div>
   <div class="progress l2d">
-    <div class="progress-bar l2d" role="progressbar" style="width: 100%" aria-valuenow="100" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar l2d" role="progressbar" style="width: 91%" aria-valuenow="91" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -267,7 +267,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Functions</h1>
-        <p> Last updated on 2023-03-14 | 
+        <p> Last updated on 2023-03-15 | 
         
         <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/07-functions.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -281,8 +281,8 @@
 
         
 
-<p><a href="07-functions.md.pdf"><strong>Download Chapter pdf</strong></a></p>
-<p><a href="07-functions.ipynb"><strong>Download Chapter notebook (ipynb)</strong></a></p>
+<p><a href="../07-functions.md.pdf"><strong>Download Chapter pdf</strong></a></p>
+<p><a href="../07-functions.ipynb"><strong>Download Chapter notebook (ipynb)</strong></a></p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -329,7 +329,8 @@
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Prereq</h3>
+<h3 class="callout-title">Prereq<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+</h3>
 <div class="callout-content">
 <ul><li><a href="02-input_output.html#math_ops">Mathematical Operation</a></li>
 <li><a href="03-conditional_statements.html#subsubsec:indentationRule">Indentation Rule</a></li>
@@ -339,7 +340,8 @@
 </ul></div>
 </div>
 </div>
-<section id="sec:functions"><h2 class="section-heading">Functions</h2>
+<section id="sec:functions"><h2 class="section-heading">Functions<a class="anchor" aria-label="anchor" href="#sec:functions"></a>
+</h2>
 <hr class="half-width"><p><a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" class="external-link"><strong>Defining Functions</strong></a></p>
 <p style="text-align: justify;">
 In programming, functions are containers that incorporate some code and perform very specific tasks. As we learned in the first chapter (on <a href="02-input_output.html#sub:ProducingAnOutput">outputs</a>), a function usually takes in one or several variables or values, processes them, and produces a specific result. The variable(s) given to a function and those produced by it are referred to as <em>input arguments</em>, and <em>outputs</em> respectively.
@@ -352,7 +354,8 @@ There are different ways to create functions in Python. In this course, we will 
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
 <div class="callout-content">
 <p>There are several points to remember in relation to functions:</p>
 <p style="text-align: justify;">
@@ -381,7 +384,8 @@ We implement functions to prevent repetition in our code. It is therefore import
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="interesting-fact" class="callout-inner">
-<h3 class="callout-title">Interesting Fact</h3>
+<h3 class="callout-title">Interesting Fact<a class="anchor" aria-label="anchor" href="#callout2"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 Functions are designed to perform specific tasks. That is why in the majority of cases, they are named using <em>verbs</em> — e.g. <kbd>add()</kbd> or <kbd>print()</kbd>. We use verbs to describe an action, a state, or an occurrence in everyday language. Likewise, this type of nomenclature describes the action performed by a specific function. Name your functions wisely!
@@ -432,7 +436,8 @@ Once implemented, we can go ahead use the function. We can do so in the same way
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-1" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout3"></a>
+</h3>
 <div class="callout-content">
 <p>When calling a function, we should always pass our <em>positional input arguments</em> in the order they are defined in the function definition, from left to right.</p>
 <p style="text-align: justify;">
@@ -479,7 +484,8 @@ Alternatively, we can use the name of each <em>input argument</em> to pass value
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-2" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout4"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 Choose the order of your <em>input argument</em> wisely. This is important when your function accepts multiple <em>input argument</em>.
@@ -536,7 +542,8 @@ In which case, our function would perform perfectly well if we use <em>keyword a
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:func:tataBoxFinder" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
 <div class="callout-content">
 <p>Implement a function called <span style="color: rgb(32, 121, 77);">find_tata</span> that takes in one <code>str</code> argument called <span style="color: rgb(32, 121, 77);">seq</span> and looks for the <span style="color: rgb(32, 121, 77);">TATA</span>-box motif inside that sequence. Then:</p>
 <ul><li><p>if found, the function should return the index for the <span style="color: rgb(32, 121, 77);">TATA</span>-box as output;</p></li>
@@ -606,7 +613,8 @@ The documentation string, also known as the <em>docstring</em>, is always writte
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-3" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout5"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 You might feel as though you would remember what your own functions do. That, however, is scarcely the case. Functions that we implement tend to perform specialist, and at times, very complex and interconnected processes. Whilst you might remember what a specific function does for a few days after writing it, you would almost certainly have trouble remembering the details in a matter of months. And that is not even considering details regarding the type of the input argument(s) and those of the output. In addition, programmers often share their works with other fellow programmers; be it with their team, or in the context of a publication, or in public repositories as a contribution to the community. Whatever the reason, there is one golden rule: a functionality does not exist unless it is documented.
@@ -667,7 +675,8 @@ add(value_a, value_b)
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:func:tataBoxFinderWithDocs" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+</h3>
 <div class="callout-content">
 <p>Re-implement the function you defined in the previous <a href="#diy:func:tataBoxFinder">Do it Yourself</a> with appropriate documentations.</p>
 </div>
@@ -719,7 +728,8 @@ An example we have already worked with is <kbd>print()</kbd>. We already know th
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-4" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout6"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 Input arguments that are necessary to call a specific function are referred to as <em>non-default arguments</em>. Those whose definition is not mandatory for a function to be called are known as <em>default</em> or <em>optional arguments</em>.
@@ -735,7 +745,8 @@ Optional arguments may <em>only</em> be defined <em>after</em> non-default argum
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="advanced-topic" class="callout-inner">
-<h3 class="callout-title">Advanced Topic</h3>
+<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#callout7"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 The default value defined for <em>optional arguments</em> can in theory be an instance of any type in Python. However, it is better and safer to only use <em>immutable</em> types as demonstrated in <a href="02-input_output.html#tb:types:nativeTypes">Table</a> for default values. The rationale behind this principle is beyond the scope of this course, but you can read more about it in the <a href="https://docs.python.org/3/tutorial/controlflow.html#default-argument-values" class="external-link">official documentations</a>.
@@ -805,7 +816,8 @@ To define functions with optional arguments, we need to assign to them a default
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+</h3>
 <div class="callout-content">
 <p>Modify the function from previous <a href="#diy:func:tataBoxFinderWithDocs">Do it Yourself</a> to accept an <em>optional argument</em> called <code>upper</code>, with default value of <code>False</code>; thereafter:</p>
 <ul><li><p>if <code>upper</code> is <code>False</code>, then the function should perform as it already does (similar to previous <a href="#diy:func:tataBoxFinderWithDocs">Do it Yourself</a>);</p></li>
@@ -860,7 +872,8 @@ To define functions with optional arguments, we need to assign to them a default
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-5" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout8"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 It is not necessary to implement your functions in this way. It is, however, a very common practice amongst programmers of any language. For that reason, you should be at least familiar with the technique as you are bound to encounter it sooner rather later.
@@ -937,7 +950,8 @@ It is possible to have more than one <kbd>return</kbd> in a function. This is us
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-6" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout9"></a>
+</h3>
 <div class="callout-content">
 <p>Functions must have specialist functionalities. They should, as much as possible, be implemented to perform one task, and one task only.</p>
 <p>So if you need to get more things done, do not write more code in one function. This would defy the purpose of functional programming. Instead, consider writing more functions that contain less code and perform more specialist functionalities.</p>
@@ -949,7 +963,8 @@ It is possible to have more than one <kbd>return</kbd> in a function. This is us
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="example-a-mini-toolbox-for-statistics" class="callout-inner">
-<h3 class="callout-title">EXAMPLE: A mini toolbox for statistics</h3>
+<h3 class="callout-title">EXAMPLE: A mini toolbox for statistics<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+</h3>
 <div class="callout-content">
 <figure><img src="../fig/mini_toolbox.png" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1069,7 +1084,8 @@ It is possible to have more than one <kbd>return</kbd> in a function. This is us
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-1" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge4"></a>
+</h3>
 <div class="callout-content">
 <p>Write a function that given an array of any values, produces a dictionary containing the value of that array as <em>keys</em>, and the count of the values in the original array (their frequencies) as <em>values</em>.</p>
 <p><strong>Example:</strong></p>
@@ -1124,13 +1140,15 @@ It is possible to have more than one <kbd>return</kbd> in a function. This is us
 </div>
 </div>
 </div>
-</section><section id="exercises"><h2 class="section-heading">Exercises</h2>
+</section><section id="exercises"><h2 class="section-heading">Exercises<a class="anchor" aria-label="anchor" href="#exercises"></a>
+</h2>
 <hr class="half-width"><div id="challenge5" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="end-of-chapter-exercises" class="callout-inner">
-<h3 class="callout-title">End of chapter Exercises</h3>
+<h3 class="callout-title">End of chapter Exercises<a class="anchor" aria-label="anchor" href="#challenge5"></a>
+</h3>
 <div class="callout-content">
 <p>Write a function with the following features:</p>
 <ul><li><p>Call the function <kbd>get_basic_stats()</kbd> and let it take one input argument which, however, may contain any number of input arrays, <em>e.g.</em> a tuple of arrays.</p></li>
@@ -1262,7 +1280,8 @@ STD of array 2 :  0.14357537702854514</code></pre>
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Keypoints</h3>
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
 <div class="callout-content">
 <ul><li>Functions make repetitive tasks efficient.</li>
 <li>Keyword <kbd>def</kbd> is used to create a function.</li>
@@ -1305,9 +1324,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/LearnToDiscover/sandpaper/tree/l2d" class="external-link">sandpaper (0.9.0)</a>,
+        <p>Built with <a href="https://github.com/zkamvar/l2d-sandpaper/tree/update-sandpaper-2023" class="external-link">sandpaper (0.11.9)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/e815ea1a34f6eda01a3c9ab9643e35aa051e1938" class="external-link">pegboard (0.4.3)</a>,
-      and <a href="https://github.com/LearnToDiscover/varnish/tree/c72a9c21616682c29279523e56b331ed24509f1c" class="external-link">varnish (0.2.14)</a>.</p>
+      and <a href="https://github.com/LearnToDiscover/varnish/tree/f412e8bbc14a5110120155e1af9282842877c62f" class="external-link">varnish (0.2.14)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1320,16 +1339,16 @@ any links that you are not going to use.
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
   "@id": "https://learntodiscover.github.io/Basic_Python/instructor/07-functions.html",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08",
+  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "Functions",
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/07-functions.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/07-functions.html",
-  "dateCreated": "2022-11-09",
-  "dateModified": "2023-03-14",
-  "datePublished": "2023-03-14"
+  "dateCreated": "2023-03-15",
+  "dateModified": "2023-03-15",
+  "datePublished": "2023-03-15"
 }
 
   </script><script>

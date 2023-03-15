@@ -85,11 +85,11 @@
   Basic Python
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 67%" class="percentage">
-    67%
+<aside class="col-md-12 lesson-progress"><div style="width: 37%" class="percentage">
+    37%
   </div>
   <div class="progress l2d">
-    <div class="progress-bar l2d" role="progressbar" style="width: 67%" aria-valuenow="67" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar l2d" role="progressbar" style="width: 37%" aria-valuenow="37" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -269,7 +269,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Iterations</h1>
-        <p> Last updated on 2023-03-14 | 
+        <p> Last updated on 2023-03-15 | 
         
         <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/05-iterations.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -325,7 +325,8 @@
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Prereq</h3>
+<h3 class="callout-title">Prereq<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+</h3>
 <div class="callout-content">
 <ul><li><a href="02-input_output.html#operations">I/O Operations</a></li>
 <li><a href="02-input_output.html#varTypes">Variables and Types</a></li>
@@ -345,7 +346,8 @@ Additionally, make sure that you are comfortable with the principles of <a href=
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="note" class="callout-inner">
-<h3 class="callout-title">Note</h3>
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 You can practice everything in this section and the subsequent ones as you have been doing so far. However, if you find it hard to grasp some of the concepts, don’t worry, you are not alone. It takes practice. To help you with that, <a href="http://www.pgbovine.net" class="external-link">Philip Guo</a> from UC San Diego (Calif., USA) has developed <a href="http://www.pythontutor.com/visualize.html#mode=edit" class="external-link">PythonTutor.com</a>, an excellent online tool for learning Python. On that website, write (or ‘copy and paste’) your code in the editor, then click <em>Visualize Execution</em>. In the new page, use the <em>forward</em> and <em>back</em> buttons to see a step-by-step graphical visualisation of the processes that occur during the execution of your code. Try it on the examples in this section.
@@ -353,7 +355,8 @@ You can practice everything in this section and the subsequent ones as you have 
 </div>
 </div>
 </div>
-<section id="the-concept"><h2 class="section-heading">The concept</h2>
+<section id="the-concept"><h2 class="section-heading">The concept<a class="anchor" aria-label="anchor" href="#the-concept"></a>
+</h2>
 <hr class="half-width"><p style="text-align: justify;">
 We employ iterations and loops in programming to perform repetitive operations. A repetitive operation is a reference to one or several defined operations that are repeated multiple times.
 </p>
@@ -387,7 +390,8 @@ Whilst this does the job, it is clearly very tedious and repetitive. In addition
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout2"></a>
+</h3>
 <div class="callout-content">
 <p>In programming, there is a universally appreciated golden principle known as the <strong>DRY</strong> rule; and this is what it stand for:</p>
 <p align="center">
@@ -404,7 +408,8 @@ There are some universal tools for iterations that exist in all programming lang
 <p style="text-align: justify;">
 Throughout this section, we will discuss iterations via <kbd>for</kbd> and <kbd>while</kbd> loops, and review some real-world examples that may only be addressed using iterative processes.
 </p>
-</section><section id="for-loop"><h2 class="section-heading">for-loops</h2>
+</section><section id="for-loop"><h2 class="section-heading">for-loops<a class="anchor" aria-label="anchor" href="#for-loop"></a>
+</h2>
 <hr class="half-width"><p style="text-align: justify;">
 Some of the data show that up to 80% of all conventional iterations are implemented as <kbd>for</kbd> loops. Whether or not it is the best choice in of all these cases is a matter of opinion. What is important, however, is to learn the difference between the 2 methods and feel comfortable with how they work.
 </p>
@@ -416,7 +421,8 @@ Implementation of <kbd>for</kbd> loops in Python is simple compared to other pro
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-1" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout3"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 In Python, <em>iterable</em> is a term used in reference to variables that can be iterated through. Any variable type that can be used in a <kbd>for</kbd> loop <em>without</em> any modifications is therefore considered an <em>iterable</em>.
@@ -433,7 +439,8 @@ Most arrays and sequences are iterable. See <a href="02-input_output.html#fig:na
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="advanced-topic" class="callout-inner">
-<h3 class="callout-title">Advanced Topic</h3>
+<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#callout4"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 An iterable is a Python variable that contains the built–in method <code>.__iter__()</code>. Methods starting and ending with two underscores (dunderscores) are also known as <em>magic methods</em> in Python. See <a href="https://docs.python.org/3/tutorial/classes.html#iterators" class="external-link">Python documentations</a> for additional information.
@@ -446,7 +453,8 @@ An iterable is a Python variable that contains the built–in method <code>.__it
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="process" class="callout-inner">
-<h3 class="callout-title">Process</h3>
+<h3 class="callout-title">Process<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li><p>A <code>for</code>-loop is initialised using an array or a sequence and begins its process by going through the array values from the first row.</p></li>
 <li><p><strong>Iterative Process:</strong> The value of the <em>current row</em> is retrieved and given the alias <span style="color: rgb(32, 121, 77);">item</span>, which now represents a variable in the context of the loop.</p></li>
@@ -493,7 +501,8 @@ where we can see that the result for each iteration is displayed in a new line. 
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-2" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout5"></a>
+</h3>
 <div class="callout-content">
 <p>A <kbd>for</kbd> loop is always initialised as:</p>
 <pre><code>for variable_name in an_array: 
@@ -515,7 +524,8 @@ You can think of each iteration cycle as pulling out a row from table that is ou
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
 <div class="callout-content">
 <p>Given:</p>
 <div class="codewrapper sourceCode" id="cb7">
@@ -539,7 +549,7 @@ You can think of each iteration cycle as pulling out a row from table that is ou
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -566,7 +576,8 @@ Peptide DNSYLY at index 2 contains 6 amino acids.</code></pre>
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="ExtExmp" class="callout-inner">
-<h3 class="callout-title">Extended example of iterations using <code>for</code> loops</h3>
+<h3 class="callout-title">Extended example of iterations using <code>for</code> loops<a class="anchor" aria-label="anchor" href="#discussion2"></a>
+</h3>
 <div class="callout-content">
 <p>When using a <kbd>for</kbd> loop, we can also reference other variables that have already been defined outside of the loop block:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -626,7 +637,8 @@ Iteration number 5 : 3.4 * 2 = 6.8</code></pre>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-1" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+</h3>
 <div class="callout-content">
 <p>Write a <code>for</code> loop to display the values of a <code>tuple</code> defined as:</p>
 <div class="codewrapper sourceCode" id="cb14">
@@ -648,7 +660,7 @@ Protein Kinase 2: PKC</code></pre>
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -715,7 +727,8 @@ Creating a new array to store our values is very easy. All we need to do is to c
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-2" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+</h3>
 <div class="callout-content">
 <p>Given:</p>
 <div class="codewrapper sourceCode" id="cb22">
@@ -739,7 +752,7 @@ Creating a new array to store our values is very easy. All we need to do is to c
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -798,7 +811,8 @@ To perform <em>item assignment</em>; we can implement a variable to represent th
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="advanced-topic-1" class="callout-inner">
-<h3 class="callout-title">Advanced Topic</h3>
+<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#callout6"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 The <code>enumerate()</code> function actually returns a <em>generator</em> of <code>tuple</code> items each time it is called in the context of a <code>for</code> loop. A generator is in principle very similar to a normal array; however, unlike an array, the values of a generator are not evaluated by the computer until the exact time at which they are going to be used. This is an important technique in functional programming known as <em>lazy evaluation</em>. It is primarily utilised to reduce the workload on the computer (both the processor and the memory) by preventing the execution of processes that may be delayed for a later time. In the case of the <code>enumerate()</code> function, the values are evaluated at the beginning of each iteration cycle in a <code>for</code> loop. Learn more about lazy evaluation in <a href="https://en.wikipedia.org/wiki/Lazy_evaluation" class="external-link">Wikipedia</a> or read more on generators in Python in the <a href="https://docs.python.org/3/howto/functional.html#generators" class="external-link">official documentations</a>.
@@ -831,7 +845,8 @@ This is a perfectly valid approach and it is used in many programming languages.
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:loops:for:enumerate" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge4"></a>
+</h3>
 <div class="callout-content">
 <p>Given:</p>
 <div class="codewrapper sourceCode" id="cb29">
@@ -853,7 +868,7 @@ This is a perfectly valid approach and it is used in many programming languages.
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -903,7 +918,8 @@ This is a perfectly valid approach and it is used in many programming languages.
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-3" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge5"></a>
+</h3>
 <div class="callout-content">
 <p>Given:</p>
 <div class="codewrapper sourceCode" id="cb35">
@@ -933,7 +949,7 @@ This is a perfectly valid approach and it is used in many programming languages.
   DIY ANSWER
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -968,7 +984,8 @@ To produce a sequence of <code>int</code> numbers to use in a <kbd>for</kbd> loo
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-3" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout7"></a>
+</h3>
 <div class="callout-content">
 <p>The <kbd>range()</kbd> function does not create the sequence of numbers immediately. Rather, it behaves in a similar way as the <kbd>enumerate()</kbd> function does (as a generator).</p>
 </div>
@@ -1005,7 +1022,8 @@ To produce a sequence of <code>int</code> numbers to use in a <kbd>for</kbd> loo
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-4" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout8"></a>
+</h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 The <kbd>range()</kbd> function is <em>non-inclusive</em>. That is, it creates a sequence that starts from and includes the value given as the <em>start</em> argument, up to but excluding the the value of the <em>end</em> argument. For instance, <code>range</code>(1, 5, 1) creates a sequence starting from <span style="color: rgb(32, 121, 77);">1</span>, which is then incremented <span style="color: rgb(32, 121, 77);">1</span> step at a time right up to <span style="color: rgb(32, 121, 77);">5</span>, resulting in a sequence that includes the following numbers: <span style="color: rgb(32, 121, 77);">1, 2, 3, 4</span>
@@ -1018,13 +1036,15 @@ The <kbd>range()</kbd> function is <em>non-inclusive</em>. That is, it creates a
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="bigexam" class="callout-inner">
-<h3 class="callout-title">Example: Sequence comparison. dot plots and <code>for</code>-loops</h3>
+<h3 class="callout-title">Example: Sequence comparison. dot plots and <code>for</code>-loops<a class="anchor" aria-label="anchor" href="#discussion3"></a>
+</h3>
 <div class="callout-content">
 <figure><img src="fig/example.5.2.2.png" id="example" class="figure mx-auto d-block"><img src="fig/dot_matrices.png" id="dot" class="figure mx-auto d-block"><img src="fig/dot_matrix_implementation.png" id="dotImp" class="figure mx-auto d-block"><img src="fig/flowchart2.png" class="figure mx-auto d-block"><img src="fig/visualisation.png" class="figure mx-auto d-block"><img src="fig/plot.png" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </div>
-</section><section id="while-loops"><h2 class="section-heading">while-loops</h2>
+</section><section id="while-loops"><h2 class="section-heading">while-loops<a class="anchor" aria-label="anchor" href="#while-loops"></a>
+</h2>
 <hr class="half-width"><p style="text-align: justify;">
 In the previous, we explored <code>for</code>-loop mediated iterations and learned that they are <em>exclusively</em> applied to iterable objects — e.g. arrays and sequences. This is because, as demonstrated in <a href="#flowchart">workflow figure</a>, at the end of each iteration, the <em>implicit</em> termination condition that is inherent in the process tests whether or not it has reached the end of the sequence it is iterating through.
 </p>
@@ -1071,7 +1091,8 @@ GCGLL</code></pre>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-4" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge6"></a>
+</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>
 <p>Write a script which asks the user to enter a number, then:</p>
@@ -1102,7 +1123,7 @@ The use of a floating point number as <span style="color: rgb(32, 121, 77);">ste
   Q1
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <pre><code>value = 0
 		
@@ -1122,7 +1143,7 @@ print(value)</code></pre>
   Q2
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1156,7 +1177,7 @@ print(value)</code></pre>
   Q2 - Smart Solution
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1213,13 +1234,15 @@ while len(sequence) != 5 and sequence != exit_keyword:
 	
 print(sequence)</code></pre>
 </div>
-</section><section id="exercises"><h2 class="section-heading">Exercises</h2>
+</section><section id="exercises"><h2 class="section-heading">Exercises<a class="anchor" aria-label="anchor" href="#exercises"></a>
+</h2>
 <hr class="half-width"><div id="challenge7" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="end-of-chapter-exercises" class="callout-inner">
-<h3 class="callout-title">End of chapter Exercises</h3>
+<h3 class="callout-title">End of chapter Exercises<a class="anchor" aria-label="anchor" href="#challenge7"></a>
+</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Can you explain the reason why in the example given in subsection <a href="#subsubsec:loops:for:conditionalStatements">for-loop and conditional statements</a> we set <span style="color: rgb(32, 121, 77);">minimum</span> to be equal to the first value of our array instead of, for instance zero or some other number?</li>
 </ol><p>Store your answer in a variable and display it using <kbd>print()</kbd>.</p>
@@ -1252,7 +1275,7 @@ print(sequence)</code></pre>
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="q1-1">Q1<a class="anchor" aria-label="anchor" href="#q1-1"></a></h3>
@@ -1379,7 +1402,8 @@ print(sequence)</code></pre>
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Keypoints</h3>
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
 <div class="callout-content">
 <ul><li>Iterations and loops are used to perform repetitive operations.</li>
 <li>Implementation of <code>for</code>-loop involves 4 steps.</li>
@@ -1423,9 +1447,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/LearnToDiscover/sandpaper/tree/l2d" class="external-link">sandpaper (0.9.0)</a>,
+        <p>Built with <a href="https://github.com/zkamvar/l2d-sandpaper/tree/update-sandpaper-2023" class="external-link">sandpaper (0.11.9)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/e815ea1a34f6eda01a3c9ab9643e35aa051e1938" class="external-link">pegboard (0.4.3)</a>,
-      and <a href="https://github.com/LearnToDiscover/varnish/tree/c72a9c21616682c29279523e56b331ed24509f1c" class="external-link">varnish (0.2.14)</a>.</p>
+      and <a href="https://github.com/LearnToDiscover/varnish/tree/f412e8bbc14a5110120155e1af9282842877c62f" class="external-link">varnish (0.2.14)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1438,16 +1462,16 @@ any links that you are not going to use.
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
   "@id": "https://learntodiscover.github.io/Basic_Python/05-iterations.html",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08",
+  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "Iterations",
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/05-iterations.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/05-iterations.html",
-  "dateCreated": "2022-11-09",
-  "dateModified": "2023-03-14",
-  "datePublished": "2023-03-14"
+  "dateCreated": "2023-03-15",
+  "dateModified": "2023-03-15",
+  "datePublished": "2023-03-15"
 }
 
   </script><script>

@@ -268,7 +268,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Dictionaries</h1>
-        <p> Last updated on 2023-03-14 | 
+        <p> Last updated on 2023-03-15 | 
         
         <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/06-dictionaries.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -282,8 +282,8 @@
 
         
 
-<p><a href="06-dictionaries.md.pdf"><strong>Download Chapter pdf</strong></a></p>
-<p><a href="06-dictionaries.ipynb"><strong>Download Chapter notebook (ipynb)</strong></a></p>
+<p><a href="../06-dictionaries.md.pdf"><strong>Download Chapter pdf</strong></a></p>
+<p><a href="../06-dictionaries.ipynb"><strong>Download Chapter notebook (ipynb)</strong></a></p>
 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdr0capF7jloJhPH3Pki1B3LZoKOG16poOpuVJ7SL2LkwLHQA/viewform?pli=1" class="external-link"><span style="color: rgb(255, 0, 0);"><strong>Mandatory Lesson Feedback Survey</strong></span></a></p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
@@ -316,7 +316,8 @@
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Prereq</h3>
+<h3 class="callout-title">Prereq<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+</h3>
 <div class="callout-content">
 <ul><li><a href="03-conditional_statements.html#subsubsec:indentationRule">Indentation Rule</a></li>
 <li><a href="03-conditional_statements.html">Conditional Statements</a></li>
@@ -325,7 +326,8 @@
 </ul></div>
 </div>
 </div>
-<section id="sec:dict"><h2 class="section-heading">Dictionary</h2>
+<section id="sec:dict"><h2 class="section-heading">Dictionary<a class="anchor" aria-label="anchor" href="#sec:dict"></a>
+</h2>
 <hr class="half-width"><p><a href="https://docs.python.org/3.6/library/stdtypes.html#mapping-types-dict" class="external-link"><strong>Mapping Types – <code>dict</code></strong></a></p>
 <p><a href="https://www.google.co.uk/search?q=Dictionaries%20in%20Python%203" class="external-link"><strong>Google search</strong></a></p>
 <p><a href="https://stackoverflow.com/search?q=python-3.x%20dictionaries&amp;s=78ef2a31-bb79-485b-914d-02db1ab8e9ca" class="external-link"><strong>StackOverflow python-3.x dictionaries</strong></a></p>
@@ -343,7 +345,8 @@
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
 <div class="callout-content">
 <p>To implement a <code>dict</code> in Python, we place our entries in curly bracket, separated using a comma. We separate <em>keys</em> and <em>values</em> using a colon — e.g. {<span style="color: rgb(32, 121, 77);">‘key’</span>: <span style="color: rgb(32, 121, 77);">‘value’</span>}. The combination of dictionary <em>key</em> and its associating <em>value</em> is known as a dictionary <em>item</em>.</p>
 </div>
@@ -354,7 +357,8 @@
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="note" class="callout-inner">
-<h3 class="callout-title">Note</h3>
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#callout2"></a>
+</h3>
 <div class="callout-content">
 <p>When constructing a long <code>dict</code> with several <em>items</em> that span over several lines, it is not necessary to write one <em>item</em> per line or use indentations for each <em>item</em> or line. All we must is to write the  as {<span style="color: rgb(32, 121, 77);">‘key’</span>: <span style="color: rgb(32, 121, 77);">‘value’</span>} in curly brackets and separate each pair with a comma. However, it is good practice to write one <em>item</em> per line and use indentations as it makes it considerably easier to read the code and understand the hierarchy.</p>
 </div>
@@ -394,7 +398,8 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
 <div class="callout-content">
 <p>Use <a href="https://uniprot.org/" class="external-link">Universal Protein Resource</a> (UniProt) to find the following proteins for humans: - Axin-1 - Rhodopsin</p>
 <p>Construct a dictionary for these proteins and the number amino acids for each of them. The <em>keys</em> should represent the name of the protein. Display the result.</p>
@@ -455,7 +460,8 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-1" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+</h3>
 <div class="callout-content">
 <p>Using the dictionary you created in <a href="#diy:firstDictExample">Do it Yourself</a>, test to see whether or not a protein called <strong>ERK</strong> exists as a <em>key</em> in your dictionary? Display the result as a Boolean value.</p>
 </div>
@@ -528,7 +534,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:dict:implement:fromTable" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+</h3>
 <div class="callout-content">
 <p>Implement a <code>dict</code> to represent the following set of information:</p>
 <p><strong>Cystic Fibrosis:</strong></p>
@@ -576,7 +583,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-1" class="callout-inner">
-<h3 class="callout-title">Remember</h3>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout3"></a>
+</h3>
 <div class="callout-content">
 <p>Whilst the <em>values</em> in a <code>dict</code> can be of virtually any type supported in Python, the <em>keys</em> may only be defined using immutable types.</p>
 <p>To find out which types are immutable, see <a href="02-input_output.html#fig:nativeTypes">Table</a>. Additionally, the <em>keys</em> in a dictionary must be unique.</p>
@@ -714,7 +722,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-2" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge4"></a>
+</h3>
 <div class="callout-content">
 <p>Implement the following dictionary:</p>
 <pre><code>signal = {'name': 'Wnt', 'pathway': 'Non-Canonical'}}
@@ -759,7 +768,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="advanced-topic" class="callout-inner">
-<h3 class="callout-title">Advanced Topic</h3>
+<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#callout4"></a>
+</h3>
 <div class="callout-content">
 <p>Displaying an entire dictionary using the <kbd>print()</kbd> function can look a little messy because it is not properly structured. There is, however, an external library called <code>pprint</code> (Pretty-Print) that behaves in very similar way to the default <kbd>print()</kbd> function, but structures dictionaries and other arrays in a more presentable way before displaying them. We do not discuss ``Pretty-Print’’ in this course, but it is a part of Python’s default library and is therefore installed with Python automatically. To learn more it, have a read through the <a href="https://docs.python.org/3/library/pprint.html#module-pprint" class="external-link">official documentations</a> for the library and review the <a href="https://docs.python.org/3/library/pprint.html#example" class="external-link">examples</a>.</p>
 </div>
@@ -811,7 +821,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-3" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge5"></a>
+</h3>
 <div class="callout-content">
 <p>Implement a dictionary as:</p>
 <div class="codewrapper sourceCode" id="cb47">
@@ -959,7 +970,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-4" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge6"></a>
+</h3>
 <div class="callout-content">
 <p>Implement the following table of genetic disorders as a nested dictionary:</p>
 <table class="table"><colgroup><col width="65%"><col width="11%"><col width="11%"><col width="11%"></colgroup><thead><tr class="header"><th align="center"></th>
@@ -1028,7 +1040,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="ex:dict:dictExample" class="callout-inner">
-<h3 class="callout-title">EXAMPLE: Nested dictionaries in practice</h3>
+<h3 class="callout-title">EXAMPLE: Nested dictionaries in practice<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+</h3>
 <div class="callout-content">
 <p>We would like to store and analyse the structure of several proteins involved in the <em>Lac operon</em>. To do so, we create a Python <code>dict</code> to help us organise our data.</p>
 <p>We start off by creating an empty dictionary that will store our structures:</p>
@@ -1267,7 +1280,8 @@ resolution: 2.7</code></pre>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-5" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge7"></a>
+</h3>
 <div class="callout-content">
 <p>Try <kbd>.items()</kbd> on a nested <code>dict</code> and see how it works.</p>
 </div>
@@ -1347,7 +1361,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-6" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge8"></a>
+</h3>
 <div class="callout-content">
 <p>Implement the <span style="color: rgb(32, 121, 77);">lac_repressor</span> dictionary and try to extract the <em>values</em> associated with the following <em>keys</em>:</p>
 <ul><li><span style="color: rgb(32, 121, 77);">organism</span></li>
@@ -1439,7 +1454,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-7" class="callout-inner">
-<h3 class="callout-title">Do it Yourself</h3>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge9"></a>
+</h3>
 <div class="callout-content">
 <p>We know that in reverse transcription, RNA nucleotides are converted to their complementary DNA as shown:</p>
 <table class="table"><thead><tr class="header"><th align="center">Type</th>
@@ -1525,20 +1541,23 @@ Detailed traceback:
 </div>
 </div>
 </div>
-</section><section id="summary"><h2 class="section-heading">Summary</h2>
+</section><section id="summary"><h2 class="section-heading">Summary<a class="anchor" aria-label="anchor" href="#summary"></a>
+</h2>
 <hr class="half-width"><p>In this section we talked about dictionaries, which are one the most powerful built-in types in Python. We learned:</p>
 <ul><li>how to create dictionaries in Python,</li>
 <li>methods to alter or manipulate normal and nested dictionaries,</li>
 <li>two different techniques for changing an existing <em>key</em>,</li>
 <li>examples on how dictionaries help us organise our data and retrieve them when needed,</li>
 </ul><p>Finally, we also learned that we can create an <em>iterable</em> (discussed in <a href="#for-loop">section</a>) from dictionary <em>keys</em> or <em>values</em> using the <kbd>.key()</kbd>, the <kbd>.values()</kbd>, or the <kbd>.items()</kbd> methods.</p>
-</section><section id="exercises"><h2 class="section-heading">Exercises</h2>
+</section><section id="exercises"><h2 class="section-heading">Exercises<a class="anchor" aria-label="anchor" href="#exercises"></a>
+</h2>
 <hr class="half-width"><div id="challenge10" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="end-of-chapter-exercises" class="callout-inner">
-<h3 class="callout-title">End of chapter Exercises</h3>
+<h3 class="callout-title">End of chapter Exercises<a class="anchor" aria-label="anchor" href="#challenge10"></a>
+</h3>
 <div class="callout-content">
 <p>We know that the process of protein translation starts by transcribing a gene from DNA to RNA <em>nucleotides</em>, followed by translating the RNA <em>codons</em> to protein.</p>
 <p>Conventionally, we write a DNA sequence from the <span style="color: rgb(32, 121, 77);">5’</span>-end to the <span style="color: rgb(32, 121, 77);">3’</span>-end. The transcription process, however, starts from the <span style="color: rgb(32, 121, 77);">3’</span>-end of a gene to the <span style="color: rgb(32, 121, 77);">5’</span>-end (anti-sense strand), resulting in a sense mRNA sequence complementing the sense DNA strand. This is because RNA polymerase can only add nucleotides to the <span style="color: rgb(32, 121, 77);">3’</span>-end of the growing mRNA chain, which eliminates the need for the <a href="https://en.wikipedia.org/wiki/Okazaki_fragments" class="external-link">Okazaki fragments</a> as seen in DNA replication.</p>
@@ -1749,7 +1768,8 @@ Detailed traceback:
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Keypoints</h3>
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
 <div class="callout-content">
 <ul><li>Dictionaries associate a set of <em>values</em> with a number of <em>keys</em>.</li>
 <li>
@@ -1795,9 +1815,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/LearnToDiscover/sandpaper/tree/l2d" class="external-link">sandpaper (0.9.0)</a>,
+        <p>Built with <a href="https://github.com/zkamvar/l2d-sandpaper/tree/update-sandpaper-2023" class="external-link">sandpaper (0.11.9)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/e815ea1a34f6eda01a3c9ab9643e35aa051e1938" class="external-link">pegboard (0.4.3)</a>,
-      and <a href="https://github.com/LearnToDiscover/varnish/tree/c72a9c21616682c29279523e56b331ed24509f1c" class="external-link">varnish (0.2.14)</a>.</p>
+      and <a href="https://github.com/LearnToDiscover/varnish/tree/f412e8bbc14a5110120155e1af9282842877c62f" class="external-link">varnish (0.2.14)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1810,16 +1830,16 @@ any links that you are not going to use.
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
   "@id": "https://learntodiscover.github.io/Basic_Python/instructor/06-dictionaries.html",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08",
+  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "Dictionaries",
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/06-dictionaries.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/06-dictionaries.html",
-  "dateCreated": "2022-11-09",
-  "dateModified": "2023-03-14",
-  "datePublished": "2023-03-14"
+  "dateCreated": "2023-03-15",
+  "dateModified": "2023-03-15",
+  "datePublished": "2023-03-15"
 }
 
   </script><script>
